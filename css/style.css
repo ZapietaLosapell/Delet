@@ -1,5 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Kosugi&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    /*font-family: "Kosugi", sans-serif;
+    font-family: "DotGothic16", sans-serif;*/
+}
+
+#btn-menu {
+    text-align: center;
+}
+
+.btn-menu { 
+    margin: 0.2em 0.2em;
+    border-radius: 37px;
+    border: 1px solid #2036FD;
+    color: #2036FD;
+    font-weight: 500;
+    font-size: 30px;
+    padding: 15px 30px;
+}
+
+.btn-outline-dark:hover {
+    background-color: #2036FD;
 }
