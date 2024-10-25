@@ -12,15 +12,38 @@
     <div id="start-section">
         <header>
             <div class="start-section-color-fondo-menu">
-                <button class="btn-menu btn-menu-icon" onclick="window.modal2.showModal();">
-                    <div class="menu-icon">
-                        <div class="line"></div>
-                        <div class="line"></div>
+                <nav class="navbar navbar-expand-lg menu-oculto">
+                    <div class="container-fluid">
+                        <button class="btn-menu btn-menu-icon navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="window.modal2.showModal();">
+                            <div class="menu-icon">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                        </button>
+                        <div class="collapse navbar-collapse centrar-nav" id="navbarNav">
+                            <ul class="navbar-nav">
+                              <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Press Kit</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Pases/Tikects</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Sinopsis</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Contacto</a>
+                              </li>
+                            </ul>
+                          </div>
                     </div>
-                </button>
+                </nav>
                 
                 <nav class="d-none d-lg-block" id="btn-menu">
-                    <a href="#" class="btn btn-outline-dark btn-menu">PRES KIT</a>
+                    <a href="#" class="btn btn-outline-dark btn-menu">PRESS KIT</a>
                     <a href="#" class="btn btn-outline-dark btn-menu">PASES / TIKECTS</a>
                     <a href="#sinopsis-section" class="btn btn-outline-dark btn-menu">SINOPSIS</a>
                     <a href="#" class="btn btn-outline-dark btn-menu">CONTACTO</a>
@@ -40,7 +63,7 @@
                         <video id="teaser" controls preload="auto" poster="img/poster.png" alt="Video teaser" width="100%">
                             <source src="video/Teaser_1.mp4" type="video/mp4" />
                             <source src="video/Teaser_1.webm" type="video/webm" />
-                            <track src="captions/captions.es.vtt" kind="captions" srclang="es" label="Spanish" default />
+                            <track src="captions/captions.es.vtt" kind="captions" srclang="es" label="Spanish" />
                             <p>Your browser does not support the video tag. Download the <a href="Teaser_1.mp4">enlace al vídeo</a> alternativo.<br>
                             Su navegador no soporta vídeo HTML5. Este es un <a href="Teaser_1.mp4">enlace al vídeo</a> alternativo.</p>
                         </video>
@@ -69,6 +92,11 @@
                 Your browser does not support HTML5 video. 
                 Su navegador no soporta vídeo HTML5. 
             </video>
+            <article id="sinopsis-section">
+                <h2>Sinopsis</h2>
+                <p><span>Y¿Delet.exe *** Archivo potencialmente olvidado ***</span> es una inmersión intrigante en las imágenes de los años 80, tratadas como especies en peligro en un ecosistema digital saturado. Con un enfoque en la evolución de la memoria visual y cultural, el documental revela lo que podría estar desapareciendo ante nuestros ojos. ¿Qué se ha perdido realmente?</p>
+                <a href="#">Descubre más</a>
+            </article>
         </section>
     </main>  
     
