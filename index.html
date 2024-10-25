@@ -37,13 +37,12 @@
                         <button onclick="window.modal1.close();">X</button>
                     </div>
                     <div class="container">
-                        <video id="teaser" width="100%" controls preload="auto" Poster="img/poster.png" alt="Video teaser">
+                        <video id="teaser" controls preload="auto" poster="img/poster.png" alt="Video teaser" width="100%">
                             <source src="video/Teaser_1.mp4" type="video/mp4" />
                             <source src="video/Teaser_1.webm" type="video/webm" />
-                            <track src="captions/captions_es.vtt" kind="captions" srclang="es" label="Español" />
-                            Your browser does not support the video tag.
-                            Su navegador no soporta vídeo HTML5. Este es un
-                            <a href="Teaser_1.mp4">enlace al vídeo</a> alternativo.
+                            <track src="captions/captions.es.vtt" kind="captions" srclang="es" label="Spanish" default />
+                            <p>Your browser does not support the video tag. Download the <a href="Teaser_1.mp4">enlace al vídeo</a> alternativo.<br>
+                            Su navegador no soporta vídeo HTML5. Este es un <a href="Teaser_1.mp4">enlace al vídeo</a> alternativo.</p>
                         </video>
                     </div>
                 </dialog>
@@ -67,9 +66,8 @@
             <video id="teaser" width="100%" loop autoplay muted="muted" Poster="img/poster.png" alt="Video teaser">
                 <source src="video/video-tv.mp4" type="video/mp4" />
                 <source src="video/video-tv.webm" type="video/webm" />
-                <track src="captions/captions.es.vtt" kind="captions" srclang="es" label="Spanish" default />
-                Your browser does not support HTML5 video. Download the <a href="Teaser_1.mp4">enlace al vídeo</a> alternativo.
-                Su navegador no soporta vídeo HTML5. Este es un <a href="video-tv.mp4">enlace al vídeo</a> alternativo.
+                Your browser does not support HTML5 video. 
+                Su navegador no soporta vídeo HTML5. 
             </video>
         </section>
     </main>  
