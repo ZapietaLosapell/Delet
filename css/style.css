@@ -136,6 +136,7 @@ dialog button:hover {
 
 div.fixed-1 {
     position: fixed;
+    z-index: 800;
     width: 560px;
     height: 270px;
     right: 2%;
@@ -148,6 +149,7 @@ div.fixed-1 {
 
 div.fixed-2 {
     position: fixed;
+    z-index: 800;
     width: 560px;
     height: 270px;
     right: 2%;
@@ -201,6 +203,7 @@ div.fixed-2 h1 {
     width: 2rem;
     height: 2rem;
     padding: 1rem;
+    z-index: 800;
     position: absolute;
     display: flex;
     align-items: center;
