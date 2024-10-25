@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="inicio-section">
-        <div class="section">
-            <div class="inicio-section-color-menu">
+    <div id="start-section">
+        <header>
+            <div class="start-section-color-fondo-menu">
                 <button class="btn-menu btn-menu-icon" onclick="window.modal2.showModal();">
                     <div class="menu-icon">
                         <div class="line"></div>
@@ -19,38 +19,60 @@
                     </div>
                 </button>
                 
-                <div class="d-none d-lg-block" id="btn-menu">
+                <nav class="d-none d-lg-block" id="btn-menu">
                     <a href="#" class="btn btn-outline-dark btn-menu">PRES KIT</a>
                     <a href="#" class="btn btn-outline-dark btn-menu">PASES / TIKECTS</a>
-                    <a href="/#sinopsis-section" class="btn btn-outline-dark btn-menu">SINOPSIS</a>
+                    <a href="#sinopsis-section" class="btn btn-outline-dark btn-menu">SINOPSIS</a>
                     <a href="#" class="btn btn-outline-dark btn-menu">CONTACTO</a>
-                </div>
+                </nav>   
             </div>
+
             <div class="container-fluid fondo">
-                <button class="open" onclick="window.modal1.showModal();">
+                <button class="open" onclick="window.modal1.showModal();" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="¡Ya puedes ver el teaser!">
                     <img src="img/play.png" alt="Play" width="90px">
                 </button>
-        
+
                 <dialog id="modal1">
-                    <button onclick="window.modal1.close();">Cerrar</button>
+                    <div class="x">
+                        <button onclick="window.modal1.close();">X</button>
+                    </div>
                     <div class="container">
-                        <video id="teaser" src="img/Teaser_01.mp4" width="100%" type="video/mp4" controls autoplay alt="Video teaser">
+                        <video id="teaser" width="100%" controls preload="auto" Poster="img/poster.png" alt="Video teaser">
+                            <source src="video/Teaser_1.mp4" type="video/mp4" />
+                            <source src="video/Teaser_1.webm" type="video/webm" />
+                            <track src="captions/captions_es.vtt" kind="captions" srclang="es" label="Español" />
                             Your browser does not support the video tag.
+                            Su navegador no soporta vídeo HTML5. Este es un
+                            <a href="Teaser_1.mp4">enlace al vídeo</a> alternativo.
                         </video>
                     </div>
                 </dialog>
             </div>
+        </header>
+
+        <div class="fixed-1 aviso"></div>
+        <div id="" class="fixed-2 aviso">
+            <h1>Estreno el 7 de agosto*</h1>
+            <button id="close" class="fixed-close">X</button>
+            <h3>Consigue <a href="#">aquí</a> tu entrada.</h3>
+            <span>乁(`‿`)ㄏ</span><span>乁(`‿`)ㄏ</span><span>乁(`‿`)ㄏ</span>
+            <p>* Acceso libre hasta completar aforo, o también, puedes <a href="#">asistir al preestreno</a>.</p>
         </div>
-        <div class="estreno">
-            <div class="fixed-1"></div>
-            <div class="fixed-2">
-                <h1>Estreno el 7 de agosto*</h1>
-                <span>乁(`‿`)ㄏ</span><span>乁(`‿`)ㄏ</span><span>乁(`‿`)ㄏ</span>
-                <p>* Acceso libre hasta completar aforo, o también, puedes <a href="#">asistir al preestreno</a>.</p>
-            </div>
-        <div>
-        <p class="mas"> &#8595; Sigue viendo </p>
+
+        <img src="img/Arrow-1.png" class="mas" alt="Flecha hacia abajo">
+        
     </div>
+    <main>
+        <section>
+            <video id="teaser" width="100%" loop autoplay muted="muted" Poster="img/poster.png" alt="Video teaser">
+                <source src="video/video-tv.mp4" type="video/mp4" />
+                <source src="video/video-tv.webm" type="video/webm" />
+                <track src="captions/captions.es.vtt" kind="captions" srclang="es" label="Spanish" default />
+                Your browser does not support HTML5 video. Download the <a href="Teaser_1.mp4">enlace al vídeo</a> alternativo.
+                Su navegador no soporta vídeo HTML5. Este es un <a href="video-tv.mp4">enlace al vídeo</a> alternativo.
+            </video>
+        </section>
+    </main>  
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
