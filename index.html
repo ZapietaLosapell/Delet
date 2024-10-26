@@ -52,7 +52,7 @@
 
             <div class="container-fluid fondo">
                 <button class="open" onclick="window.modal1.showModal();" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="¡Ya puedes ver el teaser!">
-                    <img src="img/play-1.png" alt="Play" width="90px">
+                    <img src="img/play-3.png" alt="Play" width="110px">
                 </button>
 
                 <dialog id="modal1">
@@ -63,7 +63,8 @@
                         <video id="teaser" controls preload="auto" poster="img/poster.png" alt="Video teaser" width="100%">
                             <source src="video/Teaser_1.mp4" type="video/mp4" />
                             <source src="video/Teaser_1.webm" type="video/webm" />
-                            <track src="captions/captions.es.vtt" kind="captions" srclang="es" label="Spanish" />
+                            <track src="captions/MyCaptions.es.vtt" kind="captions" srclang="es" label="Spanish" class="track-es">
+                            <track src="captions/MyCaptions.en.vtt" kind="captions" srclang="en" label="English captions" class="track-en">
                             <p>Your browser does not support the video tag. Download the <a href="Teaser_1.mp4">enlace al vídeo</a> alternativo.<br>
                             Su navegador no soporta vídeo HTML5. Este es un <a href="Teaser_1.mp4">enlace al vídeo</a> alternativo.</p>
                         </video>
