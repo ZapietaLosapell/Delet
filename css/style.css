@@ -45,9 +45,12 @@
     padding-left: 1.5em;
 }
 
+.btn-outline-dark {
+    transition: 2s !important;
+}
+
 .btn-outline-dark:hover {
     background-color: #2F06CA;
-    transition: 2s !important;
 }
 
 .home-section-color-fondo-menu {
@@ -84,10 +87,10 @@
 
 .logotipo {
     position: absolute;
-    max-width: 97%;
+    max-width: 95%;
     z-index: 2;
     mix-blend-mode: hard-light;
-    animation: desplazamiento .8s cubic-bezier(0.45, 0, 0.35, 1) infinite;
+    animation: desplazamiento 1.5s cubic-bezier(0.45, 0, 0.35, 1) infinite;
 }
 
 @keyframes desplazamiento {
@@ -100,7 +103,7 @@
         filter: brightness(1.1) blur(0.3px);
     }
     50% {
-        transform: translate(-0.5px, -0.3px) scale(0.998);
+        transform: translate(-0.5px, -0.3px) scale(0.997);
         filter: brightness(1.3) blur(0.7px);
     }
     75% {
@@ -424,28 +427,6 @@ section #sinopsis-section .container {
     height: 80vh;
 }
 
-@media (min-width: 992px) {
-    .menu-oculto {
-        display: none !important;
-    }
-}
-
-@media (max-width: 992px) {
-    .start-section-color-fondo-menu {
-        padding-top: 1%;
-    }
-
-    video::cue {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 1200px) {
-    #modal1 {
-        max-width: 720px;
-    }
-}
-
 .navbar-collapse {
     display: flex;
     justify-content: center;
@@ -462,7 +443,7 @@ section #sinopsis-section .container {
     color: #2036fd !important;
 }
 
-.video-tv {
+.video-tv-container {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -476,7 +457,7 @@ section #sinopsis-section .container {
     width: 100%;
     max-width: 100%;
     height: auto;
-    border-radius: 150px;
+    border-radius: 6rem;
     opacity: 0.95;
     z-index: 1;
     mix-blend-mode: hard-light;
@@ -487,5 +468,61 @@ section #sinopsis-section .container {
     background-color: #FC1F30;
     display: flex;
     align-items: center;
+}
+
+@media (min-width: 992px) {
+    .menu-oculto {
+        display: none !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .start-section-color-fondo-menu {
+        padding-top: 1%;
+    }
+
+    video::cue {
+        font-size: .9rem;
+        font-weight: 400;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .video-tv-container {
+        height: 100vh;
+    }
+
+    #video-tv {
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    #modal1 {
+        max-width: 720px;
+    }
+
+    .video-tv-container {
+        padding: 0;
+    }
+
+    #video-tv {
+        width: 100%; 
+        padding: 1%;
+        border-radius: 2rem;
+    }
+
+    .logotipo  {
+        display: none;
+    }
+    
+    .aviso {
+        display: none;
+    }
+    .open {
+        width: 5rem;
+    }
+
 }
 
