@@ -12,7 +12,7 @@
     accent-color: #FC1F30;
 }
 
-#start-section {
+#home-section {
     height: 100vh;
     max-height: 100vh;
     width: 100%;
@@ -50,7 +50,7 @@
     transition: 2s !important;
 }
 
-.start-section-color-fondo-menu {
+.home-section-color-fondo-menu {
     padding: 1rem 0;
     width: 100vw;
     display: flex;
@@ -84,10 +84,10 @@
 
 .logotipo {
     position: absolute;
-    max-width: 95%;
+    max-width: 97%;
     z-index: 2;
     mix-blend-mode: hard-light;
-    animation: desplazamiento 1.3s ease-in-out infinite;
+    animation: desplazamiento .8s cubic-bezier(0.45, 0, 0.35, 1) infinite;
 }
 
 @keyframes desplazamiento {
@@ -96,14 +96,16 @@
         filter: brightness(1) blur(0px);
     }
     25% {
-        transform: translate(-0.5px, 0) scale(0.999);
+        transform: translate(-0.3px, 0) scale(0.999);
+        filter: brightness(1.1) blur(0.3px);
     }
     50% {
-        transform: translate(-0.7px, -0.5px) scale(0.996);
-        filter: brightness(1.4) blur(0.7px);
+        transform: translate(-0.5px, -0.3px) scale(0.998);
+        filter: brightness(1.3) blur(0.7px);
     }
     75% {
-        transform: translate(0, -0.5px) scale(0.999);
+        transform: translate(0, -0.3px) scale(0.999);
+        filter: brightness(1.1) blur(0.3px);
     }
 }
 
@@ -257,7 +259,7 @@ video::cue {
     width: 568px;
     padding: .5rem 0 0 1.5rem;
     overflow: auto;
-    background-color: #fffffff8;
+    background-color: #ffffffe1;
 }
   
 ::-webkit-scrollbar {
@@ -295,29 +297,29 @@ div.fixed-2::-webkit-scrollbar-thumb {
     font-size: 1.9rem;
     font-weight: 500;
     width: 60%;
-    margin-top: .5rem;
+    margin-top: .8rem;
     text-transform: uppercase;
 }
 
 .fixed-2 .fixed-close {
     width: 2rem;
     height: 2rem;
-    padding: 1rem;
+    padding: 1.2rem;
     z-index: 800;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    border: 3px solid #1e0c5f;
+    border: 2px solid #1e0c5f;
     border-radius: 50%;
     color: #1e0c5f;
     font-size: 2em;
     font-weight: 500;
-    margin-right: .3rem;
+    margin-right: .4rem;
 }
 
 .sticky {
-    top: 0;
+    top: 5px;
     position: sticky;
     display: flex;
     flex-direction: row;
