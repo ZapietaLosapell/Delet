@@ -50,22 +50,31 @@
                 </nav>   
             </div>
 
-            <div class="container-fluid fondo">
+            <div class="container-fluid">
+                <div class="container-fluid video-tv">
+                    <video id="video-tv" loop autoplay muted="muted" poster="poimg/poster.png" alt="Video teaser">
+                        <source src="video/Vídeo-de-Khanh-Hoang-Minh-2.webm" type="video/mp4" />
+                        <source src="video/Video.webm" type="video/webm" />
+                        Your browser does not support HTML5 video. 
+                        Su navegador no soporta vídeo HTML5. 
+                    </video>
+                    <img class="logo" src="img/logotipo.png">
+                    </div>
                 <button class="open" onclick="window.modal1.showModal();" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="¡Ya puedes ver el teaser!">
-                    <img src="img/play-3.png" alt="Play" width="110px">
+                    <img src="img/play-2.png" alt="Play">
                 </button>
 
                 <dialog id="modal1">
                     <div class="x">
                         <button onclick="window.modal1.close();">X</button>
                     </div>
-                    <div class="container">
-                        <video id="teaser" controls preload="auto" poster="img/poster.png" alt="Video teaser" width="100%">
+                    <div class="video-container">
+                        <video id="teaser" controls preload="auto" poster="img/poster.png" alt="Video teaser">
                             <source src="video/Teaser_1.mp4" type="video/mp4" />
                             <source src="video/Teaser_1.webm" type="video/webm" />
                             <track src="captions/MyCaptions.es.vtt" kind="captions" srclang="es" label="Spanish" class="track-es">
                             <track src="captions/MyCaptions.en.vtt" kind="captions" srclang="en" label="English captions" class="track-en">
-                            <p>Your browser does not support the video tag. Download the <a href="Teaser_1.mp4">enlace al vídeo</a> alternativo.<br>
+                            <p>Your browser does not support the video tag. Download <a href="Teaser_1.mp4">Teaser.mp4</a>.<br>
                             Su navegador no soporta vídeo HTML5. Este es un <a href="Teaser_1.mp4">enlace al vídeo</a> alternativo.</p>
                         </video>
                     </div>
@@ -73,32 +82,34 @@
             </div>
         </header>
 
-        <div class="fixed-1 aviso"></div>
-        <div id="" class="fixed-2 aviso">
-            <div class="sticky">
-                <h1>Estreno el 7 de agosto*</h1>
-                <button id="close" class="fixed-close">X</button>
+        <div class="aviso">
+            <div class="fixed-1 aviso"></div>
+            <div id="" class="fixed-2 aviso">
+                <div class="sticky">
+                    <h1>Estreno el 7 de agosto*</h1>
+                    <button id="close" class="fixed-close">X</button>
+                </div>
+                <h3>Consigue <a href="#"><b>aquí</b></a> tu entrada.</h3>
+                <p><span>乁(`‿`)ㄏ</span><span>乁(`‿`)ㄏ</span><span>乁(`‿`)ㄏ</span></p>
+                <p><span>乁(`‿`)ㄏ</span><span>乁(`‿`)ㄏ</span><span>乁(`‿`)ㄏ</span></p>
+                <p>* <a href="#"><b>Ven al preestreno</b></a>.</p>
             </div>
-            <h3>Consigue <a href="#">aquí</a> tu entrada.</h3>
-            <p><span>乁(`‿`)ㄏ</span><span>乁(`‿`)ㄏ</span><span>乁(`‿`)ㄏ</span></p>
-            <p><span>乁(`‿`)ㄏ</span><span>乁(`‿`)ㄏ</span><span>乁(`‿`)ㄏ</span></p>
-            <p>* <a href="#">Ven al preestreno</a>.</p>
         </div>
 
-        <div class="flecha">
+        <!-- <div class="flecha">
             <img src="img/Arrow-1.png" class="mas" alt="Flecha hacia abajo">
-        </div>    
+        </div>     -->
     </div>
     <main>
         <section>
-            <article class="red">
+            <!-- <article class="red">
                 <video id="video-tv" width="100%" loop autoplay muted="muted" Poster="img/poster.png" alt="Video teaser">
                     <source src="video/Vídeo-de-Khanh-Hoang-Minh-2.webm" type="video/mp4" />
                     <source src="video/Video.webm" type="video/webm" />
                     Your browser does not support HTML5 video. 
                     Su navegador no soporta vídeo HTML5. 
                 </video>
-            </article>
+            </article> -->
             
             <article id="sinopsis-section">
                 <div class="container">
