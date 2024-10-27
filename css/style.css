@@ -26,20 +26,28 @@
     border: 1px solid #3106cad5;
     font-size: 30px;
     padding: 15px 30px;
-    background-color: rgba(255, 255, 255, 0.31);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
-#btn-menu {
-    text-align: center;
+.btn-menu-icon {
+    background: white;
+    height: 50px;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 1%;
+    top: 1rem;
+    padding: 0;
 }
 
-#btn-menu  a {
+#botones-menu  a {
     color: #3106ca;
     font-weight: 500;
     transition: color 2s ease-in-out;
 }
 
-#btn-menu  a:hover {
+#botones-menu  a:hover {
     color: white;
     font-weight: 400 !important;
     padding-left: 1.5em;
@@ -87,7 +95,7 @@
 
 .logotipo {
     position: absolute;
-    max-width: 95%;
+    max-width: 90%;
     z-index: 2;
     mix-blend-mode: hard-light;
     animation: desplazamiento 1.5s cubic-bezier(0.45, 0, 0.35, 1) infinite;
@@ -110,18 +118,6 @@
         transform: translate(0, -0.3px) scale(0.999);
         filter: brightness(1.1) blur(0.3px);
     }
-}
-
-.btn-menu-icon {
-    background: none;
-    height: 50px;
-    width: 5rem;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    padding: 0;
 }
 
 .menu-icon {
@@ -248,10 +244,8 @@ video::cue {
 
 .aviso.fixed-1 {
     z-index: 4;   
-    background-color: #ffffffb1;
     bottom: 3.5%;
     width: 565px;
-    border: 1px solid #2F06CA;
 }
 
 .aviso.fixed-2 {
@@ -262,7 +256,7 @@ video::cue {
     width: 568px;
     padding: .5rem 0 0 1.5rem;
     overflow: auto;
-    background-color: #ffffffe1;
+    background-color: #FEF102;
 }
   
 ::-webkit-scrollbar {
@@ -433,9 +427,9 @@ section #sinopsis-section .container {
     background: #ffffff;
     text-align: center;
     text-transform: uppercase;
-    height: 40vh;
+    height: 50vh !important;
     border: 1px solid #2036fd;
-    margin: 4.5rem 1%;
+    margin: 2rem 1%;
     border-radius: 20px;
 }
 
@@ -470,19 +464,49 @@ section #sinopsis-section .container {
     align-items: center;
 }
 
+.logotipo-navbar {
+    width: 20rem;
+    height: auto;
+    margin-left: 5%;
+}
+
+@media (max-width: 576px) {
+    
+    .logotipo-navbar {
+        width: 10rem;
+    }
+
+    .btn-menu-icon {
+        top: .5rem;
+        width: 4rem;
+    }
+
+    .menu-icon {
+        height: 10px;
+    }
+
+    .line {
+        width: 35px;
+        height: 1px;
+    }
+}
+
+
 @media (min-width: 992px) {
+
     .menu-oculto {
         display: none !important;
     }
 }
 
 @media (max-width: 992px) {
+
     .start-section-color-fondo-menu {
         padding-top: 1%;
     }
 
     video::cue {
-        font-size: .9rem;
+        font-size: .9em;
         font-weight: 400;
         font-family: "Montserrat", sans-serif;
     }
@@ -496,9 +520,25 @@ section #sinopsis-section .container {
         object-fit: cover;
     }
 
+    .home-section-color-fondo-menu {
+        mix-blend-mode: normal;
+    }
+
+    .container-fluid {
+        height: auto;
+    }
+
+    .home-section-color-fondo-menu {
+        padding: 0;
+    }
+
+    .btn-menu {
+        margin: 0 1%;
+    }
 }
 
 @media (max-width: 1200px) {
+
     #modal1 {
         max-width: 720px;
     }
