@@ -84,12 +84,25 @@
 
 .logo {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 100%;
+    max-width: 97%;
     z-index: 2;
     mix-blend-mode: hard-light;
+    animation: desplazamiento 1s ease-in-out infinite;
+}
+
+@keyframes desplazamiento {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(0.5px, 0) scale(0.999);
+    }
+    50% {
+        transform: translate(1px, 0.7px) scale(0.998);
+    }
+    75% {
+        transform: translate(0, 0.7px) scale(0.999);
+    }
 }
 
 .btn-menu-icon {
