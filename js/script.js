@@ -6,7 +6,10 @@ const aviso = document.getElementsByClassName("aviso");
 for (let i = 0; i < aviso.length; i++) {
     close.addEventListener("click", function(){
         aviso[i].style.opacity = "0";
-      });
+        setTimeout(() => {
+            aviso[i].style.pointerEvents = "none";
+            }, 500);
+    });
 }
 
 let videos = document.querySelectorAll("video");
