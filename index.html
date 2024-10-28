@@ -63,13 +63,13 @@
                     </video>
                     <img class="logotipo" src="img/logotipo.png" alt="Logotipo">
                 </div>
-                <button class="open" onclick="window.modal1.showModal();" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="¡Ya puedes ver el teaser!">
+                <button class="open" onclick="openModal();" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="¡Ya puedes ver el teaser!">
                     <img src="img/play-5.png" alt="Play">
                 </button>
 
                 <dialog id="modal1">
                     <div class="x">
-                        <button onclick="window.modal1.close();">X</button>
+                        <button onclick="closeModal();">X</button>
                     </div>
                     <div class="video-container">
                         <video id="teaser" controls preload="auto" poster="img/poster.png" alt="Video teaser">
@@ -125,6 +125,7 @@
     </main>  
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js">
+    </script>
 </body>
 </html>

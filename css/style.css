@@ -95,7 +95,7 @@
 
 .logotipo {
     position: absolute;
-    max-width: 90%;
+    max-width: 70%;
     z-index: 2;
     mix-blend-mode: hard-light;
     animation: desplazamiento 1.5s cubic-bezier(0.45, 0, 0.35, 1) infinite;
@@ -141,12 +141,18 @@
     z-index: 2;
     width: 6%;
     filter: brightness(2);
+    pointer-events: auto;
+}
+
+.open.disabled {
+    pointer-events: none;
+    opacity: 0.5;
 }
 
 .open img {
     width: 100%;
     opacity: 0.8;
-    transition: 1s ease-out;
+    transition: .5s ease-out;
 }
 
 .open img:hover {
@@ -154,14 +160,12 @@
     transform: translateX(2px);
 }
 
-
 dialog {
     margin: auto;
 }
 
 dialog::backdrop {
-    background:rgba(0, 0, 0, 0.859);
-    opacity: 0.97;
+    background:rgba(15, 15, 15, 0.95);
 }
 
 dialog .x {
@@ -291,10 +295,9 @@ div.fixed-2::-webkit-scrollbar-thumb {
 }
 
 .aviso.fixed-2 h1 {
-    font-size: 1.9rem;
-    font-weight: 500;
-    width: 60%;
-    margin-top: .8rem;
+    font-size: 2.3rem;
+    width: 70%;
+    margin-top: .5rem;
     text-transform: uppercase;
 }
 
@@ -458,11 +461,11 @@ section #sinopsis-section .container {
     padding: 2rem;
 }
 
-.red {
+/* .red {
     background-color: #FC1F30;
     display: flex;
     align-items: center;
-}
+} */
 
 .logotipo-navbar {
     width: 20rem;
@@ -470,24 +473,14 @@ section #sinopsis-section .container {
     margin-left: 5%;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 @media (max-width: 576px) {
     
     .logotipo-navbar {
         width: 10rem;
-    }
-
-    .btn-menu-icon {
-        top: .5rem;
-        width: 4rem;
-    }
-
-    .menu-icon {
-        height: 10px;
-    }
-
-    .line {
-        width: 35px;
-        height: 1px;
     }
 }
 
@@ -534,6 +527,20 @@ section #sinopsis-section .container {
 
     .btn-menu {
         margin: 0 1%;
+    }
+
+    .btn-menu-icon {
+        top: 1rem;
+        width: 4rem;
+    }
+
+    .menu-icon {
+        height: 10px;
+    }
+
+    .line {
+        width: 35px;
+        height: 1px;
     }
 }
 
