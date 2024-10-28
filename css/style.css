@@ -9,11 +9,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+    cursor: url("../img/cursor-4.png"), url("../img/cursor-3.cur"), url("../img/cursor-2.cur"), url("../img/cursor-1.png"), auto;
     accent-color: #FC1F30;
-}
-
-body {
-    cursor: url("../img/cursor-7.png"), auto;
 }
 
 #home-section {
@@ -264,7 +261,7 @@ video::cue {
     width: 568px;
     padding: .5rem 0 0 1.5rem;
     overflow: auto;
-    background-color: #FEF102;
+    background-color: #fffffff8;
 }
   
 ::-webkit-scrollbar {
