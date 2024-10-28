@@ -12,6 +12,10 @@
     accent-color: #FC1F30;
 }
 
+body {
+    cursor: url("../img/cursor-7.png"), auto;
+}
+
 #home-section {
     height: 100vh;
     max-height: 100vh;
