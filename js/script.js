@@ -1,8 +1,10 @@
 const tooltipTriggerEl = document.querySelector('[data-bs-toggle="tooltip"]');
 const tooltip = new bootstrap.Tooltip(tooltipTriggerEl);
 
-tooltipTriggerEl.addEventListener("mouseleave", () => {
-  tooltip.hide();
+document.body.addEventListener("mousemove", (event) => {
+  if (tooltipTriggerEl.contains(event.target) === false) {
+    tooltip.hide();
+  }
 });
 
 
