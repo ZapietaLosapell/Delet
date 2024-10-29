@@ -11,7 +11,7 @@
 <body>
     <div id="home-section">
         <header>
-            <div class="home-section-color-fondo-menu">
+            <div class="home-section-fondo-menu">
                 <nav class="navbar navbar-expand-lg menu-oculto">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#">
@@ -35,7 +35,7 @@
                                 <a class="nav-link" href="#">Pases / Tikects</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="#">Sinopsis</a>
+                                <a class="nav-link" href="#sinopsis-section">Sinopsis</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="#">Contacto</a>
@@ -46,10 +46,10 @@
                 </nav>
                 
                 <nav class="d-none d-lg-block" id="botones-menu">
-                    <a href="#" class="btn btn-outline-dark btn-menu">PRESS KIT</a>
-                    <a href="#" class="btn btn-outline-dark btn-menu">PASES / TIKECTS</a>
-                    <a href="#sinopsis-section" class="btn btn-outline-dark btn-menu">SINOPSIS</a>
-                    <a href="#" class="btn btn-outline-dark btn-menu">CONTACTO</a>
+                    <a href="#" class="btn btn-outline-dark btn-menu pointer">PRESS KIT</a>
+                    <a href="#" class="btn btn-outline-dark btn-menu pointer">PASES / TIKECTS</a>
+                    <a href="#sinopsis-section" class="btn btn-outline-dark btn-menu pointer">SINOPSIS</a>
+                    <a href="#" class="btn btn-outline-dark btn-menu pointer">CONTACTO</a>
                 </nav>   
             </div>
 
@@ -61,10 +61,10 @@
                         Your browser does not support HTML5 video. 
                         Su navegador no soporta vídeo HTML5. 
                     </video>
-                    <img class="logotipo" src="img/logotipo.png" alt="Logotipo">
+                    <img class="logotipo" src="img/logotipo.png" alt="Logotipo" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="¡Has escontrado el Teaser!">
                 </div>
-                <button class="open" onclick="openModal();" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="¡Ya puedes ver el teaser!">
-                    <img src="img/play-5.png" alt="Play">
+                <button class="open" onclick="openModal();">
+                    <img src="img/play-5.png" alt="Play" class="pointer">
                 </button>
 
                 <dialog id="modal1">
@@ -92,10 +92,10 @@
                     <h1>Estreno el 7 de agosto*</h1>
                     <button id="close" class="fixed-close">X</button>
                 </div>
-                <h3>Consigue <a href="#"><b>aquí</b></a> tu entrada.</h3>
+                <h3>Consigue <a href="#"><b class="pointer">aquí</b></a> tu entrada.</h3>
                 <p><span>乁(`‿`)ㄏ</span><b>⇊</b><span>乁(`‿`)ㄏ</span><b>⇊</b><span>乁(`‿`)ㄏ</span></p>
                 <p><span>乁(`‿`)ㄏ</span><b>⇊</b><span>乁(`‿`)ㄏ</span><b>⇊</b><span>乁(`‿`)ㄏ</span></p>
-                <p><b>*</b> <a href="#"><b>Ven al preestreno</b></a>.</p>
+                <p><b>*</b> <a href="#"><b class="pointer">Y aquí una camiseta gratis</b></a>.</p>
             </div>
         </div>
 
@@ -118,7 +118,7 @@
                 <div class="container">
                     <h3>Sinopsis</h2>
                     <p><span>Y¿Delet.exe *** Archivo potencialmente olvidado ***</span> es una inmersión intrigante en las imágenes de los años 80, tratadas como especies en peligro en un ecosistema digital saturado. Con un enfoque en la evolución de la memoria visual y cultural, el documental revela lo que podría estar desapareciendo ante nuestros ojos. ¿Qué se ha perdido realmente?</p>
-                    <a href="#">→ Descubre más</a>
+                    <a href="#" class="pointer">→ Descubre más</a>
                 </div>
             </article>
         </section>

@@ -13,7 +13,7 @@ document.body.addEventListener("mousemove", (event) => {
 const close = document.getElementById("close");
 const aviso = document.getElementsByClassName("aviso");
 
-for (let i = 0; i < aviso.length; i++) {  // Nota: Para todas las .aviso, opacidad 0.
+for (let i = 0; i < aviso.length; i++) {
     close.addEventListener("click", function(){
         aviso[i].style.opacity = "0";
         setTimeout(() => {
@@ -51,11 +51,30 @@ modal.addEventListener("close", () => {
 
 window.openModal = function() {
     modal.showModal();
-    document.body.classList.add('no-scroll');
+    document.body.classList.add("scroll");
 };
 
 window.closeModal = function() {
     modal.close();
     video.pause();
-    document.body.classList.remove('no-scroll');
+    document.body.classList.remove("scroll");
 };
+
+
+// Cierre del menu
+
+const navbarCollapse = document.getElementById("navbarNav");
+const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+const transition = document.querySelector(".navbar-collapse");
+
+transition.style.transition = ".5s ease-out";
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    transition.style.opacity = "0";
+    setTimeout(() => {
+        navbarCollapse.classList.remove("show");
+        transition.style.opacity = "1";
+    }, 500);
+  });
+});
