@@ -1,20 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Kosugi&family=Montserrat:ital,wght@0,500;1,500&display=swap');
 
+:root {
+
+    /* Colores principales */
+    --primary-color: #2036fd; 
+    --secundary-color: #2F06CA; 
+    --accent-color: #FC1F30; 
+    --highlight-color: #FEF102; 
+    --background-color: white; 
+
+    /* Colores de uso poco frecuente */
+    --details-color: #5EF6AD; 
+    --purple: #4F0CA7; 
+    --black: #181818; 
+
+    /* Tipografías */
+    --font-title: "DotGothic16", sans-serif;
+    --font-body: "Montserrat", sans-serif; 
+    --font-details: "Kosugi", sans-serif; 
+    --font-mono: "Azeret Mono", monospace; 
+    --font-btn-link: "Montserrat", sans-serif; 
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font-body);
     cursor: url("../img/a1.png"), url("../img/a2.png"), url("../img/a3.png"), auto;
-    accent-color: #FC1F30;
+    accent-color: var(--accent-color);
 }
 
-.font-dotgot {
-    font-family: "DotGothic16", sans-serif;
-}
-
-.font-kosugi {
-    font-family: "Kosugi", sans-serif;
+button, a {
+    font-family: var(--font-btn-link);
+    font-weight: 500;
+    text-decoration: none;
 }
 
 .pointer {
@@ -46,20 +67,20 @@
 .btn-menu { 
     margin: .5em .1em 0 .1em !important;
     border-radius: 37px;
-    border: 1px solid #2036fd;
+    border: 1px solid var(--primary-color);
     font-size: 30px;
     padding: 15px 30px;
     background-color: rgba(255, 255, 255, 0.5);
 }
 
 #botones-menu  a {
-    color: #3106ca;
+    color: var(--secundary-color);
     font-weight: 500;
     transition: color 1.5s ease-in-out;
 }
 
 #botones-menu  a:hover {
-    color: white;
+    color: var(--background-color);
     font-weight: 400 !important;
     padding-left: 1.5em;
 }
@@ -69,11 +90,11 @@
 }
 
 .btn-outline-dark:hover {
-    background-color: #2F06CA;
+    background-color: var(--secundary-color);
 }
 
 .btn-outline-dark:focus {
-    background-color: #ffffff;
+    background-color: var(--background-color);
 }
 
 .home-section-fondo-menu {
@@ -108,7 +129,7 @@
     text-align: center;
     font-size: 1.5em;
     text-transform: uppercase;
-    border: 1px solid #2036fd;
+    border: 1px solid var(--primary-color);
     border-radius: 20px;
     margin: 2.3rem 5%;
 }
@@ -125,7 +146,7 @@
 }
 
 .navbar-collapse ul li a {
-    color: #2036fd !important;
+    color: var(--primary-color) !important;
 }
 
 .menu-oculto {
@@ -151,7 +172,7 @@
 .line {
     width: 35px;
     height: 1px;
-    background-color: #2036FD;
+    background-color: var(--primary-color);
 }
 
 .btn-menu {
@@ -218,7 +239,7 @@
     width: 6%;
     filter: brightness(2);
     font-size: 3rem;
-    color: #2F06CA;
+    color: var(--secundary-color);
 }
 
 /* Play en pantalla pequeña */
@@ -305,8 +326,8 @@ dialog::backdrop {
 dialog .x {
     display: flex;
     justify-content: space-between;
-    background-color: #2F06CA;
-    border-bottom: 1px solid #2F06CA;
+    background-color: var(--secundary-color);
+    border-bottom: 1px solid var(--secundary-color);
     font-size: 1.2em;
 }
 
@@ -321,10 +342,10 @@ dialog .x {
 
 dialog button {
     padding: 0 .4em;
-    color: #2F06CA;
+    color: var(--secundary-color);
     font-weight: 500;
     background: #5EF6AD;
-    border: 1px solid #2F06CA;
+    border: 1px solid var(--secundary-color);
     border-radius: 2px;
     box-shadow: 0 0 40px #5ef6ad;
 }
@@ -338,14 +359,14 @@ dialog button:hover {
 #modal1 {
     width: 100%;
     max-width: 1080px;
-    border: 1px solid #181818;
+    border: 1px solid var(--black);
     border-radius: 5px;
 }
 
 .video-container {
     position: relative;
     padding-bottom: 56.25%; /* Video de 16:9 */
-    background: #181818;
+    background: var(--black);
     object-fit: contain;
 }
 
@@ -363,19 +384,20 @@ dialog button:hover {
 
 video::cue {
     font-size: 1.5rem;
-    background-color: #2F06CA;
+    background-color: var(--secundary-color);
     background-clip: content-box;
-    color: white;
+    color: var(--background-color);
     line-height: 1.5;
 }
 
 ::cue(b) {
-    color: #FC1F30;
+    color: var(--accent-color);
     background-color: #09090990;
+    font-size: 1.2em;
 }
 
 ::cue(i) {
-    color: #5EF6AD;
+    color: var(--details-color);
 }
 
 
@@ -386,8 +408,8 @@ video::cue {
     position: fixed;
     bottom: 3%;
     right: 1.6%;
-    color: #2F06CA;
-    border: 1px solid #2F06CA;
+    color: var(--secundary-color);
+    border: 1px solid var(--secundary-color);
     z-index: 3;
     width: 500px;
     height: 300px;
@@ -401,7 +423,7 @@ div.fixed-1 {
 }
 
 div.fixed-2 {
-    padding: .4rem 0 0 1.5rem;
+    padding: .5rem 0.2rem 0 1.5rem;
     overflow: auto;
 }
 
@@ -430,6 +452,7 @@ div.fixed-2 {
 
 .fixed-2 h1 {
     text-transform: uppercase;
+    padding-right: 3rem;
 }
 
 .fixed-2 h3, .fixed-2 p {
@@ -447,7 +470,7 @@ div.fixed-2 {
 }
 
 .fixed-2 a {
-    color: #FC1F30;
+    color: var(--accent-color);
 }
 
 
@@ -466,25 +489,25 @@ div.fixed-2 {
 }
 
 ::-webkit-scrollbar-track {
-    border: 1px solid #2036fd;
+    border: 1px solid var(--primary-color);
     border-radius: 4px;
 }
    
 ::-webkit-scrollbar-thumb {
-    background: #2036fd; 
+    background: var(--primary-color); 
     border-radius: 4px;
 }
   
 ::-webkit-scrollbar-thumb:hover {
     background: #FEF102; 
-    box-shadow: inset 0 0 3px #3106ca;
+    box-shadow: inset 0 0 3px var(--primary-color);
 }
 
 
 /* TOOLTIP */
  
 .custom-tooltip {
-    --bs-tooltip-bg: #2F06CA;
+    --bs-tooltip-bg: var(--secundary-color);
     mix-blend-mode: hard-light;
 }
 
@@ -493,9 +516,8 @@ div.fixed-2 {
     height: 85px;
     padding: 1em;
     line-height: 1.4;
-    color: #ffffff;
-    background: #2F06CA;
-    border: 1px solid #2036FD;
+    color: var(--background-color);
+    background: var(--secundary-color);
     border-radius: 50%;
     max-width: 250px !important;
 }
@@ -506,7 +528,7 @@ div.fixed-2 {
 #sinopsis-section h3 {
     font-size: 2em;
     font-weight: 500;
-    color: #181818;
+    color: var(--black);
     align-self: flex-start;
     margin: 0 1rem;
     font-weight: 500;
@@ -521,16 +543,14 @@ div.fixed-2 {
 
 #sinopsis-section .container a {
     font-size: 1.2em;
-    text-decoration: none;
-    color: #1d1d1d;
+    color: var(--black);
     margin: 0 1rem;
     align-self: flex-end;
 }
 
 #sinopsis-section a:hover {
     text-decoration: underline;
-    font-weight: 500;
-    color: #FC1F30;
+    color: var(--accent-color);
 }
 
 #sinopsis-section p span {
