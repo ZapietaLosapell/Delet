@@ -46,7 +46,7 @@ h1 {
 }
 
 .pointer {
-    cursor: url("../img/pointer_a.png"), pointer;
+    cursor: url("../img/pointer_a.png"), pointer !important;
 }
 
 .help {
@@ -541,13 +541,12 @@ div.fixed-2 {
 
 #sinopsis-section p {
     margin: 2rem 1rem;
-    font-size: 1.4em;
+    font-size: 1.3rem;
     color: inherit;
     font-family: var(--font-mono);
 }
 
 #sinopsis-section a {
-    font-size: 1.3em;
     margin: 0 1rem;
     color: var(--black);
     align-self: flex-end;
@@ -561,7 +560,6 @@ div.fixed-2 {
 
 #sinopsis-section p span {
     font-family: var(--font-title);
-    color: var(--secundary-color);
 }
 
 #sinopsis-section .container {
@@ -571,6 +569,9 @@ div.fixed-2 {
     height: 90vh;
 }
 
+
+/* REVIEW SECTION */
+
 #review-section {
     height: 120vh;
 }
@@ -578,6 +579,46 @@ div.fixed-2 {
 .carousel-item.active, .carousel-item-next, .carousel-item-prev {
     display: flex;
 }
+
+.estrellas {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.card {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-family: var(--font-body);
+}
+
+.carousel-control-prev-icon {
+    background-image: url(../img/prev-icon.png);
+}
+
+.carousel-control-next-icon {
+    background-image: url(../img/next-icon.png);
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 10%;
+}
+
+.carousel-inner {
+    margin: 0;
+    padding: 3.5rem;
+}
+
+.card h5 {
+    font-size: 2em;
+}
+
+/* .active-carousel-item-start, .carousel-item-prev:not(.carousel-item-end) {
+    transform: translateX(-100%);
+}
+
+.active-carousel-item-end, .carousel-item-next:not(.carousel-item-start) {
+    transform: translateX(100%);
+} */
 
 
 @media (max-width: 1200px) {
