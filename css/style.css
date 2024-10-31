@@ -37,6 +37,14 @@ button, a {
     text-decoration: none;
 }
 
+h1 {
+    text-transform: uppercase;
+    font-family: var(--font-title);
+    font-size: calc(1.3rem + 20vw);
+    color: var(--primary-color);
+    text-align: center;
+}
+
 .pointer {
     cursor: url("../img/pointer_a.png"), pointer;
 }
@@ -56,12 +64,12 @@ button, a {
 /* Aplica al menu en pantalla grande */
 
 .btn-menu { 
-    margin: .5em .1em 0 .1em !important;
-    border-radius: 37px;
+    margin: .5em .05em !important;
+    border-radius: 50px;
     border: 2px solid var(--primary-color);
     font-size: 30px;
     padding: 20px 50px;
-    background-color: rgba(255, 255, 255, 0.278);
+    background-color: rgba(255, 255, 255, 0.5);
     font-family: var(--font-body);
 }
 
@@ -101,14 +109,14 @@ button, a {
 /* Aplica al menu en pantallas pequeñas */
 
 .btn-menu-icon {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.596);
     height: 50px;
     width: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 1%;
+    right: 1.5%;
     top: 1.7rem;
     width: 4rem;
 }
@@ -117,7 +125,7 @@ button, a {
     height: 70vh;
     display: flex;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(255, 255, 255, 0.822);
     text-align: center;
     font-size: 1.5em;
     text-transform: uppercase;
@@ -151,6 +159,7 @@ button, a {
     margin-left: 5%;
     cursor: pointer;
     margin-top: 5px;
+    border-radius: 10px;
 }
 
 .menu-icon {
@@ -247,15 +256,15 @@ button, a {
 
 .open p {
     display: none;
-    animation: glitch 4s;
+    animation: glitch 2s;
     padding-top: 1rem;
     padding-left: 5px;
 }
 
 @keyframes glitch {
     0%, 100% { 
-        text-shadow: 3px 3px 6px rgba(254, 255, 255, 0.83), 
-                     -2px -2px 8px rgba(90, 100, 215, 0.834); 
+        text-shadow: 2px 2px 10px rgba(254, 255, 255, 0.83), 
+                     -2px -2px 9px rgba(90, 100, 215, 0.834); 
     }
     25% { 
         text-shadow: 3px 3px 8px rgba(255, 255, 255, 0.7), 
@@ -301,11 +310,9 @@ button, a {
     width: 100%;
     max-width: 100%;
     height: auto;
-    /* border-radius: 6rem; */
     opacity: 0.95;
     z-index: 1;
     mix-blend-mode: hard-light;
-    /* padding: 2rem; */
 }
 
 
@@ -333,7 +340,7 @@ dialog .x {
 
 #dialogTitle {
     font-size: .7em;
-    color: white;
+    color: var(--background-color);
     padding-left: 10px;
     padding-top: 5px;
     margin: 0;
@@ -347,7 +354,7 @@ dialog button {
     background: var(--background-color);
     border: 1px solid var(--secundary-color);
     border-radius: 2px;
-    box-shadow: 0 0 40px #5ef6ad;
+    box-shadow: 0 0 40px var(--details-color);
 }
 
 dialog button:hover {
@@ -421,7 +428,7 @@ video::cue {
 
 div.fixed-1 {
     background-color: var(--background-color);   
-    opacity: .6;
+    opacity: .5;
 }
 
 div.fixed-2 {
@@ -449,10 +456,6 @@ div.fixed-2 {
     border-radius: 50%;
     color: var(--primary-color);
     margin-right: .5rem;
-}
-
-.fixed-2 h1 {
-    text-transform: uppercase;
 }
 
 .fixed-2 h3, .fixed-2 p {
@@ -532,21 +535,23 @@ div.fixed-2 {
     color: var(--black);
     align-self: flex-start;
     margin: 0 1rem;
-    font-weight: 500;
     text-transform: uppercase;
+    font-family: var(--font-title);
 }
 
 #sinopsis-section p {
     margin: 2rem 1rem;
-    font-size: 1.3em;
+    font-size: 1.4em;
     color: inherit;
+    font-family: var(--font-mono);
 }
 
-#sinopsis-section .container a {
-    font-size: 1.2em;
-    color: var(--black);
+#sinopsis-section a {
+    font-size: 1.3em;
     margin: 0 1rem;
+    color: var(--black);
     align-self: flex-end;
+    font-family: var(--font-title);
 }
 
 #sinopsis-section a:hover {
@@ -555,14 +560,23 @@ div.fixed-2 {
 }
 
 #sinopsis-section p span {
-    font-weight: 500;
+    font-family: var(--font-title);
+    color: var(--secundary-color);
 }
 
-section #sinopsis-section .container {
+#sinopsis-section .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 80vh;
+    height: 90vh;
+}
+
+#review-section {
+    height: 120vh;
+}
+
+.carousel-item.active, .carousel-item-next, .carousel-item-prev {
+    display: flex;
 }
 
 
@@ -574,12 +588,6 @@ section #sinopsis-section .container {
 
     .video-tv-container {
         padding: 0;
-    }
-
-    #video-tv {
-        width: 100%; 
-        padding: 1%;
-        border-radius: 2rem;
     }
 
     .logotipo  {
@@ -612,6 +620,9 @@ section #sinopsis-section .container {
     }
 
     #video-tv {
+        width: 100%; 
+        padding: 1%;
+        border-radius: 2rem;
         height: 100%;
         object-fit: cover;
     }
@@ -658,4 +669,17 @@ section #sinopsis-section .container {
         height: 50vh;
         margin: 2.3rem 1%;
     }
+
+    #sinopsis-section p {
+        font-size: 1em;
+    }
+    
+    #sinopsis-section a {
+        font-size: .9em;
+    }
+   
+    #sinopsis-section p span {
+        font-size: .9em;
+    }
+
 }
