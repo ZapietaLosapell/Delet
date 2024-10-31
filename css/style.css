@@ -612,14 +612,6 @@ div.fixed-2 {
     font-size: 2em;
 }
 
-/* .active-carousel-item-start, .carousel-item-prev:not(.carousel-item-end) {
-    transform: translateX(-100%);
-}
-
-.active-carousel-item-end, .carousel-item-next:not(.carousel-item-start) {
-    transform: translateX(100%);
-} */
-
 
 @media (max-width: 1200px) {
 
@@ -682,6 +674,7 @@ div.fixed-2 {
     .menu-oculto {
         display: none !important;
     }
+    
 }
 
 @media (max-width: 576px) {
