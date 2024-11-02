@@ -15,7 +15,7 @@
                 <nav class="navbar navbar-expand-lg menu-oculto">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#">
-                            <img class="logotipo-navbar" src="img/small_logo.png" alt="Logotipo">
+                            <img class="logotipo-navbar" src="img/logotipo.png" alt="Logotipo">
                         </a>
                         <button class="btn-menu btn-menu-icon navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <div class="menu-icon">
@@ -61,7 +61,7 @@
                         Your browser does not support HTML5 video. 
                         Su navegador no soporta vídeo HTML5. 
                     </video>
-                    <img class="logotipo" src="img/logotipo.png" alt="Logotipo">
+                    <img class="logotipo" src="img/logotipo-1.png" alt="Logotipo">
                 </div>
                 <button class="open" onclick="openModal();"><p class="font-dotgot">Play</p>
                     <img src="img/play-8.png" alt="Play" class="pointer" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="¡Has encontrado el Teaser!">
@@ -90,88 +90,103 @@
             <div class="fixed-1 aviso"></div>
             <div class="fixed-2 aviso">
                 <div class="sticky">
-                    <h2>Estreno del documental el 07/08/25</h2>
+                    <h2><a href="#" class="pointer">Ven al estreno del documental*</a></h2>
                     <button type="button" id="close" class="fixed-close">X</button>
                 </div>
-                <h3>Consigue <a href="#" class="pointer">aquí</a> tu entrada.*</h3>
                 <p><span>乁(`‿`)ㄏ</span><b>⇊</b><span>乁(`‿`)ㄏ</span><b>⇊</b><span>乁(`‿`)ㄏ</span></p>
                 <p><span>乁(`‿`)ㄏ</span><b>⇊</b><span>乁(`‿`)ㄏ</span><b>⇊</b><span>乁(`‿`)ㄏ</span></p>
-                <p>*<a href="#" class="pointer">Y aquí una camiseta gratis</a>.</p>
+                <p>*<a href="#" class="pointer">Consigue aquí tu camiseta gratis</a>.</p>
             </div>
         </div>
     </div>
     <main>
         <section id="sinopsis-section">     
-            <article class="container">
+            <!-- <img class="img-fluid rounded" src="img/Tv-paused.png" alt="Fotografía de un televisor antiguo con un texto que dice: PAUSED"> -->
+            <article>
+                <div class="container">
                     <h3>Sinopsis</h3>
                     <p><span>Y¿Delet.exe *** Archivo potencialmente olvidado ***</span> es una inmersión intrigante en las imágenes de los años 80, tratadas como especies en peligro en un ecosistema digital saturado. Con un enfoque en la evolución de la memoria visual y cultural, el documental revela lo que podría estar desapareciendo ante nuestros ojos. ¿Qué se ha perdido realmente?</p>
                     <a href="#" class="pointer">→ Descubre más</a>
-            </article>
-            <article>
-                <img class="img-fluid" src="img/Tv-paused.png" alt="Fotografía de un televisor antiguo con un texto que dice: PAUSED">
+                </div>
             </article>
         </section>
         <section id="review-section">
             <article>
-                <h1>Reviews</h1>
+                <h1>/Reviews</h1>
                 <div id="carouselReviews" class="container carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-12 col-md-4">
-                                    <div class="card mx-3 h-100">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card 1</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="carousel-item active card a1">
+                            <div class="row card-body slide-carousel">
+                                <div class="col-12 col-sm-6 col-md-4">
+                                    <div class="card h-100">
+                                        <div class="card-body slide">
+                                            <h5 class="card-title mt-1">El País</h5>
+                                            <p class="card-text">Una obra magistralmente compuesta que desentraña la complejidad de la memoria y su representación visual en sintonía con la época actual.</p>
+                                        </div>
+                                        <div class="card-footer">
                                             <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="card mx-3 h-100">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card 2</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                            <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
+                                <div class="col-12 col-sm-6 col-md-4 align-items-end">
+                                    <div class="card h-100">
+                                        <div class="card-body slide">
+                                            <h5 class="card-title mt-1">La Vanguardia</h5>
+                                            <p class="card-text">Este documental de los años 80 se revela como un hito en la exploración de cómo la imagen moldea nuestra memoria colectiva. Resuena por su perspicaz análisis y un uso innovador de secuencias visuales.</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <img class="estrellas" src="img/5-estrellas.png" alt="4 estrellas">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="card mx-3 h-100">
+                                <div class="col-12 col-sm-6 col-md-4">
+                                    <div class="card h-100">
                                         <div class="card-body">
-                                            <h5 class="card-title">Card 3</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                            <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
+                                            <h5 class="card-title mt-1">Fotogramas</h5>
+                                            <p class="card-text">Una pieza que trasciende su época y deja una huella indeleble en la historia del cine documental. Se nos presenta como un clásico que no va a perder vigencia con el tiempo.</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <img class="estrellas" src="img/5-estrellas.png" alt="4 estrellas">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-12 col-md-4">
-                                    <div class="card mx-3 h-100">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card 4</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="carousel-item card">
+                            <div class="row card-body slide-carousel">
+                                <div class="col-12 col-sm-6 col-md-4">
+                                    <div class="card h-100">
+                                        <div class="card-body slide">
+                                            <h5 class="card-title mt-1">ABC</h5>
+                                            <p class="card-text">¿Y_Delet_.exe, con su enfoque introspectivo sobre la memoria visual y las narrativas, es pionero en mostrar cómo las imágenes fijas y en movimiento conforman nuestro recuerdo histórico. Un testimonio de gran valor.</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <img class="estrellas" src="img/5-estrellas.png" alt="4 estrellas">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4">
+                                    <div class="card h-100">
+                                        <div class="card-body slide">
+                                            <h5 class="card-title mt-1">Cinemanía</h5>
+                                            <p class="card-text">Este documental se erige como una joya del cine de ensayo de los años 80. Una obra imprescindible para los amantes de la historia del cine.</p>
+                                        </div>
+                                        <div class="card-footer">
                                             <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="card mx-3 h-100">
+                                <div class="col-12 col-sm-6 col-md-4">
+                                    <div class="card h-100">
                                         <div class="card-body">
-                                            <h5 class="card-title">Card 5</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                            <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
+                                            <h5 class="card-title mt-1">El Mundo</h5>
+                                            <p class="card-text">Con una mirada que combina lo filosófico y lo artístico, este documental de los años 80 indaga en las narrativas visuales como un espejo de nuestra identidad.</p>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="card mx-3 h-100">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card 6</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <div class="card-footer">
                                             <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
                                         </div>
                                     </div>
@@ -189,7 +204,93 @@
                     </button>
                 </div>  
             </article>
-        </section> 
+            <!-- <article>
+                <div class="container">
+                    <div class="row justify-content-center g-0">
+                        <div class="col-12 col-md-4">
+                            
+                            <div id="carousel1" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="hover">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active bg-body">
+                                        <div class="card m-2 h-100">
+                                            <div class="card-body">
+                                                <h5 class="card-title">El País</h5>
+                                                <p class="card-text">Una obra magistralmente compuesta que desentraña la complejidad de la memoria y su representación visual en sintonía con la época actual.</p>
+                                                <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item bg-body">
+                                        <div class="card m-2 h-100">
+                                            <div class="card-body">
+                                                <h5 class="card-title">La Vanguardia</h5>
+                                                <p class="card-text">Este documental de los años 80 se revela como un hito en la exploración de cómo la imagen moldea nuestra memoria colectiva. Resuena por su perspicaz análisis y un uso innovador de secuencias visuales.</p>
+                                                <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            
+                            <div id="carousel2" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="hover">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active bg-body">
+                                        <div class="card m-2 h-100">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Fotogramas</h5>
+                                                <p class="card-text">Una pieza que trasciende su época y deja una huella indeleble en la historia del cine documental. Se nos presenta como un clásico que no va a perder vigencia con el tiempo.</p>
+                                                <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item bg-body">
+                                        <div class="card m-2 h-100">
+                                            <div class="card-body">
+                                                <h5 class="card-title">ABC</h5>
+                                                <p class="card-text">¿Y_Delet_.exe, con su enfoque introspectivo sobre la memoria visual y las narrativas, es pionero en mostrar cómo las imágenes fijas y en movimiento conforman nuestro recuerdo histórico. Un testimonio de gran valor.</p>
+                                                <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            
+                            <div id="carousel3" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="hover">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active bg-body">
+                                        <div class="card m-2 h-100">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Cinemanía</h5>
+                                                <p class="card-text">Este documental se erige como una joya del cine de ensayo de los años 80. Una obra imprescindible para los amantes de la historia del cine.</p>
+                                                <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item bg-body">
+                                        <div class="card m-2 h-100">
+                                            <div class="card-body">
+                                                <h5 class="card-title">El Mundo</h5>
+                                                <p class="card-text">Con una mirada que combina lo filosófico y lo artístico, este documental de los años 80 indaga en las narrativas visuales como un espejo de nuestra identidad.</p>
+                                                <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article> -->
+        </section>
+        <section>
+            <article>
+                <h1>/VIDEOS</h1>
+            </article>
+        </section>
     </main>  
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
