@@ -78,3 +78,7 @@ navLinks.forEach(link => {
     }, 500);
   });
 });
+
+document.querySelector(".menu-icon").addEventListener("click", function() {
+  this.classList.toggle("open");
+});
