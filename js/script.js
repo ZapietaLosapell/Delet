@@ -82,3 +82,8 @@ navLinks.forEach(link => {
 document.querySelector(".menu-icon").addEventListener("click", function() {
   this.classList.toggle("open");
 });
+
+
+// AOS
+
+AOS.init();

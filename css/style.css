@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Kosugi&family=Montserrat:ital,wght@0,400;1,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Kosugi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
 
 :root {
 
@@ -558,25 +559,45 @@ div.fixed-2 {
 
 /* SECCIÓN SINOPSIS */
 
+#sinopsis-section {
+    display: flex;
+    flex-direction: row;
+}
+
+#sinopsis-section .space img {
+    border-radius: 15px;
+    filter: brightness(2);
+}
+
+#sinopsis-section .sinopsis {
+    padding: 1rem 3rem;
+}
+
 #sinopsis-section article {
-    padding: 3rem 0;
     background-color: var(--primary-color);
-    letter-spacing: .1em;
     border-bottom: 2px solid var(--background-color);
+    margin: 0 1px;
+    border-radius: 1rem;
 }
 
 #sinopsis-section h3 {
-    font-size: 1em;
     align-self: flex-start;
     text-transform: uppercase;
-    font-weight: 500;
     font-family: var(--font-title);
+    border: 1px solid var(--background-color);
+    padding: 0 .5em;
 }
 
 #sinopsis-section p {
     margin: 1.5rem 0;
-    font-size: 1.2rem;
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: -.025em;
+}
+
+#sinopsis-section span {
+    color: var(--details-color);
 }
 
 #sinopsis-section a {
@@ -584,10 +605,17 @@ div.fixed-2 {
     font-family: var(--font-title);
     letter-spacing: .05em;
     color: var(--background-color);
+    border: 1px solid transparent;
+    padding-right: .5em;
+    transform: translateX(10px);
+    transition: color .5s, transform .5s, background-color .5s;
 }
 
 #sinopsis-section a:hover {
-    color: var(--details-color);
+    color: var(--secundary-color);
+    border: 1px solid #ffffff;
+    background-color: var(--background-color);
+    transform: translateX(0);
 }
 
 #sinopsis-section .container {
@@ -595,8 +623,9 @@ div.fixed-2 {
     flex-direction: column;
     align-items: center;
     color: var(--background-color);
-    padding: 4rem 6rem;
+    padding: 2rem 0;
     font-family: var(--font-body);
+    font-size: clamp(.4rem,calc(.4rem + ((2.2 - .4)*((100vw - 20rem)/(120 - 20)))),2.2rem);
 }
 
 
@@ -700,6 +729,39 @@ div.fixed-2 {
 #video-section video {
     height: 250px;
 }
+
+
+
+/* IMAGEN VHS */
+
+.vhs {
+    background: center / cover no-repeat url(../img/fondo-01.png), var(--highlight-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vhs img {
+    width: 50%;
+}
+
+[data-aos="vhs-animation"] {
+    transform: translateX(-400px);
+    opacity: 0;
+    transition-property: transform, opacity;
+  
+    &.aos-animate {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+[data-aos] {
+    body[data-aos-easing="new-easing"] &,
+    &[data-aos][data-aos-easing="new-easing"] {
+      transition-timing-function: cubic-bezier(0.175, 0, 0.001, 1.475);
+    }
+  }
 
 
 @media (max-width: 1200px) {
@@ -817,17 +879,22 @@ div.fixed-2 {
         margin: 2.3rem 1%;
     }
 
-    #sinopsis-section p {
-        font-size: .8em;
-        line-height: 1.7em;
-        letter-spacing: .1em;
-    }
-    
     #sinopsis-section .container {
-        padding: 0 1rem;
-        height: 80vh;
+        padding: 0 2em;
+        height: auto;
     }
 
+    #sinopsis-section p {
+        font-size: 1.6em;
+        line-height: 116%;
+        letter-spacing: .01em;
+    }
+
+    #sinopsis-section h3, a {
+        font-size: 1.6em;
+        letter-spacing: .05em;
+    }
+    
     .card-body.slide-carousel img {
         width: 40%;
     }
@@ -877,15 +944,6 @@ div.fixed-2 {
 
     #carouselReviews .card p {
         font-size: 1.1em !important;
-    }
-
-    #sinopsis-section .container {
-        padding: 2rem 2rem;
-        height: auto;
-    }
-
-    #sinopsis-section article {
-        margin: 3rem 0;
     }
 
 }
