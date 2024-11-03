@@ -92,8 +92,8 @@ navLinks.forEach(link => {
   });
 });
 
-document.querySelector(".menu-icon").addEventListener("click", function() {
-  this.classList.toggle("open");
+document.querySelector(".btn-menu-icon").addEventListener("click", function() {
+  this.classList.toggle("m");
 });
 
 
@@ -104,7 +104,21 @@ AOS.init();
 AOS.init({
   duration: 500,
   easing: "ease-out-quart",
-  delay: 100,
-  offset: 10,
+  offset: 200,
   once: true,
 });
+
+
+// Gif animado
+
+const gif = document.getElementById("gif");
+const gifMove = "img/tv-animacion.gif";
+const gifStatic = "img/tv-animacion.png";
+
+function pausarGif() {
+    gif.src = gifStatic;
+}
+
+function reanudarGif() {
+    gif.src = gifMove;
+}
