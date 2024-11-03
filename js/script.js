@@ -1,8 +1,10 @@
+// Tooltip
+
 const tooltipTriggerEl = document.querySelector('[data-bs-toggle="tooltip"]');
 const tooltip = new bootstrap.Tooltip(tooltipTriggerEl);
 
-document.body.addEventListener("mousemove", (event) => {
-  if (tooltipTriggerEl.contains(event.target) === false) {
+document.body.addEventListener("mousemove", (e) => {
+  if (tooltipTriggerEl.contains(e.target) === false) {
     tooltip.hide();
   }
 });
@@ -12,9 +14,11 @@ document.body.addEventListener("mousemove", (event) => {
 
 const close = document.getElementById("close");
 const aviso = document.getElementsByClassName("aviso");
+const fixed1 = document.querySelector(".fixed-1");
+const fixed2 = document.querySelector(".fixed-2");
 
 for (let i = 0; i < aviso.length; i++) {
-    close.addEventListener("click", function(){
+    close.addEventListener("click", () => {
         aviso[i].style.opacity = "0";
         setTimeout(() => {
             aviso[i].style.pointerEvents = "none";
@@ -22,10 +26,19 @@ for (let i = 0; i < aviso.length; i++) {
     });
 }
 
+fixed2.addEventListener("mouseover", function() {
+  fixed1.classList.add("hover-opacity-1");
+});
+
+fixed2.addEventListener("mouseout", function() {
+  fixed1.classList.remove("hover-opacity-1");
+});
+
+
 
 // Subtítulos
 
-let videos = document.querySelectorAll("video");
+let videos = document.querySelectorAll(".teaser");
 videos.forEach(video => {
 
     let track = video.addTextTrack("subtitles", "Subtitles", "en");
@@ -45,8 +58,8 @@ console.log(track.cues);
 const modal = document.getElementById("modal1");
 const video = document.getElementById("teaser");
 
-modal.addEventListener("close", () => {
-    tooltip.hide();
+modal.addEventListener("close", function() {
+  tooltip.hide();
 });
 
 window.openModal = function() {
@@ -87,3 +100,11 @@ document.querySelector(".menu-icon").addEventListener("click", function() {
 // AOS
 
 AOS.init();
+
+AOS.init({
+  duration: 500,
+  easing: "ease-out-quart",
+  delay: 100,
+  offset: 10,
+  once: true,
+});

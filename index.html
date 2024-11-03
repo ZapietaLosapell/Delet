@@ -57,7 +57,7 @@
 
             <div class="container-fluid">
                 <div class="video-tv-container">
-                    <video id="video-tv" loop autoplay muted poster="poimg/poster.png" alt="Video teaser">
+                    <video id="video-tv" class="teaser" loop autoplay muted poster="poimg/poster.png" alt="Video teaser">
                         <source src="video/Vídeo de KoolShooters__.mp4" type="video/mp4" />
                         <source src="video/Video.webm" type="video/webm" />
                         Your browser does not support HTML5 video. 
@@ -65,17 +65,18 @@
                     </video>
                     <img class="logotipo" src="img/logotipo-1.png" alt="Logotipo">
                 </div>
-                <button class="open" onclick="openModal();"><p class="font-dotgot">Play</p>
-                    <img src="img/play-8.png" alt="Play" class="pointer" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="¡Has encontrado el Teaser!">
-                </button>
-
+                <div class="open">
+                    <button onclick="openModal();" aria-label="Open"><p class="font-dotgot">Play</p>
+                        <img src="img/play-8.png" alt="Play" class="pointer" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="¡Has encontrado el Teaser!">
+                    </button>
+                </div>
                 <dialog id="modal1" role="dialog" aria-labelledby="dialogTitle">
                     <div class="x">
                         <h3 id="dialogTitle">Teaser video</h3>
-                        <button type="button" onclick="closeModal();">X</button>
+                        <button type="button" onclick="closeModal();" aria-label="Close">X</button>
                     </div>
-                    <div class="video-container">
-                        <video id="teaser" controls preload="auto" poster="img/poster.png" alt="Teaser Video">
+                    <div class="video-container ratio ratio-16x9">
+                        <video id="teaser" class="teaser" controls preload="auto" poster="img/poster.png" alt="Teaser Video">
                             <source src="video/Teaser_1.mp4" type="video/mp4" />
                             <source src="video/Teaser_1.webm" type="video/webm" />
                             <track src="captions/MyCaptions.es.vtt" kind="captions" srclang="es" label="Spanish" class="track-es">
@@ -93,35 +94,37 @@
             <div class="fixed-2 aviso">
                 <div class="sticky">
                     <h2><a href="#" class="pointer">Ven al estreno del documental*</a></h2>
-                    <button type="button" id="close" class="fixed-close">X</button>
+                    <button type="button" id="close" class="fixed-close" aria-label="Close">X</button>
                 </div>
                 <p><span>乁(`‿`)ㄏ</span><b>⇊</b><span>乁(`‿`)ㄏ</span><b>⇊</b><span>乁(`‿`)ㄏ</span></p>
                 <p><span>乁(`‿`)ㄏ</span><b>⇊</b><span>乁(`‿`)ㄏ</span><b>⇊</b><span>乁(`‿`)ㄏ</span></p>
                 <p>*<a href="#" class="pointer">Consigue aquí tu camiseta gratis</a>.</p>
             </div>
         </div>
+
     </div>
     <main>
-        <section id="sinopsis-section">     
-            <article class="sinopsis">
+        <section id="sinopsis-section" class="d-flex">     
+            <article data-aos="my-fade-up">
                 <div class="container">
                     <h3>Sinopsis</h3>
                     <p><span>Y¿Delet.exe *** Archivo potencialmente olvidado ***</span> es una inmersión intrigante en las imágenes de los años 80, tratadas como especies en peligro en un ecosistema digital saturado. Con un enfoque en la evolución de la memoria visual y cultural, el documental revela lo que podría estar desapareciendo ante nuestros ojos. ¿Qué se ha perdido realmente?</p>
                     <a href="#" class="pointer">→ Descubre más</a>
                 </div>
             </article>
-            <article>
-                <div class="space"><img src="img/Tv-paused.png" class="img-fluid" alt="image"></div>
+            <article class="d-flex" data-aos="my-fade-up" data-aos-delay="300">
+                <img class="img-fluid object-fit-cover d-none d-lg-block" src="img/Tv-paused.png" alt="Imagen">
             </article>
         </section>
+
         <div class="vhs">
-            <!-- <img class="img-fluid position-absolute" src="img/fondo-01.png" alt="Fondo de rectángulos azules"> -->
-            <img class="img-fluid" src="img/vhs-blue-2.png" alt="Imagen de una cinta VHS con fondo transparente" data-aos="vhs-animation" data-aos-easing="new-easing" data-aos-anchor-placement="top-center" data-aos-delay="200" data-aos-duration="1000">
+            <img src="img/vhs-blue-2.png" class="img-fluid" alt="Imagen de una cinta VHS con fondo transparente" data-aos="vhs-animation" data-aos-anchor-placement="top-top">
         </div>
+
         <section id="review-section">
             <h1>/Reviews</h1>
             <article>
-                <div id="carouselReviews" class="container carousel slide">
+                <div id="carouselReviews" class="container carousel slide" data-aos="my-fade-up">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="1" aria-label="Slide 2"></button>
