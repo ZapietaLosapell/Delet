@@ -102,7 +102,7 @@ document.querySelector(".btn-menu-icon").addEventListener("click", function() {
 AOS.init();
 
 AOS.init({
-  duration: 500,
+  duration: 400,
   easing: "ease-out-quart",
   offset: 200,
   once: true,
@@ -122,3 +122,33 @@ function pausarGif() {
 function reanudarGif() {
     gif.src = gifMove;
 }
+
+
+// Seguimiento del mouse
+
+const lookFor = document.querySelector("#busca-play");
+const targetVideo = document.querySelector(".video-tv-container");
+const offsetX = 90, offsetY = -45;
+let shown = false; 
+
+targetVideo.addEventListener("mouseenter", () => {
+  if (shown === false) {
+    lookFor.style.display = "block";
+    lookFor.style.opacity = 1;
+    shown = true;
+  }
+});
+
+targetVideo.addEventListener("mouseleave", () => {
+  lookFor.style.opacity = 0;
+    setTimeout(() => {
+    lookFor.style.display = "none";
+    }, 300);
+});
+
+targetVideo.addEventListener("mousemove", e => {
+  const posicionX = e.clientX + offsetX;
+  const posicionY = e.clientY + offsetY;
+  lookFor.style.left = `${posicionX}px`;
+  lookFor.style.top = `${posicionY}px`;
+});
