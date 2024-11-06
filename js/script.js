@@ -181,3 +181,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+
+// Animación del logotipo
+
+setTimeout(function() {
+  document.getElementById("logotipo").style.opacity = "1";
+}, 20000);
+
+setTimeout(function() {
+  document.getElementById("logotipo").style.animationPlayState = "paused";
+}, 26000);

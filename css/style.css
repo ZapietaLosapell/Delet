@@ -39,16 +39,15 @@ button, a {
 }
 
 h1 {
-    font-family: var(--font-title);
-    font-size: calc(2rem + 11vw);
+    font-family: var(--font-body);
+    font-size: calc(2rem + 10vw);
     color: var(--primary-color);
-    letter-spacing: -.05em;
+    letter-spacing: -.055em;
     border-top: 2px solid var(--primary-color);
     margin: 0;
-    padding-top: .3em;
-    padding-bottom: .1em;
-    text-align: center;
-}
+    padding-left: 0.02em;
+    line-height: 1;
+} 
 
 .pointer {
     cursor: url("../img/pointer_a1.png"), url("../img/pointer_a2.png"), pointer !important;
@@ -79,6 +78,7 @@ h1 {
     font-size: 2.5em;
     background-color: rgba(255, 255, 255, 0.185);
     backdrop-filter: blur(10px);
+    filter: brightness(1.2);
     font-family: var(--font-title);
     padding: 8px 15px;
 }
@@ -244,13 +244,17 @@ h1 {
 
 /* Logotipo y Play con Video de fondo */
 
-.logotipo {
+#logotipo {
     position: absolute;
-    width: 80%;
-    max-width: 100%;
+    object-fit: cover;
+    padding-bottom: .5em;
+    width: 90%;
     z-index: 2;
     mix-blend-mode: hard-light;
-    animation: desplazamiento 1.5s cubic-bezier(0.45, 0, 0.35, 1) infinite;
+    animation: desplazamiento 2s cubic-bezier(0.45, 0, 0.35, 1) infinite;
+    animation-play-state: running;
+    opacity: 0;
+    transition: opacity 2s cubic-bezier(0.45, 0, 0.35, 1);
 }
 
 @keyframes desplazamiento {
@@ -260,15 +264,15 @@ h1 {
     }
     25% {
         transform: translate(-0.3px, 0) scale(0.999);
-        filter: brightness(1.1) blur(1px);
+        filter: brightness(1.1) blur(3px);
     }
     50% {
-        transform: translate(-0.5px, -0.3px) scale(0.997);
-        filter: brightness(1.3) blur(2px);
+        transform: translate(-0.5px, -0.7px) scale(0.997);
+        filter: brightness(1.5) blur(5px);
     }
     75% {
         transform: translate(0, -0.3px) scale(0.999);
-        filter: brightness(1.1) blur(1px);
+        filter: brightness(1.1) blur(2px);
     }
 }
 
@@ -371,10 +375,11 @@ button.open {
 
 #video-tv {
     display: block;
-    width: 115%;
+    width: 200%;
     opacity: 0.95;
     z-index: 1;
-    mix-blend-mode: hard-light;
+    filter: brightness(.5);
+    filter: contrast(1.2);
 }
 
 
@@ -477,18 +482,18 @@ video::cue {
     bottom: 2%;
     right: 1%;
     z-index: 3;
-    width: 500px;
-    height: 240px;
+    width: 400px;
+    height: 280px;
     transition: opacity 0.5s ease-in-out;
     color: var(--primary-color);
-    text-transform: uppercase;
-    letter-spacing: .04em;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(3px);
+    filter: brightness(1.1);
+    padding-left: .6em;
+    border: 1px solid var(--primary-color);
 }
 
 div.fixed-1 {
     background-color: var(--background-color);
-    backdrop-filter: blur(10px);
     opacity: 0;
 }
 
@@ -497,13 +502,12 @@ div.fixed-1 {
 }
 
 div.fixed-2 {
-    padding: .5rem 0.5rem 0 1.2rem;
     overflow: auto;
-    border: 1px solid var(--primary-color);
+    border: none;
 }
 
 .fixed-2 .sticky {
-    top: 6px;
+    top: 12px;
     position: sticky;
     display: flex;
     flex-direction: row;
@@ -517,8 +521,8 @@ div.fixed-2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
     border: 1px solid var(--primary-color);
+    background-color: transparent;
     border-radius: 15px;
     color: var(--primary-color);
     transition: background-color .8s;
@@ -529,15 +533,13 @@ div.fixed-2 {
 }
 
 .fixed-2 p {
-    font-size: 1rem;
-    padding-top: 0.5rem;
-    text-transform: uppercase;
+    font-size: 1em;
 }
 
 .fixed-2 h2 {
-    width: 400px;
-    font-size: 1.7em;
-    margin-bottom: 50px;
+    font-size: 3.5em;
+    margin-bottom: 55px;
+    line-height: 1;
 }
 
 .aviso:hover .fixed-2 a {
@@ -545,7 +547,7 @@ div.fixed-2 {
 }
 
 .fixed-2 span {
-    font-size: 1.2em;
+    font-size: 1em;
     margin-right: 5%;
 }
 
@@ -557,6 +559,8 @@ div.fixed-2 {
     font-family: var(--font-title);
     color: var(--primary-color);
     transition: color .5s;
+    letter-spacing: -.04em;
+    font-weight: 500;
 }
 
 .fixed-2 a:hover {
@@ -622,8 +626,8 @@ div.fixed-2 {
 }
 
 #sinopsis-section article {
-    background-color: var(--background-color);
-    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
+    border: 2px solid var(--background-color);
     margin: 0 1px;
     border-radius: 1rem;
     position: relative; 
@@ -655,20 +659,21 @@ div.fixed-2 {
     padding: 0 .3em;
     font-size: 1.2em;
     margin-left: -.2em;
+    font-family: var(--font-mono);
 }
 
 #sinopsis-section p {
     margin: 1.5rem 0;
-    font-family: var(--font-title);
-    /* font-weight: 600; */
-    line-height: 100%;
-    letter-spacing: -.025em;
-    font-size: clamp(.4rem, calc(.4rem + ((2 - .4)*((100vw - 20rem)/(120 - 20)))), 2rem);
+    font-family: var(--font-body);
+    font-weight: 600;
+    line-height: 110%;
+    /* letter-spacing: -.025em; */
+    font-size: clamp(.2rem, calc(.2rem + ((2 - .4)*((100vw - 20rem)/(120 - 20)))), 2rem);
 }
 
 #sinopsis-section span {
-    /* color: var(--details-color); */
-    font-weight: 800;
+    color: var(--details-color);
+    font-weight: 600;
 }
 
 #sinopsis-section a {
@@ -676,7 +681,7 @@ div.fixed-2 {
     font-size: 1.2em;
     font-family: var(--font-mono);
     /* letter-spacing: .05em; */
-    color: var(--primary-color);
+    color: var(--background-color);
     border: 1px solid transparent;
     margin-right: .8em;
     transform: translateX(10px);
@@ -684,21 +689,20 @@ div.fixed-2 {
 }
 
 #sinopsis-section a:hover {
-    color: var(--background-color);
-    border: 1px solid var(--primary-color);
-    background-color: var(--primary-color);
+    color: var(--secundary-color);
+    border: 1px solid var(--background-color);
+    background-color: var(--background-color);
     transform: translateX(0);
     padding-right: 1em;
-    letter-spacing: .05em;
+    letter-spacing: .033em;
 }
 
 #sinopsis-section article:first-child .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--primary-color);
+    color: var(--background-color);
     padding: 2rem 0;
-    font-family: var(--font-mono);
 }
 
 
@@ -1064,9 +1068,11 @@ div.fixed-2 {
         padding-left: .5rem;
         font-size: calc(1.3rem + 15vw);
         letter-spacing: .15em;
-        padding-top: .1em;
-        padding-bottom: .2em;
+        padding-top: .2em;
+        padding-bottom: .3em;
         text-transform: uppercase;
+        font-family: var(--font-title);
+        text-align: center;
     }
 
     .navbar-nav {
