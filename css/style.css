@@ -39,11 +39,9 @@ button, a {
 }
 
 h1 {
-    /* text-transform: uppercase; */
     font-family: var(--font-title);
-    font-size: calc(2rem + 10vw);
+    font-size: calc(2rem + 11vw);
     color: var(--primary-color);
-    /* padding-left: 4%; */
     letter-spacing: -.05em;
     border-top: 2px solid var(--primary-color);
     margin: 0;
@@ -707,7 +705,6 @@ div.fixed-2 {
 /* REVIEW SECTION */
 
 #carouselReviews {
-    padding-top: 1rem;
     padding-bottom: 5rem;
 }
 
@@ -801,7 +798,8 @@ div.fixed-2 {
 }
 
 .accordion-button {
-    padding: 0 .5em;
+    padding: 0 .7em;
+    margin-right: .3em;
     width: auto;
     color: var(--primary-color);
     font-family: var(--font-mono);
@@ -823,6 +821,11 @@ div.fixed-2 {
 
 .accordion-button:not(.collapsed)::after {
     background-image: url(../img/more-icon.png);
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .accordion-item {
@@ -1060,7 +1063,10 @@ div.fixed-2 {
     h1 {
         padding-left: .5rem;
         font-size: calc(1.3rem + 15vw);
-        letter-spacing: -.035em;
+        letter-spacing: .15em;
+        padding-top: .1em;
+        padding-bottom: .2em;
+        text-transform: uppercase;
     }
 
     .navbar-nav {
