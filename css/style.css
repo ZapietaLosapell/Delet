@@ -47,7 +47,17 @@ h1 {
     margin: 0;
     padding-left: 0.02em;
     line-height: 1;
-} 
+}
+
+.header-section {
+    height: 100%;
+    color: var(--primary-color);
+    font-family: var(--font-body);
+    font-weight: 500;
+}
+
+
+/* Cursores */
 
 .pointer {
     cursor: url("../img/pointer_a1.png"), url("../img/pointer_a2.png"), pointer !important;
@@ -66,7 +76,6 @@ h1 {
 }
 
 
-
 /* MENÚ */
 
 /* Aplica al menu en pantalla grande */
@@ -75,9 +84,9 @@ h1 {
     margin: .5em .05em;
     border-radius: 15px;
     border: 1px solid var(--primary-color);
-    font-size: 2.5em;
+    font-size: 2.8em;
     background-color: rgba(255, 255, 255, 0.185);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     filter: brightness(1.2);
     font-family: var(--font-title);
     padding: 8px 15px;
@@ -248,7 +257,7 @@ h1 {
     position: absolute;
     object-fit: cover;
     padding-bottom: .5em;
-    width: 90%;
+    width: 100%;
     z-index: 2;
     mix-blend-mode: hard-light;
     animation: desplazamiento 2s cubic-bezier(0.45, 0, 0.35, 1) infinite;
@@ -478,22 +487,24 @@ video::cue {
 
 .aviso {
     border-radius: 10px;
-    position: fixed;
-    bottom: 2%;
-    right: 1%;
+    position: absolute;
+    bottom: 1%;
+    right: 8px;
     z-index: 3;
-    width: 400px;
-    height: 280px;
+    width: 99%;
+    height: 330px;
     transition: opacity 0.5s ease-in-out;
     color: var(--primary-color);
     backdrop-filter: blur(3px);
     filter: brightness(1.1);
-    padding-left: .6em;
+    padding-left: .7em;
     border: 1px solid var(--primary-color);
 }
 
 div.fixed-1 {
     background-color: var(--background-color);
+    backdrop-filter: blur(20px);
+    filter: brightness(1.1);
     opacity: 0;
 }
 
@@ -533,12 +544,13 @@ div.fixed-2 {
 }
 
 .fixed-2 p {
-    font-size: 1em;
+    font-size: 1.3em;
+    margin: 5rem 0;
+    text-align: right;
 }
 
 .fixed-2 h2 {
     font-size: 3.5em;
-    margin-bottom: 55px;
     line-height: 1;
 }
 
@@ -547,7 +559,7 @@ div.fixed-2 {
 }
 
 .fixed-2 span {
-    font-size: 1em;
+    font-size: 1.1em;
     margin-right: 5%;
 }
 
@@ -659,16 +671,16 @@ div.fixed-2 {
     padding: 0 .3em;
     font-size: 1.2em;
     margin-left: -.2em;
-    font-family: var(--font-mono);
+    font-family: var(--font-title);
 }
 
 #sinopsis-section p {
     margin: 1.5rem 0;
-    font-family: var(--font-body);
-    font-weight: 600;
+    font-family: var(--font-mono);
+    font-weight: 500;
     line-height: 110%;
     /* letter-spacing: -.025em; */
-    font-size: clamp(.2rem, calc(.2rem + ((2 - .4)*((100vw - 20rem)/(120 - 20)))), 2rem);
+    font-size: clamp(.2rem, calc(.2rem + ((2 - .7)*((100vw - 10rem)/(120 - 20)))), 2rem);
 }
 
 #sinopsis-section span {
@@ -679,7 +691,7 @@ div.fixed-2 {
 #sinopsis-section a {
     align-self: flex-end;
     font-size: 1.2em;
-    font-family: var(--font-mono);
+    font-family: var(--font-title);
     /* letter-spacing: .05em; */
     color: var(--background-color);
     border: 1px solid transparent;
@@ -708,8 +720,13 @@ div.fixed-2 {
 
 /* REVIEW SECTION */
 
+#archi {
+    width: 10%;
+}
+
 #carouselReviews {
     padding-bottom: 5rem;
+    border-top: 2px solid var(--primary-color);
 }
 
 .carousel-item.active, .carousel-item-next, .carousel-item-prev {

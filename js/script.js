@@ -1,3 +1,4 @@
+
 // Tooltip
 
 const tooltipTriggerEl = document.querySelector('[data-bs-toggle="tooltip"]');
@@ -129,7 +130,7 @@ function reanudarGif() {
 // Seguimiento del mouse
 
 const lookFor = document.querySelector("#busca-play");
-const targetVideo = document.querySelector(".video-tv-container");
+const targetVideo = document.querySelector("header");
 const offsetX = 90, offsetY = -45;
 let shown = false; 
 
