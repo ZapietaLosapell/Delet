@@ -79,6 +79,7 @@ window.closeModal = function() {
 const navbarCollapse = document.getElementById("navbarNav");
 const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 const transition = document.querySelector(".navbar-collapse");
+const x = document.querySelector(".btn-menu-icon");
 
 transition.style.transition = ".5s ease-out";
 
@@ -87,12 +88,13 @@ navLinks.forEach(link => {
     transition.style.opacity = "0";
     setTimeout(() => {
         navbarCollapse.classList.remove("show");
+        x.classList.toggle("m");
         transition.style.opacity = "1";
     }, 500);
   });
 });
 
-document.querySelector(".btn-menu-icon").addEventListener("click", function() {
+x.addEventListener("click", function() {
   this.classList.toggle("m");
 });
 
@@ -169,10 +171,12 @@ document.addEventListener("DOMContentLoaded", function() {
         cardText.style.opacity = "1";
         cardText.style.height = contentHeight;
         cardText.style.transform = "translateY(0)";
+        cardText.style.transform =  "rotateX(0deg)";
       } else {
         cardText.style.opacity = "0";
         cardText.style.height = "0";
         cardText.style.transform = "translateY(-20px)";
+        cardText.style.transform = "rotateX(200deg)";
       }
     });
   });
