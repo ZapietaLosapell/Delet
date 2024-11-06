@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Kosugi&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 
 :root {
@@ -75,25 +75,27 @@ h1 {
     margin: .5em .05em;
     border-radius: 15px;
     border: 1px solid var(--primary-color);
-    font-size: 30px;
-    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 2.5em;
+    background-color: rgba(255, 255, 255, 0.185);
+    backdrop-filter: blur(10px);
     font-family: var(--font-title);
-    padding: 10px 20px;
+    padding: 8px 15px;
 }
 
 #botones-menu  a {
     color: var(--primary-color);
-    transition: color 1.5s ease-in-out;
+    transition: color 1s ease-in-out;
 }
 
 #botones-menu  a:hover {
     color: var(--background-color);
     font-weight: 400 !important;
     padding-left: 1.5em;
+    border: 1px solid var(--background-color);
 }
 
 .btn-outline-dark {
-    transition: 1.5s !important;
+    transition: 1s !important;
 }
 
 .btn-outline-dark:hover {
@@ -116,9 +118,10 @@ h1 {
 /* Aplica al menu en pantallas pequeñas */
 
 .btn-menu-icon {
-    background: rgba(255, 255, 255, 0.94);
+    background: rgba(255, 255, 255, 0.112);
+    backdrop-filter: blur(10px);
     height: 45px;
-    width: 48px;
+    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,7 +185,7 @@ h1 {
 
 .line {
     height: 1px;
-    width: 80%;
+    width: 70%;
     border-radius: 3px;
     transition: 800ms;
     background-color: var(--secundary-color);
@@ -242,6 +245,7 @@ h1 {
 
 .logotipo {
     position: absolute;
+    width: 80%;
     max-width: 100%;
     z-index: 2;
     mix-blend-mode: hard-light;
@@ -255,15 +259,15 @@ h1 {
     }
     25% {
         transform: translate(-0.3px, 0) scale(0.999);
-        filter: brightness(1.1) blur(0.3px);
+        filter: brightness(1.1) blur(1px);
     }
     50% {
         transform: translate(-0.5px, -0.3px) scale(0.997);
-        filter: brightness(1.3) blur(0.5px);
+        filter: brightness(1.3) blur(2px);
     }
     75% {
         transform: translate(0, -0.3px) scale(0.999);
-        filter: brightness(1.1) blur(0.3px);
+        filter: brightness(1.1) blur(1px);
     }
 }
 
@@ -278,6 +282,8 @@ h1 {
     font-size: 3rem;
     color: var(--primary-color);
     font-family: var(--font-details);
+    display: flex;
+    justify-content: center;
 }
 
 /* Play en pantalla pequeña */
@@ -285,10 +291,15 @@ h1 {
 .open p {
     display: none;
     animation: glitch 3s forwards;
-    color: var(--background-color);
+    color: var(--secundary-color);
     font-family: var(--font-title);
-    font-size: 1.2em;
-    opacity: .95;
+    font-size: .6em;
+    border-radius: 10px;
+    border: 1px solid var(--secundary-color);
+    backdrop-filter: blur(1px);
+    filter: brightness(1.2);
+    padding: .05em .4em .1em .4em;
+    margin-left: .5em;
 }
 
 button.open {
@@ -314,7 +325,7 @@ button.open {
                      -2px 2px 30px var(--background-color); 
     }
     100% { 
-        text-shadow: -1px -1px 10px var(--details-color); 
+        text-shadow: -1px -1px 10px var(--background-color); 
     }
 }
 
@@ -322,7 +333,7 @@ button.open {
 
 .open img {
     width: 100%;
-    transform: scale(1.2);
+    transform: scale(1.7);
     opacity: 0;
     transition: opacity 500ms ease-out, transform 400ms ease-out;
     position: absolute;
@@ -331,7 +342,7 @@ button.open {
 
 .open img:hover {
     opacity: 1;
-    transform: scale(.8);
+    transform: scale(1.5);
     visibility: visible;
 }
 
@@ -465,7 +476,6 @@ video::cue {
     position: fixed;
     bottom: 2%;
     right: 1%;
-    border: 1px solid var(--primary-color);
     z-index: 3;
     width: 500px;
     height: 240px;
@@ -473,20 +483,23 @@ video::cue {
     color: var(--primary-color);
     text-transform: uppercase;
     letter-spacing: .04em;
+    backdrop-filter: blur(10px);
 }
 
 div.fixed-1 {
-    background-color: var(--background-color);   
-    opacity: .5;
+    background-color: var(--background-color);
+    backdrop-filter: blur(10px);
+    opacity: 0;
 }
 
 .fixed-1.hover-opacity-1 {
-    opacity: 1;
+    opacity: .5;
 }
 
 div.fixed-2 {
     padding: .5rem 0.5rem 0 1.2rem;
     overflow: auto;
+    border: 1px solid var(--primary-color);
 }
 
 .fixed-2 .sticky {
@@ -527,6 +540,10 @@ div.fixed-2 {
     margin-bottom: 50px;
 }
 
+.aviso:hover .fixed-2 a {
+    text-decoration: underline;
+}
+
 .fixed-2 span {
     font-size: 1.2em;
     margin-right: 5%;
@@ -544,6 +561,7 @@ div.fixed-2 {
 
 .fixed-2 a:hover {
     color: var(--accent-color);
+    text-decoration: underline;
 }
 
 
@@ -580,7 +598,7 @@ div.fixed-2 {
 /* TOOLTIP */
  
 .custom-tooltip {
-    --bs-tooltip-bg: var(--background-color);
+    --bs-tooltip-bg: var(--secundary-color);
 }
 
 .tooltip-inner {
@@ -588,8 +606,8 @@ div.fixed-2 {
     height: 85px;
     padding: 1em;
     line-height: 1.4;
-    color: var(--primary-color);
-    background: var(--background-color);
+    color: var(--background-color);
+    background: var(--secundary-color);
     border-radius: 50%;
     max-width: 250px !important;
     font-family: var(--font-title);
@@ -636,6 +654,7 @@ div.fixed-2 {
     align-self: flex-start;
     padding: 0 .3em;
     font-size: 1.2em;
+    margin-left: -.2em;
 }
 
 #sinopsis-section p {
@@ -746,6 +765,7 @@ div.fixed-2 {
 #carouselReviews .card p {
     font-size: 1.2rem;
     font-family: var(--font-mono);
+    transition: opacity 500ms, transform 500ms, height 500ms;
 }
 
 .card-body.slide-carousel {
@@ -777,6 +797,43 @@ div.fixed-2 {
     background-color: var(--primary-color);
 }
 
+.accordion-button {
+    padding: 0 .5em;
+    width: auto;
+    color: var(--primary-color);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    border: 1px solid var(--primary-color);
+}
+
+.accordion-button::after {
+    margin-left: .5em;
+    background-image: url(../img/more-icon.png);
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    border: 1px solid var(--primary-color);
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(../img/more-icon.png);
+}
+
+.accordion-item {
+    border: none;
+    margin-top: .5em;
+}
+
+.accordion-body {
+    padding: 1em 0 0 0;
+    color: var(--primary-color);
+    font-family: var(--font-mono);
+    text-align: justify;
+}
+
 
 /* VIDEO SECTION */
 
@@ -785,9 +842,14 @@ div.fixed-2 {
 }
 
 
-
 /* AOS */
-/* Imagen VHS */
+/* VHS SECTION */
+
+#vhs-section {
+    color: var(--primary-color);
+    font-family: var(--font-body);
+    letter-spacing: -.025em;
+}
 
 .vhs {
     background: center / cover repeat-x url(../img/fondo-01.png), var(--highlight-color);
@@ -797,6 +859,33 @@ div.fixed-2 {
     animation: mover-fondo 10s linear forwards;
     position: relative;
     z-index: 2;
+}
+
+.vhs h5 {
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    line-height: 120%;
+    width: 45%;
+    margin: 0;
+    font-size: clamp(.4rem, calc(.4rem + ((2 - .4)*((100vw - 20rem)/(120 - 20)))), 2rem);
+}
+
+.vhs span {
+    background-color: var(--details-color);
+    padding: 0 1%;
+    font-weight: 700;
+}
+
+#vhs-section .descrip {
+    font-size: 1.3em;
+    font-weight: 700;
+    line-height: 110%;
+    margin: 0;
+    padding: 1rem 1rem;
+    background-color: var(--details-color);
+    border-top: 2px solid var(--primary-color);
 }
 
 @keyframes mover-fondo {
@@ -943,6 +1032,10 @@ div.fixed-2 {
         line-height: 120%;
         letter-spacing: .01em;
     }
+
+    .card {
+        padding: 0 0 1.5em 0;
+    }
 }
 
 @media (min-width: 992px) {
@@ -963,6 +1056,7 @@ div.fixed-2 {
 
     .open {
         height: auto;
+        width: 30%;
     }
 
     .navbar-nav {
@@ -974,14 +1068,18 @@ div.fixed-2 {
         height: auto;
     }
 
+    #sinopsis-section article:first-child {
+        padding: 0 1rem;
+    }
+
     #sinopsis-section p {
-        font-size: 1.5em;
+        font-size: 1.3em;
         line-height: 116%;
         letter-spacing: 0;
     }
 
     #sinopsis-section h3, a {
-        font-size: 1.6em;
+        font-size: 1.3em;
         letter-spacing: .05em;
     }
     
@@ -1015,9 +1113,17 @@ div.fixed-2 {
         margin-top: 0;
     }
 
+    #carouselReviews .card {
+        border-radius: 5px;
+    }
+
     /* #carouselReviews .a1 .estrellas {
         margin-top: 0;
     } */
+
+    .card {
+        padding: 0;
+    }
 
     .card-footer {
         display: none;
@@ -1026,14 +1132,18 @@ div.fixed-2 {
     #carouselReviews .card h5 {
         padding-bottom: .5rem;
         font-weight: 500;
-        font-size: 1rem !important;
+        font-size: 1em !important;
         font-family: var(--font-title);
         text-transform: uppercase;
         letter-spacing: .05em;
     }
 
     #carouselReviews .card p {
-        font-size: 1.1em !important;
+        font-size: 1em !important;
+        margin-bottom: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
     }
-
 }

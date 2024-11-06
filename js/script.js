@@ -152,3 +152,28 @@ targetVideo.addEventListener("mousemove", e => {
   lookFor.style.left = `${posicionX}px`;
   lookFor.style.top = `${posicionY}px`;
 });
+
+
+// Acordeón
+
+document.addEventListener("DOMContentLoaded", function() {
+  const accordionButtons = document.querySelectorAll(".accordion-button");
+
+  accordionButtons.forEach(button => {
+    button.addEventListener("click", function() {
+      const cardBody = button.closest(".card-body");
+      const cardText = cardBody.querySelector(".card-text");
+      const contentHeight = cardText.scrollHeight + "px";
+
+      if (cardText.style.opacity === "0") {
+        cardText.style.opacity = "1";
+        cardText.style.height = contentHeight;
+        cardText.style.transform = "translateY(0)";
+      } else {
+        cardText.style.opacity = "0";
+        cardText.style.height = "0";
+        cardText.style.transform = "translateY(-20px)";
+      }
+    });
+  });
+});
