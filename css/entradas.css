@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Kosugi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+    background-color: black;
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.logotipo-navbar {
+    width: 8rem; /* Ajustar el tamaño según sea necesario */
+    height: auto;
+    cursor: pointer;
+    margin-top: 8px; /* Añadir 8 píxeles de margen superior */
+    padding-left: 16px;
+}
+
+/* Estilos para la sección de compra de entradas */
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
