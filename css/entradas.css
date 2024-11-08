@@ -67,6 +67,7 @@ body {
 .card-title {
     font-family: var(--font-title);
     font-size: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 .card-text {
@@ -100,7 +101,7 @@ body {
 .fecha {
     padding-bottom: 3.5rem;
     padding-top: 1.5rem;
-    display: inline-block;
+    display: ruby;
 }
 
 .container { 

@@ -185,13 +185,22 @@ setTimeout(function() {
 
 // Calendario entradas
 $(document).ready(function(){
-    $('#date').datepicker({
-        format: 'mm/dd/yyyy',
-        startDate: '-3d'
-    });
+  // Set the default date to the current date
+  var today = new Date();
+  var day = String(today.getDate()).padStart(2, '0');
+  var month = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+  var year = today.getFullYear();
+  var formattedDate = day + '/' + month + '/' + year;
+  $('#date').val(formattedDate);
+
+  $('#date').datepicker({
+      format: 'dd/mm/yyyy',
+      startDate: '-3d',
+      autoclose: true
+  });
 });
 
-// Payment Modal NO FUNCIONA :C
+// Payment Modal
 document.querySelectorAll('.obtener-entrada').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default behavior of the <a> tag
