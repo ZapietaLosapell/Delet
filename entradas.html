@@ -10,6 +10,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/entradas.css">
+    <!-- Include Bootstrap Datepicker CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
 </head>
 <body>
     <header>
@@ -39,43 +41,61 @@
             <!-- Sala 1 -->
             <div class="col-12 mb-4">
                 <div class="card">
+                    <a href="#" class="btn btn-primary obtener-entrada">Obtener Entrada</a>
                     <div class="card-body">
                         <h5 class="card-title">Sala 1</h5>
                         <p class="card-text">Horarios: 10:00 AM, 1:00 PM, 4:00 PM</p>
                         <p class="card-text">Precio: $10</p>
                         <p class="card-text">Dirección: Calle Falsa 123</p>
-                        <a href="#" class="btn btn-primary">Obtener Entrada</a>
                     </div>
                 </div>
             </div>
             <!-- Sala 2 -->
             <div class="col-12 mb-4">
                 <div class="card">
+                    <a href="#" class="btn btn-primary obtener-entrada">Obtener Entrada</a>
                     <div class="card-body">
                         <h5 class="card-title">Sala 2</h5>
                         <p class="card-text">Horarios: 11:00 AM, 2:00 PM, 5:00 PM</p>
                         <p class="card-text">Precio: $12</p>
                         <p class="card-text">Dirección: Avenida Siempre Viva 742</p>
-                        <a href="#" class="btn btn-primary">Obtener Entrada</a>
                     </div>
                 </div>
             </div>
             <!-- Sala 3 -->
             <div class="col-12 mb-4">
                 <div class="card">
+                    <a href="#" class="btn btn-primary obtener-entrada">Obtener Entrada</a>
                     <div class="card-body">
                         <h5 class="card-title">Sala 3</h5>
                         <p class="card-text">Horarios: 12:00 PM, 3:00 PM, 6:00 PM</p>
                         <p class="card-text">Precio: $15</p>
-                        <p class="card-text">Dirección: Plaza Mayor 456</p>
-                        <a href="#" class="btn btn-primary">Obtener Entrada</a>
-                    </div>
+                        <p class="card-text">Dirección: Plaza Mayor 456</p>                    </div>
                 </div>
             </div>
         </div>
+        
+            <!-- Modal (no funciona:c)-->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Confirmación</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                Reserva realizada con éxito
+                </div>
+                <div class="modal-footer">
+                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

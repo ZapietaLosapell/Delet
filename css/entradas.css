@@ -52,8 +52,12 @@ body {
     background-color: var(--background-color);
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
-    border-radius: 10px;
+    border-radius: 5px; /* Reduced border-radius */
     font-family: var(--font-body);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-right: 3rem;
 }
 
 .card:hover {
@@ -109,3 +113,9 @@ body {
 .h2, h2 {
     font-size: xxx-large;
 }
+
+.btn-primary {
+    padding: 1rem 2rem !important; /* Increase padding for a bigger button */
+    font-size: 1.25rem; /* Increase font size */
+}
+

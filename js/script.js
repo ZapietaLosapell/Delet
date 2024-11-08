@@ -1,4 +1,3 @@
-
 // Tooltip
 
 const tooltipTriggerEl = document.querySelector('[data-bs-toggle="tooltip"]');
@@ -9,7 +8,6 @@ document.body.addEventListener("mousemove", (e) => {
     tooltip.hide();
   }
 });
-
 
 // Aviso
 
@@ -35,8 +33,6 @@ fixed2.addEventListener("mouseout", function() {
   fixed1.classList.remove("hover-opacity-1");
 });
 
-
-
 // Subtítulos
 
 let videos = document.querySelectorAll(".teaser");
@@ -52,7 +48,6 @@ videos.forEach(video => {
 
 console.log(track.cues);
 });
-
 
 // Video de la ventana modal
 
@@ -73,7 +68,6 @@ window.closeModal = function() {
     video.pause();
     document.body.classList.remove("scroll");
 };
-
 
 // Cierre del menu
 
@@ -99,7 +93,6 @@ x.addEventListener("click", function() {
   this.classList.toggle("m");
 });
 
-
 // AOS
 
 AOS.init();
@@ -111,12 +104,11 @@ AOS.init({
   once: true,
 });
 
-
 // Gif animado
 
 const gif = document.getElementById("gif");
 const gifMove = "img/tv-animacion.gif";
-const gifStatic = "img/tv-animacion.png";
+const gifStatic = "img/tv-animacion";
 
 function pausarGif() {
     gif.src = gifStatic;
@@ -125,7 +117,6 @@ function pausarGif() {
 function reanudarGif() {
     gif.src = gifMove;
 }
-
 
 // Seguimiento del mouse
 
@@ -156,7 +147,6 @@ targetVideo.addEventListener("mousemove", e => {
   lookFor.style.top = `${posicionY}px`;
 });
 
-
 // Acordeón
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -183,7 +173,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
 // Animación del logotipo
 
 setTimeout(function() {
@@ -193,3 +182,21 @@ setTimeout(function() {
 setTimeout(function() {
   document.getElementById("logotipo").style.animationPlayState = "paused";
 }, 26000);
+
+// Calendario entradas
+$(document).ready(function(){
+    $('#date').datepicker({
+        format: 'mm/dd/yyyy',
+        startDate: '-3d'
+    });
+});
+
+// Payment Modal NO FUNCIONA :C
+document.querySelectorAll('.obtener-entrada').forEach(button => {
+    button.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default behavior of the <a> tag
+        console.log('Button clicked'); // Add this line to check if the event is triggered
+        var confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+        confirmationModal.show();
+    });
+});
