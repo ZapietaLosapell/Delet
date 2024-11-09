@@ -38,7 +38,7 @@
                                 <a class="nav-link" href="#">Videos</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="#">Pases / Tikects</a>
+                                <a class="nav-link" href="#video-section">Pases / Tikects</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="#sinopsis-section">Sinopsis</a>
@@ -52,7 +52,7 @@
                 </nav>
                 <nav class="d-none d-lg-block" id="botones-menu">
                     <ul class="list-inline m-0">
-                        <li class="list-inline-item"><a href="#" class="btn btn-outline-dark btn-menu pointer">VIDEOS</a></li>
+                        <li class="list-inline-item"><a href="#video-section" class="btn btn-outline-dark btn-menu pointer">VIDEOS</a></li>
                         <li class="list-inline-item"><a href="#" class="btn btn-outline-dark btn-menu pointer">PASES / TIKECTS</a></li>
                         <li class="list-inline-item"><a href="#sinopsis-section" class="btn btn-outline-dark btn-menu pointer">SINOPSIS</a></li>
                         <li class="list-inline-item"><a href="#" class="btn btn-outline-dark btn-menu pointer">CONTACTO</a></li>
@@ -141,22 +141,24 @@
                 <div class="container intro px-4 justify-content-center">
                     <div class="row gx-5">
                         <div class="col-lg-3 col-archi">
+                            <button>Abrir</button>
                             <img id="archi" class="pb-5 help" src="img/archi.png" alt="Ilustración de un archivo digital">
+                            <img id="archi-2" class="pb-5 help" src="img/archi-2.png" alt="Ilustración de un archivo digital">
                         </div>
                         <div class="col-lg-3">
-                            <p class="rev">✷ Estoy un poco pixelado y roto, pero aún puedo rescatar lo que dicen de mí.</p>
+                            <p id="r-1" class="rev" data-aos="fade-up" data-aos-duration="1000">✷ Estoy un poco pixelado y roto, pero aún puedo rescatar lo que dicen de mí.</p>
                         </div>
                         <div class="col-lg-3">
-                            <p class="rev">✷ ¿Te apetece descubrirlo?</p>
+                            <p class="rev" data-aos="fade-up"  data-aos-delay="1700" data-aos-duration="1000">✷ ¿Te apetece descubrirlo?</p>
                         </div>
                         <div class="col-lg-3">
-                            <p class="rev">✷ No prometo que sea bonito, pero sí... interesante.</p>
+                            <p class="rev" data-aos="fade-up"  data-aos-delay="3000" data-aos-duration="1000">✷ No prometo que sea bonito, pero sí... interesante.</p>
                         </div>
                     </div>
                 </div>
             </article>
             <article class="section-inner section-inner-2">
-                    <div class="d-block d-sm-flex justify-content-start"><h3 class="pt-4 ms-3 situ situ-1">Reviews</h3><h3 class="situ situ-2 pt-4 mx-3 pe-1">✵ Deja tu review <a href="#" class="pointer">@¿Y-Delet!</a></h3></div>
+                    <h3 class="situ situ-2 pt-2 mx-1 pe-1">✵ Deja tu review <a href="#" class="pointer">@¿Y-Delet!</a></h3></div>
                     <div id="carouselReviews" class="container carousel slide" data-aos="my-fade-up">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -339,69 +341,69 @@
             <article class="section-inner dark">
                 <h1 class="dark">Videos</h1>
                 <p class="px-4 mt-3 comentario">Deja tu comentario #¿Y-Videos-Delet!</p>
-            </article>
-            <article class="section-inner section-inner-2 coleccion-horizontal pe-5">
-                <h3 class="pt-1 ms-2 situ position-absolute">Videos</h3>
-                <div class="video-s d-block d-lg-flex align-items-end">
-                        <div class="v position-relative" id="v1">
-                            <video id="video1" class="bg-video position-absolute w-100 h-100 top-0 start-0 videos" autoplay muted loop>
-                                <source src="video/Vídeo de KoolShooters__.mp4" type="video/mp4">
-                                Tu navegador no soporta la reproducción de videos.
-                            </video>
-                            <div class="v-2 d-flex justify-content-center align-items-center">
-                                <button class="i-z fullPlay">Play ▶</button>
-                                <div class="i-v i-z position-absolute">
-                                    <div class=" d-flex">
-                                        <h3>01</h3>
-                                        <div>
-                                            <h2>Origen</h2>
-                                            <h2>1:32 min</h2>
-                                        </div>
-                                    </div>   
+                <div class="coleccion-horizontal pe-5">
+                    <div class="video-s d-block d-lg-flex align-items-end">
+                            <div class="v position-relative" id="v1">
+                                <video id="video1" class="bg-video position-absolute w-100 h-100 top-0 start-0 videos" autoplay muted loop>
+                                    <source src="video/medu-a.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="v-2 d-flex justify-content-center align-items-center">
+                                    <button class="i-z fullPlay">Play ▶</button>
+                                    <div class="i-v i-z position-absolute">
+                                        <div class=" d-flex">
+                                            <h3>01</h3>
+                                            <div>
+                                                <h2>Origen</h2>
+                                                <h2>1:32 min</h2>
+                                            </div>
+                                        </div>   
+                                    </div>
+                                    <div class="cover position-absolute"></div>
                                 </div>
-                                <div class="cover position-absolute"></div>
                             </div>
-                        </div>
-                        <div class="v position-relative" id="v2">
-                            <video class="bg-video position-absolute w-100 h-100 top-0 start-0 videos" autoplay muted loop>
-                                <source src="video/Vídeo de KoolShooters__.mp4" type="video/mp4">
-                                Tu navegador no soporta la reproducción de videos.
-                            </video>
-                            <div class="v-2 d-flex justify-content-center align-items-center">
-                                <button class="i-z fullPlay">Play ▶</button>
-                                <div class="i-v i-z position-absolute">
-                                    <div class=" d-flex">
-                                        <h3>02</h3>
-                                        <div>
-                                            <h2>Propósito</h2>
-                                            <h2>1:02 min</h2>
-                                        </div>
-                                    </div>   
+                            <div class="v position-relative" id="v2">
+                                <video class="bg-video position-absolute w-100 h-100 top-0 start-0 videos" autoplay muted loop>
+                                    <source src="video/medu-b.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="v-2 d-flex justify-content-center align-items-center">
+                                    <button class="i-z fullPlay">Play ▶</button>
+                                    <div class="i-v i-z position-absolute">
+                                        <div class=" d-flex">
+                                            <h3>02</h3>
+                                            <div>
+                                                <h2>Propósito</h2>
+                                                <h2>1:02 min</h2>
+                                            </div>
+                                        </div>   
+                                    </div>
+                                    <div class="cover position-absolute"></div>
                                 </div>
-                                <div class="cover position-absolute"></div>
                             </div>
-                        </div>
-                        <div class="v position-relative" id="v3">
-                            <video class="bg-video position-absolute w-100 h-100 top-0 start-0 videos" autoplay muted loop>
-                                <source src="video/Vídeo de KoolShooters__.mp4" type="video/mp4">
-                                Tu navegador no soporta la reproducción de videos.
-                            </video>
-                            <div class="v-2 d-flex justify-content-center align-items-center">
-                                <button class="i-z fullPlay">Play ▶</button>
-                                <div class="i-v i-z position-absolute">
-                                    <div class=" d-flex">
-                                        <h3>03</h3>
-                                        <div>
-                                            <h2>Variaciones</h2>
-                                            <h2>1:52 min</h2>
-                                        </div>
-                                    </div>   
-                                </div>
-                             <div class="cover position-absolute"></div>
+                            <div class="v position-relative" id="v3">
+                                <video class="bg-video position-absolute w-100 h-100 top-0 start-0 videos" autoplay muted loop>
+                                    <source src="video/medu-c.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="v-2 d-flex justify-content-center align-items-center">
+                                    <button class="i-z fullPlay">Play ▶</button>
+                                    <div class="i-v i-z position-absolute">
+                                        <div class=" d-flex">
+                                            <h3>03</h3>
+                                            <div>
+                                                <h2>Variaciones</h2>
+                                                <h2>1:52 min</h2>
+                                            </div>
+                                        </div>   
+                                    </div>
+                                 <div class="cover position-absolute"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </article>
+            
         </section>
 
         <section id="characters-section">
@@ -409,8 +411,8 @@
                 <h1>Personajes</h1>
                 <div class="container character">
                     <div class="row align-items-center justify-content-center g-0">
-                      <div class="col-9 col-md-4">
-                        <div class="card">
+                      <div class="col-10 col-md-4">
+                        <div class="card" data-aos="my-fade-up">
                             <img src="img/character-1.png" class="card-img-top" alt="character 1">
                             <div class="card-overlay">Nadie le ha visto.</div>
                             <div class="card-body">
@@ -419,8 +421,8 @@
                             </div>
                           </div>
                       </div>
-                      <div class="col-9 col-md-4">
-                        <div class="card">
+                      <div class="col-10 col-md-4">
+                        <div class="card" data-aos="my-fade-up" data-aos-delay="300">
                             <img src="img/character-2.png" class="card-img-top" alt="character 2">
                             <div class="card-overlay">Es propiedad del mundo.</div>
                             <div class="card-body">
@@ -643,6 +645,12 @@
             });
         });
     })();
+    </script>
+
+    <script>
+        $( "button" ).on( "click", function() {
+        $( "#archi-2" ).fadeToggle( "slow", "linear" );
+        } );
     </script>
 
 </body>
