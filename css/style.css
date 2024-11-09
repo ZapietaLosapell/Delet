@@ -5,8 +5,8 @@
 :root {
 
     /* Colores principales */
-    --primary-color: #2036fd; 
-    --secundary-color: #2F06CA; 
+    --primary-color: #1E1EFF; 
+    --secundary-color: #000682; 
     --accent-color: #FC1F30; 
     --highlight-color: #FEF102; 
     --background-color: white; 
@@ -30,7 +30,6 @@
     padding: 0;
     box-sizing: border-box;
     cursor: url("../img/a1.png"), url("../img/a2.png"), url("../img/a3.png"), url("../img/a4.png"), auto;
-    accent-color: var(--accent-color);
 }
 
 button, a {
@@ -40,9 +39,7 @@ button, a {
 }
 
 a:hover {
-    background-color: var(--secundary-color);
     color: var(--background-color);
-    font-weight: 600;
     padding: 0 .1em;
 }
 
@@ -91,33 +88,35 @@ h1 {
     margin: .5em .05em;
     border-radius: 15px;
     border: 1px solid var(--primary-color);
-    font-size: 2.8em;
-    background-color: rgba(255, 255, 255, 0.185);
-    backdrop-filter: blur(20px);
+    font-size: 1.7em;
+    background-color: #4f0ca7cc;
+    backdrop-filter: blur(10px);
     filter: brightness(1.2);
     font-family: var(--font-title);
-    padding: 8px 15px;
+    padding: 10px 17px;
 }
 
 #botones-menu  a {
-    color: var(--primary-color);
-    transition: color .7s, .7s ease-out;
+    color: var(--background-color);
+    border: 1px solid var(--background-color);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 #botones-menu  a:hover {
-    color: var(--background-color);
+    color: var(--secundary-color);
+    border: 1px solid var(--secundary-color);
     font-weight: 400 !important;
     padding-left: 1.5em;
-    border: 1px solid var(--background-color);
-    padding: 5px 15px 10px 35px;
+    padding: 10px 17px 10px 30px;
 }
 
 .btn-outline-dark:hover {
-    background-color: var(--secundary-color);
+    background-color: rgba(255, 255, 255, 0.816);
+    backdrop-filter: blur(10px);
 }
 
 .btn-outline-dark:focus {
-    background-color: var(--background-color);
+    background-color: var(--accent-color);
 }
 
 .home-section-fondo-menu {
@@ -133,7 +132,7 @@ h1 {
 
 .btn-menu-icon {
     background: rgba(255, 255, 255, 0.112);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     height: 45px;
     width: 50px;
     display: flex;
@@ -153,7 +152,8 @@ h1 {
     height: 70vh;
     display: flex;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.97);
+    background: rgba(255, 255, 255, 0.564);
+    backdrop-filter: blur(10px);
     text-align: center;
     font-size: 1.8em;
     text-transform: uppercase;
@@ -260,13 +260,13 @@ h1 {
 #logotipo {
     position: absolute;
     object-fit: cover;
-    width: 100%;
-    z-index: 2;
+    width: 85%;
     mix-blend-mode: hard-light;
     animation: desplazamiento 2s cubic-bezier(0.45, 0, 0.35, 1) infinite;
     animation-play-state: running;
     opacity: 0;
     transition: opacity 2s cubic-bezier(0.45, 0, 0.35, 1);
+    z-index: 8;
 }
 
 @keyframes desplazamiento {
@@ -363,7 +363,7 @@ button.open {
 }
 
 #busca-play {
-    background-color: var(--secundary-color);
+    background-color: var(--purple);
     color: var(--background-color);
     border-radius: 15px;
     padding: .5em;
@@ -387,7 +387,7 @@ button.open {
 
 #video-tv {
     display: block;
-    width: 200%;
+    width: 100%;
     opacity: 0.95;
     z-index: 1;
     filter: brightness(.5);
@@ -489,47 +489,52 @@ video::cue {
 /* AVISO DE ESTRENO */
 
 .aviso {
-    border-radius: 10px;
     position: absolute;
-    bottom: 1%;
-    right: 8px;
-    z-index: 3;
-    width: 99%;
-    height: 350px;
+    bottom: 0;
+    right: 3px;
+    z-index: 2;
+    width: 99.7%;
+    height: 30%;
     transition: opacity 0.5s ease-in-out;
     color: var(--primary-color);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(10px);
     filter: brightness(1.1);
-    padding-left: .7em;
     border: 1px solid var(--primary-color);
 }
 
 div.fixed-1 {
-    background-color: var(--details-color);
     opacity: 0;
+    background-color: var(--background-color);
+    backdrop-filter: blur(30px);
     bottom: 0;
-    right: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    transition: .7s cubic-bezier(0.56, 0, 0.5, 1);
 }
 
 .fixed-1.hover-opacity-1 {
-    opacity: .5;
+    opacity: .2;
 }
 
 div.fixed-2 {
     overflow: auto;
     border: none;
     bottom: 0;
-    right: 0;
+    left: 0;
     width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.fixed-2:hover a {
+    text-decoration: underline;
 }
 
 .fixed-2 .sticky {
     top: 12px;
     position: sticky;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    margin-right: .6em;
 }
 
 .fixed-close {
@@ -541,12 +546,10 @@ div.fixed-2 {
     justify-content: center;
     border: 1px solid var(--primary-color);
     background-color: transparent;
-    border-radius: 25px;
     color: var(--primary-color);
     transition: background-color .8s;
     font-size: 1.5em;
     font-family: var(--font-title);
-    margin-right: .3em;
     margin-top: .1em;
 }
 
@@ -556,17 +559,15 @@ div.fixed-2 {
 
 .fixed-2 p {
     font-size: 1.3em;
-    margin: 3.8rem 0;
+    margin: 1.5rem 0;
     text-align: right;
+    padding-right: 1em;
 }
 
 .fixed-2 h2 {
-    font-size: 3.5em;
+    font-size: 2.5em;
     line-height: 1;
-}
-
-.aviso:hover .fixed-2 a {
-    text-decoration: underline;
+    padding-bottom: .1em;
 }
 
 .fixed-2 span {
@@ -589,6 +590,7 @@ div.fixed-2 {
 .fixed-2 a:hover {
     color: var(--accent-color);
     text-decoration: underline;
+    background-color: var(--secundary-color);
 }
 
 
@@ -625,7 +627,7 @@ div.fixed-2 {
 /* TOOLTIP */
  
 .custom-tooltip {
-    --bs-tooltip-bg: var(--secundary-color);
+    --bs-tooltip-bg: var(--purple);
 }
 
 .tooltip-inner {
@@ -634,7 +636,7 @@ div.fixed-2 {
     padding: 1em;
     line-height: 1.4;
     color: var(--background-color);
-    background: var(--secundary-color);
+    background: var(--purple);
     border-radius: 50%;
     max-width: 250px !important;
     font-family: var(--font-title);
@@ -682,7 +684,7 @@ div.fixed-2 {
     padding: 0 .3em;
     font-size: 1.2em;
     margin-left: -.2em;
-    font-family: var(--font-mono);
+    font-family: var(--font-details);
 }
 
 #sinopsis-section p {
@@ -694,16 +696,10 @@ div.fixed-2 {
     font-size: clamp(.5rem,calc(.5rem + ((2 - .5)*((100vw - 20rem)/(120 - 20)))),2rem);
 }
 
-#sinopsis-section span {
-    color: var(--details-color);
-    font-weight: 600;
-}
-
 #sinopsis-section a {
     align-self: flex-end;
     font-size: 1.2em;
-    font-family: var(--font-mono);
-    /* letter-spacing: .05em; */
+    font-family: var(--font-details);
     color: var(--background-color);
     border: 1px solid transparent;
     margin-right: .8em;
@@ -714,7 +710,7 @@ div.fixed-2 {
 #sinopsis-section a:hover {
     color: var(--secundary-color);
     border: 1px solid var(--background-color);
-    background-color: var(--background-color);
+    background-color: var(--details-color);
     transform: translateX(0);
     padding-right: 1em;
     letter-spacing: .033em;
@@ -741,16 +737,30 @@ div.fixed-2 {
     color: var(--primary-color);
 }
 
-.point {
-    text-indent: -21px;
-}
-
 .intro {
     padding-top: 5rem;
 }
 
 #archi {
-    width: 50%;
+    width: 60%;
+    filter: contrast(100%);
+    opacity: .1;
+}
+
+.rev {
+    font-size: 1.1em;
+    text-indent: -2px;
+    font-family: var(--font-body);
+}
+
+.situ {
+    font-family: var(--font-body);
+}
+
+.situ a:hover {
+    font-weight: 400;
+    background-color: var(--details-color);
+    color: var(--primary-color);
 }
 
 #carouselReviews {
@@ -762,11 +772,11 @@ div.fixed-2 {
 }
 
 .estrellas {
-    width: 80%;
+    width: 100%;
 }
 
 .card-footer {
-    border-top: 1px solid #2036fd2e;
+    border-top: none;
     background-color: transparent;
     padding-top: 1rem;
     margin-left: 1rem;
@@ -806,13 +816,16 @@ div.fixed-2 {
 #carouselReviews .card h5 {
     font-size: 2em;
     padding-bottom: 1.5rem;
-    font-family: var(--font-title);
+    font-family: var(--font-body);
+    font-weight: 400;
     text-transform: uppercase;
 }
 
 #carouselReviews .card p {
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
+    font-weight: 400;
     transition: opacity 500ms, transform 500ms, height 500ms;
+    font-size: 1.1em;
 }
 
 .card-body.slide-carousel {
@@ -892,8 +905,226 @@ div.fixed-2 {
 
 /* VIDEO SECTION */
 
-#video-section video {
-    height: 250px;
+.fondo-2 {
+    height: 300px;
+    background: center / cover repeat url(../img/fondo-02.png);
+    background-size: 100% auto; 
+}
+
+.section-inner.dark {
+    border-radius: 0;
+    background-color: var(--primary-color);
+    border: 1px solid var(--background-color);
+    color: var(--background-color);
+}
+
+.comentario {
+    font-size: 1rem;
+    font-family: var(--font-body);
+}
+
+.coleccion-horizontal {
+    max-width: 100vw;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    height: 100vh;
+    background-color: var(--primary-color);
+    border-radius: 0;
+    border: 1px solid var(--background-color);
+    position: sticky;
+    top: 0;
+}
+
+.coleccion-horizontal h3 {
+    font-size: 2em;
+}
+
+.coleccion-horizontal:first-child {
+    color: var(--background-color);
+}
+
+.video-s {
+    height: 100%;
+    padding-bottom: 2%;
+    padding-left: 15%;
+    background: none;
+}
+
+.v {
+    width: 700px;
+    height: 40vh;
+    border: 1px solid var(--background-color);
+    transform-origin: bottom;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+
+h1.dark {
+    color: var(--background-color);
+    border-bottom: 1px solid var(--background-color);
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2);
+    z-index: -1;
+}
+
+.v-2 button {
+    background: none;
+    border: none;
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    font-size: 1.1em;
+    z-index: 2;
+    margin-top: 26%;
+    color: var(--background-color);
+}
+
+.i-v {
+    top: 5%;
+    left: 5%;
+    color: var(--background-color);
+    font-family: var(--font-body);
+}
+
+.i-z {
+    z-index: 2;
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    z-index: 1;
+    opacity: 1;
+    transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.v-2:hover .cover {
+    opacity: .2;
+}
+
+
+.i-v h3 {
+    font-size: 4.3em;
+    line-height: 1;
+    margin-right: .4em;
+    font-weight: 400;
+}
+
+.i-v h2 {
+    font-size: .9em;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1;
+}
+
+.i-v div div h2:last-child {
+    border-bottom: 1px solid var(--background-color);
+}
+
+.i-v div div {
+    margin-top: .7em;
+}
+
+
+/* CHARACTERS SECTION */
+
+#characters-section .section-inner {
+    height: auto;
+}
+
+.character .card {
+    padding: 5px;
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.character .card-body {
+    padding: 2px 5px;
+    line-height: 1;
+}
+
+.character {
+    padding: 5% 0;
+    overflow-x: hidden;
+}
+
+.character .row {
+    gap: 10px;
+}
+
+.character .card a {
+    text-decoration: underline;
+}
+
+.character .card a:hover {
+    color: var(--accent-color);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1eff2d;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 2;
+    pointer-events: none;
+    padding: 1em;
+}
+
+.card:hover .card-overlay {
+    opacity: 1;
+}
+
+
+/* GALERIA SECTION */
+
+#galeria{
+    height: 120vh;
+    overflow: hidden;
+}
+
+#pixi-container {
+    width: 100%;
+    height: 120vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#pixi-container.pointer {
+    height: 120vh;
+}
+
+#postalButton {
+    position: relative;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--background-color);
+    padding: 0 .5em;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    font-weight: 400;
+}
+
+#postalButton:hover {
+    background-color: var(--details-color);
+    color: var(--purple);
+    border: 1px solid var(--background-color);
 }
 
 
@@ -998,6 +1229,75 @@ div.fixed-2 {
     }
 }
 
+
+/* footer */
+
+footer {
+    height: auto;
+    width: 100vw;
+    max-width: 100%;
+    margin-top: 1px;
+    border: 1px solid var(--primary-color);
+    border-radius: 15px;
+    color: var(--primary-color);
+}
+
+footer .concon {
+    margin: 0 2%;
+    max-width: 100%;
+    transform: translateY(-1em);
+    padding: 2em 2em 0 2em;
+}
+
+footer .concon .container {
+    margin: 0;
+}
+
+footer .btn {
+    color: var(--primary-color);
+    padding: .5em;
+    margin: .1em;
+    border-color: var(--primary-color);
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+footer .btn:hover {
+    background-color: var(--purple);
+}
+
+footer a:hover {
+    color: var(--accent-color);
+    padding: 0;
+}
+
+.nombre {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-top: 1.5rem;
+}
+
+.nombre p {
+    margin: 0;
+}
+
+.idiomas {
+    padding-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.idiomas > * {
+    margin-right: .5em;
+}
+
+.faq {
+    width: 80px;
+}
+
+footer .row .btn {
+    width: 200px;
+}
 
 
 @media (max-width: 1200px) {
@@ -1114,7 +1414,51 @@ div.fixed-2 {
         width: 20%;
     }
 
+    .coleccion-horizontal {
+        flex-direction: column;
+        height: auto;
+        padding-top: 5px;
+    }
+
+    .video-s {
+        width: 100%;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .v {
+        width: 100%; 
+        height: auto;
+        padding: 10rem;
+        border: 1px solid var(--background-color);
+    }
+
+    .bg-video {
+        object-fit: cover;
+        height: 100%; 
+        width: 100%;
+        z-index: 0;
+    }
+
+    .v-2 button {
+        position: absolute;
+        margin: 0;
+    }
+
+    .cover {
+        display: none;
+    }
+
+    .section-inner.dark {
+        height: 40vh;
+    }
+
+    #video-section .section-inner {
+        border: 1px solid #ffffff;
+        margin: 0;
+    }
 }
+
 
 @media (min-width: 992px) {
 
@@ -1157,10 +1501,12 @@ div.fixed-2 {
     #sinopsis-section p {
         line-height: 116%;
         letter-spacing: 0;
+        font-weight: 400;
     }
 
     #sinopsis-section h3, #sinopsis-section a {
-        font-size: 1em;
+        font-size: .9em;
+        letter-spacing: .02em;
     }
 
     .card-body.slide-carousel img {
@@ -1191,16 +1537,25 @@ div.fixed-2 {
 
     #carouselReviews {
         margin-top: 0;
-        padding-bottom: 4rem;
+        padding-bottom: 3rem;
+    }
+
+    .situ {
+        margin: 0;
+    }
+
+    .situ-1 {
+        display: none;
+    }
+
+    .situ-2 {
+        margin-top: .5em !important;
+        margin-bottom: 1.5em;
     }
 
     #carouselReviews .card {
         border-radius: 0;
     }
-
-    /* #carouselReviews .a1 .estrellas {
-        margin-top: 0;
-    } */
 
     .card {
         padding: 0;
@@ -1240,12 +1595,9 @@ div.fixed-2 {
         padding-top: 2rem;
     }
 
-    .point {
-        padding-left: 2.5rem;
-    }
-
     .section-inner {
-        margin: 0 1%
+        margin: 0 1%;
+        height: auto;
     }
 
     #carouselReviews .card-title::after {
@@ -1263,5 +1615,69 @@ div.fixed-2 {
 
     #carouselReviews .card-title.es5::after {
         content: "★★★★★";
+    }
+
+    .section-inner-2 h3 {
+        font-size: 1.2em;
+    }
+
+    .i-v h2 {
+        font-size: .7em;
+        padding: .3em 0em;
+        border: 0;
+    }
+
+    .i-v div div {
+        margin: 0;
+        margin-top: .2em;
+    }
+
+    .i-v h3 {
+        margin-right: .5em;
+        font-size: 2.7em;
+    }
+
+    .coleccion-horizontal {
+        padding: 0 !important;
+    }
+
+    #characters-section h1 {
+        font-size: 3em;
+        padding-top: .3em;
+    }
+
+    .comentario {
+        font-size: .9em;
+    }
+   
+    #galeria button {
+        font-size: .9em;
+        margin-top: 0;
+    }
+
+    #galeria .section-inner {
+        margin: 0;
+        padding: 0;
+    }
+
+    .vhs {
+        animation: none;
+    }
+
+    .concon {
+        padding: 1%;
+    }
+
+    .nombre {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .nombre a {
+        padding-right: 0 !important;
+    }
+
+    footer .btn {
+       padding: 0;
     }
 }

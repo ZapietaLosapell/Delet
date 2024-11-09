@@ -105,10 +105,11 @@ x.addEventListener("click", function() {
 AOS.init();
 
 AOS.init({
-  duration: 400,
+  duration: 500,
   easing: "ease-out-quart",
   offset: 200,
   once: true,
+  delay: 200,
 });
 
 
@@ -193,3 +194,24 @@ setTimeout(function() {
 setTimeout(function() {
   document.getElementById("logotipo").style.animationPlayState = "paused";
 }, 26000);
+
+
+// Reproducir video en pantalla completa
+
+$(document).ready(function() {
+    var playButton = $(".fullPlay");
+    var video = $(".videos");
+
+    function enterFullscreen() {
+        if (video[0].requestFullscreen) {
+            video[0].requestFullscreen();
+        } else if (video[0].webkitRequestFullscreen) {
+            video[0].webkitRequestFullscreen();
+        }
+    }
+
+    playButton.on("click", function() {
+        video[0].play();
+        enterFullscreen();
+    });
+});
