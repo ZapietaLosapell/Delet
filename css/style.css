@@ -260,7 +260,7 @@ h1 {
 #logotipo {
     position: absolute;
     object-fit: cover;
-    width: 85%;
+    width: 90%;
     mix-blend-mode: hard-light;
     animation: desplazamiento 2s cubic-bezier(0.45, 0, 0.35, 1) infinite;
     animation-play-state: running;
