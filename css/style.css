@@ -766,8 +766,9 @@ div.fixed-2 {
 }
 
 .situ {
-    font-family: var(--font-title);
-    font-size: 1.1em;
+    font-family: var(--font-body);
+    font-size: 1em;
+    font-weight: 400;
 }
 
 .situ a:hover {
@@ -1169,6 +1170,7 @@ h1.dark {
     line-height: 143%;
     width: 70%;
     margin: 0;
+    letter-spacing: -.035em;
     font-size: clamp(.5rem,calc(.5rem + ((2 - .5)*((100vw - 20rem)/(120 - 20)))),2rem);
 }
 
