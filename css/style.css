@@ -750,6 +750,10 @@ div.fixed-2 {
     display: none;
 }
 
+.intro {
+    margin-top: 2em;
+}
+
 .col-archi button {
     background-color: transparent;
     border: 1px solid var(--primary-color);
@@ -1435,7 +1439,18 @@ footer .row .btn {
     }
 
     #archi {
-        width: 40%;
+        visibility: hidden;
+        width: 10rem;
+    }
+
+    #archi-2 {
+        position: absolute;
+        margin-left: -10rem;
+        width: 10rem;
+    }
+
+    .intro {
+        padding-bottom: 1em;
     }
 
     .coleccion-horizontal {
@@ -1605,10 +1620,6 @@ footer .row .btn {
 
     .carousel-indicators {
         bottom: 0;
-    }
-
-    #archi {
-        width: 10%;
     }
 
     .section-inner {
