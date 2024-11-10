@@ -336,6 +336,16 @@ h1 {
     font-family: var(--font-mono);
 }
 
+.btn-primary {
+    background-color: white;
+    border: solid 1px var(--primary-color);
+    border-radius: 1px;
+    color: var(--primary-color);
+    width: 8rem;
+    text-align: start;
+
+}
+
 
 /* FOOTER */
 footer {
