@@ -1,4 +1,3 @@
-
 // Tooltip
 
 const tooltipTriggerEl = document.querySelector('[data-bs-toggle="tooltip"]');
@@ -9,7 +8,6 @@ document.body.addEventListener("mousemove", (e) => {
     tooltip.hide();
   }
 });
-
 
 // Aviso
 
@@ -35,8 +33,6 @@ fixed2.addEventListener("mouseout", function() {
   fixed1.classList.remove("hover-opacity-1");
 });
 
-
-
 // Subtítulos
 
 let videos = document.querySelectorAll(".teaser");
@@ -52,7 +48,6 @@ videos.forEach(video => {
 
 console.log(track.cues);
 });
-
 
 // Video de la ventana modal
 
@@ -73,7 +68,6 @@ window.closeModal = function() {
     video.pause();
     document.body.classList.remove("scroll");
 };
-
 
 // Cierre del menu
 
@@ -99,7 +93,6 @@ x.addEventListener("click", function() {
   this.classList.toggle("m");
 });
 
-
 // AOS
 
 AOS.init();
@@ -111,7 +104,6 @@ AOS.init({
   once: true,
   delay: 200,
 });
-
 
 // Gif animado
 
@@ -126,7 +118,6 @@ function pausarGif() {
 function reanudarGif() {
     gif.src = gifMove;
 }
-
 
 // Seguimiento del mouse
 
@@ -157,7 +148,6 @@ targetVideo.addEventListener("mousemove", e => {
   lookFor.style.top = `${posicionY}px`;
 });
 
-
 // Acordeón
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -183,7 +173,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
-
 
 // Animación del logotipo
 
@@ -211,7 +200,38 @@ $(document).ready(function() {
     }
 
     playButton.on("click", function() {
-        video[0].play();
-        enterFullscreen();
+      if (video[0].paused) {
+          video[0].play();
+          enterFullscreen();
+      } else {
+          video[0].pause();
+      }
+  });
+});
+
+// Calendario entradas
+$(document).ready(function(){
+  // Set the default date to the current date
+  var today = new Date();
+  var day = String(today.getDate()).padStart(2, '0');
+  var month = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+  var year = today.getFullYear();
+  var formattedDate = day + '/' + month + '/' + year;
+  $('#date').val(formattedDate);
+
+  $('#date').datepicker({
+      format: 'dd/mm/yyyy',
+      startDate: '-3d',
+      autoclose: true
+  });
+});
+
+// Payment Modal
+document.querySelectorAll('.obtener-entrada').forEach(button => {
+    button.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default behavior of the <a> tag
+        console.log('Button clicked'); // Add this line to check if the event is triggered
+        var confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+        confirmationModal.show();
     });
 });
