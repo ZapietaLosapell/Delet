@@ -132,7 +132,7 @@ h1 {
 
 .btn-menu-icon {
     background: rgba(255, 255, 255, 0.112);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     height: 45px;
     width: 50px;
     display: flex;
@@ -152,7 +152,8 @@ h1 {
     height: 70vh;
     display: flex;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.97);
+    background: rgba(255, 255, 255, 0.564);
+    backdrop-filter: blur(10px);
     text-align: center;
     font-size: 1.8em;
     text-transform: uppercase;
@@ -258,8 +259,9 @@ h1 {
     }
 }
 
-.container.mt-5.pt-5 {
-    padding-top: 15rem !important;
+
+.contacto {
+    height: 100vh;
 }
 
 .row {
@@ -371,6 +373,10 @@ h1 {
         transform: scale(3);
     }
 
+    .btn-menu { 
+        font-size: 2em;
+    }
+
 }
 
 @media (max-width: 992px) {
@@ -467,3 +473,15 @@ h1 {
         display: none !important;
     }
 }
+
+@media (max-width: 576px) {
+
+    .navbar-nav {
+            height: 50vh;
+            margin: 2.3rem 1%;
+        }
+    
+        .btn-menu {
+            margin: 3% 1%;
+        }
+    }
