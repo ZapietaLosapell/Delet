@@ -644,6 +644,14 @@
                 photo.texture = newTextures[index];
             });
         });
+
+        window.addEventListener("resize", () => {
+            photos.forEach(photo => {
+                photo.scale.set(giveScale());
+                photo.x = Math.floor(Math.random() * app.screen.width);
+                photo.y = Math.floor(Math.random() * app.screen.height);
+            });
+        });
     })();
     </script>
     
