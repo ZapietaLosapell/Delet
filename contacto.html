@@ -52,28 +52,31 @@
         </div>
     </header>
     
-    <div class="container mt-5 pt-5">
-        <div class="col-md-6">
-            <h2 class="text-center mb-4 heading">// CONTACTO</h2>
-            <form action="submit_contact_form.php" method="post">
-                <div class="mb-3">
-                    <input type="text" class="form-control" id="address" name="address" placeholder="DIRECCIÓN EMAIL" required>
-                </div>
-                <div class="mb-3">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="NOMBRE" required>
-                </div>
-                <div class="mb-3">
-                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="MENSAJE" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-        </div>
-        <div class="row">
-            <div class="image-container">
-                <img src="img/poster.png" alt="Placeholder" class="img-fluid rotate-5">
-                <div class="banner">¡Envíanos un mensaje y te suscribimos a nuestra newsletter!</div>
+    <section class="contacto d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="col-md-6">
+                <h2 class="text-center mb-4 heading">// CONTACTO</h2>
+                <form action="submit_contact_form.php" method="post">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="address" name="address" placeholder="DIRECCIÓN EMAIL" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="NOMBRE" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="MENSAJE" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
             </div>
-    </div>
+            <div class="row">
+                <div class="image-container">
+                    <img src="img/poster.png" alt="Placeholder" class="img-fluid rotate-5">
+                    <div class="banner">¡Envíanos un mensaje y te suscribimos a nuestra newsletter!</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
