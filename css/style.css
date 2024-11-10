@@ -1007,8 +1007,8 @@ h1.dark {
 }
 
 .i-v {
-    top: 5%;
-    left: 5%;
+    top: 3.5%;
+    left: 4%;
     color: var(--background-color);
     font-family: var(--font-body);
 }
@@ -1034,7 +1034,7 @@ h1.dark {
 
 
 .i-v h3 {
-    font-size: 4.3em;
+    font-size: 2.3em;
     line-height: 1;
     margin-right: .4em;
     font-weight: 400;
@@ -1052,7 +1052,7 @@ h1.dark {
 }
 
 .i-v div div {
-    margin-top: .7em;
+    margin-top: .2em;
 }
 
 
@@ -1114,19 +1114,19 @@ h1.dark {
 /* GALERIA SECTION */
 
 #galeria{
-    height: 120vh;
+    height: 145vh;
     overflow: hidden;
 }
 
 #pixi-container {
     width: 100%;
-    height: 120vh;
+    height: 145vh;
     position: relative;
     overflow: hidden;
 }
 
 #pixi-container.pointer {
-    height: 120vh;
+    height: 145vh;
 }
 
 #postalButton {
@@ -1138,7 +1138,8 @@ h1.dark {
     font-size: 1rem;
     font-family: var(--font-body);
     font-weight: 400;
-    transition: background-color .7s ease-in-out;
+    transition: background-color .3s ease-in;
+    border: 1px solid var(--background-color);
 }
 
 #postalButton:hover {
