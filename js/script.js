@@ -209,6 +209,31 @@ $(document).ready(function() {
   });
 });
 
+
+// Reproducir video en pantalla completa
+
+$(document).ready(function() {
+    var playButton = $(".fullPlay");
+    var video = $(".videos");
+
+    function enterFullscreen() {
+        if (video[0].requestFullscreen) {
+            video[0].requestFullscreen();
+        } else if (video[0].webkitRequestFullscreen) {
+            video[0].webkitRequestFullscreen();
+        }
+    }
+
+    playButton.on("click", function() {
+      if (video[0].paused) {
+          video[0].play();
+          enterFullscreen();
+      } else {
+          video[0].pause();
+      }
+  });
+});
+
 // Calendario entradas
 $(document).ready(function(){
   // Set the default date to the current date
@@ -235,3 +260,22 @@ document.querySelectorAll('.obtener-entrada').forEach(button => {
         confirmationModal.show();
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contactForm");
+    const feedbackModal = new bootstrap.Modal(document.getElementById("feedbackModal"));
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const formData = new FormData(form);
+
+        // Simulate form submission for demonstration purposes
+        setTimeout(() => {
+            feedbackModal.show();
+            form.reset(); // Reset the form fields
+        }, 1000);
+
+    });
+});
+
