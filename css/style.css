@@ -1236,7 +1236,7 @@ h1.dark {
   
     &.aos-animate {
         opacity: 1;
-        animation: avanzr-retro-avanzr 3s cubic-bezier(0.1, 0, 0.1, 1);
+        animation: avanzr-retro-avanzr 4s cubic-bezier(0.3, 0, 0.1, 1);
     }
 }
 
