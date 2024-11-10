@@ -268,7 +268,7 @@ h1 {
     object-fit: cover;
     width: 90%;
     mix-blend-mode: hard-light;
-    animation: desplazamiento 2s cubic-bezier(0.45, 0, 0.35, 1) infinite;
+    animation: desplazamiento 1.8s cubic-bezier(0.45, 0, 0.35, 1) infinite;
     animation-play-state: running;
     opacity: 0;
     transition: opacity 2s cubic-bezier(0.45, 0, 0.35, 1);
@@ -278,19 +278,19 @@ h1 {
 @keyframes desplazamiento {
     0%, 100% {
         transform: translate(0, 0) scale(1);
-        filter: brightness(1) blur(0px);
+        filter: brightness(1) blur(0);
     }
     25% {
         transform: translate(-0.3px, 0) scale(0.999);
-        filter: brightness(1.1) blur(3px);
+        filter: brightness(1.1) blur(1px);
     }
     50% {
         transform: translate(-0.5px, -0.7px) scale(0.997);
-        filter: brightness(1.5) blur(5px);
+        filter: brightness(1.5) blur(0);
     }
     75% {
         transform: translate(0, -0.3px) scale(0.999);
-        filter: brightness(1.1) blur(2px);
+        filter: brightness(1.1) blur(0);
     }
 }
 
