@@ -88,35 +88,38 @@ h1 {
     margin: .5em .05em;
     border-radius: 15px;
     border: 1px solid var(--primary-color);
-    font-size: 1.7em;
-    background-color: #4f0ca7cc;
+    font-size: 2.8em;
+    background-color: rgba(255, 255, 255, 0.185);
     backdrop-filter: blur(10px);
     filter: brightness(1.2);
     font-family: var(--font-title);
-    padding: 10px 17px;
+    padding: 8px 15px;
 }
 
 #botones-menu  a {
-    color: var(--background-color);
-    border: 1px solid var(--background-color);
-    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    color: var(--primary-color);
+    transition: color 1s ease-in-out;
 }
 
 #botones-menu  a:hover {
-    color: var(--secundary-color);
-    border: 1px solid var(--secundary-color);
+    color: var(--background-color);
     font-weight: 400 !important;
-    padding-left: 1.5em;
-    padding: 10px 17px 10px 30px;
+    /* padding-left: 1.5em; */
+    border: 1px solid var(--background-color);
+}
+
+.btn-outline-dark {
+    transition: 1s !important;
 }
 
 .btn-outline-dark:hover {
-    background-color: rgba(255, 255, 255, 0.816);
-    backdrop-filter: blur(10px);
+    background-color: var(--secundary-color);
+    padding: 8px 15px 8px 1.5em;
 }
 
 .btn-outline-dark:focus {
-    background-color: var(--accent-color);
+    background-color: var(--background-color);
+    color: var(--primary-color);
 }
 
 .home-section-fondo-menu {
