@@ -126,17 +126,18 @@ body {
 }
 
 .logotipo-navbar {
-    width: 8rem; /* Ajustar el tamaño según sea necesario */
+    width: 8rem;
     height: auto;
     cursor: pointer;
-    margin-top: 8px; /* Añadir 8 píxeles de margen superior */
+    margin-top: 8px; ç
 }
 
+
 .back-arrow {
-    width: 2rem; /* Ajustar el tamaño según sea necesario */
+    width: 38px;
     height: auto;
     cursor: pointer;
-    margin-top: 8px; /* Añadir 8 píxeles de margen superior */
+    margin-top: 8px;
 }
 
 /* Estilos para la sección de compra de entradas */
@@ -145,7 +146,7 @@ body {
     background-color: var(--background-color);
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
-    border-radius: 5px; /* Reduced border-radius */
+    border-radius: 5px; 
     font-family: var(--font-body);
     display: flex;
     flex-direction: row-reverse;
@@ -209,7 +210,187 @@ body {
 }
 
 .btn-primary {
-    padding: 1rem 2rem !important; /* Increase padding for a bigger button */
-    font-size: 1.25rem; /* Increase font size */
+    padding: 1rem 2rem !important; 
+    font-size: 1.25rem;
+    background-color: white;
+    border: solid;
+    border-radius: 2px;
+    color: var(--primary-color);
 }
 
+/* FOOTER */
+footer {
+    height: auto;
+    width: 100vw;
+    max-width: 100%;
+    margin-top: 5rem;
+    border-radius: 3px;
+    color: var(--primary-color);
+    background-color: white;
+}
+
+footer .concon {
+    margin: 0 2%;
+    max-width: 100%;
+    transform: translateY(-1em);
+    padding: 2em 2em 0 2em;
+}
+
+footer .concon .container {
+    margin: 0;
+}
+
+footer .btn {
+    color: var(--primary-color);
+    padding: .5em;
+    margin: .1em;
+    border-color: var(--primary-color);
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+footer .btn:hover {
+    background-color: var(--purple);
+}
+
+footer a:hover {
+    color: var(--accent-color);
+    padding: 0;
+}
+
+.nombre {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-top: 1.5rem;
+}
+
+.nombre p {
+    margin: 0;
+}
+
+.idiomas {
+    padding-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.idiomas > * {
+    margin-right: .5em;
+}
+
+.faq {
+    width: 80px;
+}
+
+footer .row .btn {
+    width: 200px;
+}
+
+@media (max-width: 1200px) {
+
+    #modal1 {
+        max-width: 720px;
+    }
+
+    .btn-menu { 
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .start-section-color-fondo-menu {
+        padding-top: 1%;
+    }
+
+    .container-fluid {
+        height: auto;
+    }
+
+    .video-s {
+        width: 100%;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .v {
+        width: 100%; 
+        height: auto;
+        padding: 10rem;
+        border: 1px solid var(--background-color);
+    }
+
+    .bg-video {
+        object-fit: cover;
+        height: 100%; 
+        width: 100%;
+        z-index: 0;
+    }
+
+    .card {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+
+    .logotipo-navbar {
+        max-width: 7rem !important;
+    }
+
+    .back-arrow {
+        height: 42px !important;
+        width: 42px !important;
+    }
+
+}
+
+
+@media (min-width: 992px) {
+
+    .menu-oculto {
+        display: none !important;
+    }
+    
+}
+
+@media (max-width: 576px) {
+
+    h1 {
+        padding-left: .5rem;
+        font-size: calc(1.3rem + 15vw);
+        letter-spacing: .15em;
+        padding-top: .2em;
+        padding-bottom: .3em;
+        text-transform: uppercase;
+        font-family: var(--font-title);
+        text-align: center;
+    }
+
+    .navbar-nav {
+        height: 50vh;
+        margin: 2.3rem 1%;
+    }
+
+    .btn-menu {
+        margin: 3% 1%;
+    }
+    
+    .btn-primary {
+        max-width: 10rem;
+    }
+
+    .nombre {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .nombre a {
+        padding-right: 0 !important;
+    }
+
+    footer .btn {
+       padding: 0;
+    }
+
+    #logotipo  {
+        display: none !important;
+    }
