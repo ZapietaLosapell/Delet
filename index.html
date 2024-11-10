@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Y¿Delet.exe</title>
+    <title>¿YDelet!.exe</title>
     <link rel="icon" type="image/x-icon" href="img/icon.ico">
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href=ttps://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js />
+    <!-- Aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,11 +25,9 @@
                         <a class="navbar-brand" href="#">
                             <img class="logotipo-navbar" src="img/logo.png" alt="Logotipo">
                         </a>
-                        <button class="btn-menu btn-menu-icon navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            
+                        <button class="btn-menu btn-menu-icon navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">     
                                 <div class="line"></div>
-                                <div class="line"></div>
-                            
+                                <div class="line"></div>         
                         </button>
                         <div id="navbarNav" class="collapse navbar-collapse">
                             <ul class="navbar-nav">
@@ -31,27 +35,27 @@
                                 <a class="nav-link" href="#">Home</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="#">Press Kit</a>
+                                <a class="nav-link" href="#video-section">Videos</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="#">Pases / Tikects</a>
+                                <a class="nav-link" href="entradas.html">Pases / Tikects</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="#sinopsis-section">Sinopsis</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="#">Contacto</a>
+                                <a class="nav-link" href="contacto.html">Contacto</a>
                               </li>
                             </ul>
                           </div>
                     </div>
                 </nav>
                 <nav class="d-none d-lg-block" id="botones-menu">
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><a href="#" class="btn btn-outline-dark btn-menu pointer">PRESS KIT</a></li>
-                        <li class="list-inline-item"><a href="#" class="btn btn-outline-dark btn-menu pointer">PASES / TIKECTS</a></li>
+                    <ul class="list-inline m-0">
+                        <li class="list-inline-item"><a href="#video-section" class="btn btn-outline-dark btn-menu pointer">VIDEOS</a></li>
+                        <li class="list-inline-item"><a href="entradas.html" class="btn btn-outline-dark btn-menu pointer">PASES / TIKECTS</a></li>
                         <li class="list-inline-item"><a href="#sinopsis-section" class="btn btn-outline-dark btn-menu pointer">SINOPSIS</a></li>
-                        <li class="list-inline-item"><a href="#" class="btn btn-outline-dark btn-menu pointer">CONTACTO</a></li>
+                        <li class="list-inline-item"><a href="contacto.html" class="btn btn-outline-dark btn-menu pointer">CONTACTO</a></li>
                     </ul>
                 </nav>   
             </div>
@@ -90,12 +94,14 @@
                 <div class="fixed-1 aviso"></div>
                 <div class="fixed-2 aviso">
                     <div class="sticky">
-                        <h2><a href="#" class="pointer">Ven al estreno del documental*</a></h2>
-                        <button type="button" id="close" class="fixed-close" aria-label="Close">X</button>
+                        <div class="row justify-content-between">
+                            <h2 class="col-md-8 ms-3"><a href="#" class="pointer">Ven al estreno del documental*</a></h2>
+                            <button type="button" id="close" class="col-md-1 fixed-close me-3" aria-label="Close">X</button>
+                        </div>
                     </div>
                     <p><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b></p>
                     <p><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b></p>
-                    <p>*<a href="#" class="pointer">Y consigue tu camiseta gratis aquí.</a></p>
+                    <p><a href="#" class="pointer">* Y consigue una camiseta gratis aquí.</a></p>
                 </div>
             </div>
         </header>
@@ -106,8 +112,8 @@
             <article data-aos="my-fade-up" class="container-lg">
                 <div class="container">
                     <h3>Sinopsis</h3>
-                    <p><span>Y¿Delet.exe *** Archivo potencialmente olvidado ***</span> es una inmersión intrigante en las imágenes de los años 80, tratadas como especies en peligro en un ecosistema digital saturado. Con un enfoque en la evolución de la memoria visual y cultural, el documental revela lo que podría estar desapareciendo ante nuestros ojos. ¿Qué se ha perdido realmente?</p>
-                    <a href="#" class="pointer">→ Descubre más</a>
+                    <p>***¿Y-Delet!.exe*** es una inmersión intrigante en las imágenes de los años 80, tratadas como especies en peligro en un ecosistema digital saturado. Con un enfoque en la evolución de la memoria visual y cultural, el documental revela lo que podría estar desapareciendo ante nuestros ojos. ¿Qué se ha perdido realmente?</p>
+                    <a href="#" class="pointer">➔ Descubre más</a>
                 </div>
             </article>
             <article class="d-none d-lg-flex" data-aos="my-fade-up" data-aos-delay="200">
@@ -130,263 +136,187 @@
         </section>
 
         <section id="review-section">
-            <article class="header-section">
+            <article class="section-inner">
                 <h1>Reviews</h1>
-                <div class="container">
-                    <img id="archi" src="img/archi.png" alt="Ilustración de un archivo digital">
-                    <p>Estoy un poco pixelado y roto, pero aún puedo rescatar lo que dicen de mí.</p>
-                    <p>¿Te atreves a descubrir las reseñas?</p>
-                    <p>¿Te atreves a descubrir las reseñas?</p>
-                    <p>No prometo que sea bonito, pero sí... interesante.</p>
+                <div class="container intro px-4 justify-content-center">
+                    <div class="row gx-5">
+                        <div class="col-lg-3 col-archi">
+                            <button>Abrir</button>
+                            <img id="archi" class="pb-5 help" src="img/archi.png" alt="Ilustración de un archivo digital">
+                            <img id="archi-2" class="pb-5 help" src="img/archi-2.png" alt="Ilustración de un archivo digital">
+                        </div>
+                        <div class="col-lg-3">
+                            <p id="r-1" class="rev" data-aos="fade-up" data-aos-offset="0" data-aos-duration="1000">✷ Estoy un poco pixelado y roto, pero aún puedo rescatar lo que dicen de mí.</p>
+                        </div>
+                        <div class="col-lg-3">
+                            <p class="rev" data-aos="fade-up"  data-aos-delay="2000" data-aos-offset="0" data-aos-duration="1000">✷ ¿Te apetece descubrirlo?</p>
+                        </div>
+                        <div class="col-lg-3">
+                            <p class="rev" data-aos="fade-up"  data-aos-delay="3000" data-aos-offset="0" data-aos-duration="1000">✷ No prometo que sea bonito, pero sí... interesante.</p>
+                        </div>
+                    </div>
                 </div>
             </article>
-            <article class="inner-section">
-                <div id="carouselReviews" class="container carousel slide" data-aos="my-fade-up">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active card a1">
-                            <div class="row card-body slide-carousel g-2">
-                                <div class="col-12 col-sm-6 col-md-4">
-                                    <div class="card h-100">
-                                        <div class="card-body slide">
-                                            <h5 class="card-title mt-1">El País</h5>
-                                            <p class="card-text">Una obra magistralmente compuesta que desentraña la complejidad de la memoria y su representación visual en sintonía con la época actual.</p>
-                                            <div class="accordion d-block d-sm-none" id="accordion1">
-                                                <div class="accordion-item">
+            <article class="section-inner section-inner-2">
+                    <h3 class="situ situ-2 pt-3 mx-3 pe-1">✵ Deja tu review <a href="#" class="pointer">@¿Y-Delet!</a></h3></div>
+                    <div id="carouselReviews" class="container carousel slide" data-aos="my-fade-up">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active card a1">
+                                <div class="row card-body slide-carousel">
+                                    <div class="col-lg-4 col-md-6 col-sm-6">
+                                        <div class="card h-100">
+                                            <div class="card-body slide">
+                                                <h5 class="card-title mt-1 es4">El País</h5>
+                                                <p class="card-text">Una obra magistralmente compuesta que desentraña la complejidad de la memoria y su representación visual en sintonía con la época actual.</p>
+                                                <div class="accordion d-block d-sm-none" id="accordion1">
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                                Leer más
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapseOne" class="collapse" data-bs-parent="#accordion1">
+                                                            <div class="accordion-body">
+                                                            <strong>Una obra magistralmente compuesta</strong> que desentraña la complejidad de la memoria y su representación visual en sintonía con la época actual.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer d-md-flex justify-content-center">
+                                                <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 d-block d-sm-none d-lg-block">
+                                        <div class="card h-100">
+                                            <div class="card-body slide">
+                                                <h5 class="card-title mt-1 es5">La Vanguardia</h5>
+                                                <p class="card-text">Este documental de los años 80 se revela como un hito en la exploración de cómo la imagen moldea nuestra memoria colectiva. Resuena por su perspicaz análisis y un uso innovador de secuencias visuales.</p>
+                                                <div class="accordion d-block d-sm-none" id="accordion2">
+                                                    <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                            Leer más
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion2">
+                                                        <div class="accordion-body">
+                                                        <strong>Este documental de los años 80 se revela como un hito</strong> en la exploración de cómo la imagen moldea nuestra memoria colectiva. Resuena por su perspicaz análisis y un uso innovador de secuencias visuales.
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer d-md-flex justify-content-center">
+                                                <img class="estrellas" src="img/5-estrellas.png" alt="4 estrellas">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-6">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <h5 class="card-title mt-1 es5">Fotogramas</h5>
+                                                <p class="card-text">Una pieza que trasciende su época y deja una huella indeleble en la historia del cine documental. Se nos presenta como un clásico que no va a perder vigencia con el tiempo.</p>
+                                                <div class="accordion d-block d-sm-none" id="accordion3">
+                                                    <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                            Leer más
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion3">
+                                                        <div class="accordion-body">
+                                                        <strong>Una pieza que trasciende su época</strong> y deja una huella indeleble en la historia del cine documental. Se nos presenta como un clásico que no va a perder vigencia con el tiempo.
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer d-md-flex justify-content-center">
+                                                <img class="estrellas" src="img/5-estrellas.png" alt="4 estrellas">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item card">
+                                <div class="row card-body slide-carousel">
+                                    <div class="col-lg-4 col-md-6 col-sm-6">
+                                        <div class="card h-100">
+                                            <div class="card-body slide">
+                                                <h5 class="card-title mt-1 es5">ABC</h5>
+                                                <p class="card-text">¿Y-Delet!.exe, con su enfoque introspectivo sobre la memoria visual y las narrativas, es pionero en mostrar cómo las imágenes fijas y en movimiento conforman nuestro recuerdo histórico. Un testimonio de gran valor.</p>
+                                                <div class="accordion d-block d-sm-none" id="accordion1">
+                                                    <div class="accordion-item">
                                                     <h2 class="accordion-header">
                                                         <button class="accordion-button collapsed" data-bs-toggle="collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                                             Leer más
                                                         </button>
                                                     </h2>
-                                                    <div id="collapseOne" class="collapse" data-bs-parent="#accordion1">
+                                                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion1">
                                                         <div class="accordion-body">
-                                                        <strong>Una obra magistralmente compuesta</strong> que desentraña la complejidad de la memoria y su representación visual en sintonía con la época actual.
+                                                        <strong>¿Y-Deleted.exe, con su enfoque introspectivo</strong> sobre la memoria visual y las narrativas, es pionero en mostrar cómo las imágenes fijas y en movimiento conforman nuestro recuerdo histórico. Un testimonio de gran valor.
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-4 align-items-end">
-                                    <div class="card h-100">
-                                        <div class="card-body slide">
-                                            <h5 class="card-title mt-1">La Vanguardia</h5>
-                                            <p class="card-text">Este documental de los años 80 se revela como un hito en la exploración de cómo la imagen moldea nuestra memoria colectiva. Resuena por su perspicaz análisis y un uso innovador de secuencias visuales.</p>
-                                            <div class="accordion d-block d-sm-none" id="accordion2">
-                                                <div class="accordion-item">
-                                                  <h2 class="accordion-header">
-                                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                        Leer más
-                                                    </button>
-                                                  </h2>
-                                                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion2">
-                                                    <div class="accordion-body">
-                                                      <strong>Este documental de los años 80 se revela como un hito</strong> en la exploración de cómo la imagen moldea nuestra memoria colectiva. Resuena por su perspicaz análisis y un uso innovador de secuencias visuales.
                                                     </div>
-                                                  </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <img class="estrellas" src="img/5-estrellas.png" alt="4 estrellas">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-4">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <h5 class="card-title mt-1">Fotogramas</h5>
-                                            <p class="card-text">Una pieza que trasciende su época y deja una huella indeleble en la historia del cine documental. Se nos presenta como un clásico que no va a perder vigencia con el tiempo.</p>
-                                            <div class="accordion d-block d-sm-none" id="accordion3">
-                                                <div class="accordion-item">
-                                                  <h2 class="accordion-header">
-                                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                        Leer más
-                                                    </button>
-                                                  </h2>
-                                                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion3">
-                                                    <div class="accordion-body">
-                                                      <strong>Una pieza que trasciende su época</strong> y deja una huella indeleble en la historia del cine documental. Se nos presenta como un clásico que no va a perder vigencia con el tiempo.
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <img class="estrellas" src="img/5-estrellas.png" alt="4 estrellas">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item card">
-                            <div class="row card-body slide-carousel">
-                                <div class="col-12 col-sm-6 col-md-4">
-                                    <div class="card h-100">
-                                        <div class="card-body slide">
-                                            <h5 class="card-title mt-1">ABC</h5>
-                                            <p class="card-text">¿Y-Delet!.exe, con su enfoque introspectivo sobre la memoria visual y las narrativas, es pionero en mostrar cómo las imágenes fijas y en movimiento conforman nuestro recuerdo histórico. Un testimonio de gran valor.</p>
-                                            <div class="accordion d-block d-sm-none" id="accordion1">
-                                                <div class="accordion-item">
-                                                  <h2 class="accordion-header">
-                                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                                        Leer más
-                                                    </button>
-                                                  </h2>
-                                                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion1">
-                                                    <div class="accordion-body">
-                                                      <strong>¿Y-Deleted.exe, con su enfoque introspectivo</strong> sobre la memoria visual y las narrativas, es pionero en mostrar cómo las imágenes fijas y en movimiento conforman nuestro recuerdo histórico. Un testimonio de gran valor.
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <img class="estrellas" src="img/5-estrellas.png" alt="4 estrellas">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-4">
-                                    <div class="card h-100">
-                                        <div class="card-body slide">
-                                            <h5 class="card-title mt-1">Cinemanía</h5>
-                                            <p class="card-text">Este documental se erige como una joya del cine de ensayo de los años 80. Una obra imprescindible para los amantes de la historia del cine.</p>
-                                            <div class="accordion d-block d-sm-none" id="accordion2">
-                                                <div class="accordion-item">
-                                                  <h2 class="accordion-header">
-                                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                        Leer más
-                                                    </button>
-                                                  </h2>
-                                                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion2">
-                                                    <div class="accordion-body">
-                                                      <strong>Este documental se erige como una joya</strong> del cine de ensayo de los años 80. Una obra imprescindible para los amantes de la historia del cine.
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-4">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <h5 class="card-title mt-1">El Mundo</h5>
-                                            <p class="card-text">Con una mirada que combina lo filosófico y lo artístico, este documental de los años 80 indaga en las narrativas visuales como un espejo de nuestra identidad.</p>
-                                            <div class="accordion d-block d-sm-none" id="accordion3">
-                                                <div class="accordion-item">
-                                                  <h2 class="accordion-header">
-                                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                        Leer más
-                                                    </button>
-                                                  </h2>
-                                                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion3">
-                                                    <div class="accordion-body">
-                                                      <strong>Con una mirada que combina lo filosófico y lo artístico</strong>, este documental de los años 80 indaga en las narrativas visuales como un espejo de nuestra identidad.
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev pointer" type="button" data-bs-target="#carouselReviews" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon pointer" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next pointer" type="button" data-bs-target="#carouselReviews" data-bs-slide="next">
-                        <span class="carousel-control-next-icon pointer" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>  
-            </article>
-            <!-- <article>
-                <div class="container">
-                    <div class="row justify-content-center g-0">
-                        <div class="col-12 col-md-4">
-                            
-                            <div id="carousel1" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="hover">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active bg-body">
-                                        <div class="card m-2 h-100">
-                                            <div class="card-body">
-                                                <h5 class="card-title">El País</h5>
-                                                <p class="card-text">Una obra magistralmente compuesta que desentraña la complejidad de la memoria y su representación visual en sintonía con la época actual.</p>
-                                                <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
+                                            <div class="card-footer d-md-flex justify-content-center">
+                                                <img class="estrellas" src="img/5-estrellas.png" alt="4 estrellas">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="carousel-item bg-body">
-                                        <div class="card m-2 h-100">
-                                            <div class="card-body">
-                                                <h5 class="card-title">La Vanguardia</h5>
-                                                <p class="card-text">Este documental de los años 80 se revela como un hito en la exploración de cómo la imagen moldea nuestra memoria colectiva. Resuena por su perspicaz análisis y un uso innovador de secuencias visuales.</p>
-                                                <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            
-                            <div id="carousel2" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="hover">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active bg-body">
-                                        <div class="card m-2 h-100">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Fotogramas</h5>
-                                                <p class="card-text">Una pieza que trasciende su época y deja una huella indeleble en la historia del cine documental. Se nos presenta como un clásico que no va a perder vigencia con el tiempo.</p>
-                                                <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item bg-body">
-                                        <div class="card m-2 h-100">
-                                            <div class="card-body">
-                                                <h5 class="card-title">ABC</h5>
-                                                <p class="card-text">¿Y_Delet_.exe, con su enfoque introspectivo sobre la memoria visual y las narrativas, es pionero en mostrar cómo las imágenes fijas y en movimiento conforman nuestro recuerdo histórico. Un testimonio de gran valor.</p>
-                                                <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            
-                            <div id="carousel3" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="hover">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active bg-body">
-                                        <div class="card m-2 h-100">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Cinemanía</h5>
+                                    <div class="col-lg-4 col-md-6 d-block d-sm-none d-lg-block">
+                                        <div class="card h-100">
+                                            <div class="card-body slide">
+                                                <h5 class="card-title mt-1 es4">Cinemanía</h5>
                                                 <p class="card-text">Este documental se erige como una joya del cine de ensayo de los años 80. Una obra imprescindible para los amantes de la historia del cine.</p>
+                                                <div class="accordion d-block d-sm-none" id="accordion2">
+                                                    <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                            Leer más
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion2">
+                                                        <div class="accordion-body">
+                                                        <strong>Este documental se erige como una joya</strong> del cine de ensayo de los años 80. Una obra imprescindible para los amantes de la historia del cine.
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer d-md-flex justify-content-center">
                                                 <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="carousel-item bg-body">
-                                        <div class="card m-2 h-100">
+                                    <div class="col-lg-4 col-md-6 col-sm-6">
+                                        <div class="card h-100">
                                             <div class="card-body">
-                                                <h5 class="card-title">El Mundo</h5>
+                                                <h5 class="card-title mt-1 es4">El Mundo</h5>
                                                 <p class="card-text">Con una mirada que combina lo filosófico y lo artístico, este documental de los años 80 indaga en las narrativas visuales como un espejo de nuestra identidad.</p>
+                                                <div class="accordion d-block d-sm-none" id="accordion3">
+                                                    <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                            Leer más
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion3">
+                                                        <div class="accordion-body">
+                                                        <strong>Con una mirada que combina lo filosófico y lo artístico</strong>, este documental de los años 80 indaga en las narrativas visuales como un espejo de nuestra identidad.
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer">
                                                 <img class="estrellas" src="img/4-estrellas.png" alt="4 estrellas">
                                             </div>
                                         </div>
@@ -394,22 +324,335 @@
                                 </div>
                             </div>
                         </div>
+                        <button class="carousel-control-prev pointer" type="button" data-bs-target="#carouselReviews" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon pointer" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next pointer" type="button" data-bs-target="#carouselReviews" data-bs-slide="next">
+                            <span class="carousel-control-next-icon pointer" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                </div>
-            </article> -->
+            </article>
+            
         </section>
         <section id="video-section">
-            <article>
-                <h1>Videos</h1>
-                <div>
-                    <!-- <video src="/video/Vídeo de KoolShooters__.mp4" autoplay muted></video> -->
+            <div class="fondo-2"></div>
+            <article class="section-inner dark">
+                <h1 class="dark">Videos</h1>
+                <p class="px-4 mt-3 comentario">Deja tu comentario #¿Y-Videos-Delet!</p>
+                <div class="coleccion-horizontal pe-5">
+                    <div class="video-s d-block d-lg-flex align-items-end">
+                            <div class="v position-relative" id="v1">
+                                <video id="video1" class="bg-video position-absolute w-100 h-100 top-0 start-0 videos" autoplay muted loop>
+                                    <source src="video/medu-a.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="v-2 d-flex justify-content-center align-items-center">
+                                    <button class="i-z fullPlay">Play ▶</button>
+                                    <div class="i-v i-z position-absolute">
+                                        <div class=" d-flex">
+                                            <h3>01</h3>
+                                            <div>
+                                                <h2>Origen</h2>
+                                                <h2><i>1:32 min</i></h2>
+                                            </div>
+                                        </div>   
+                                    </div>
+                                    <div class="cover position-absolute"></div>
+                                </div>
+                            </div>
+                            <div class="v position-relative" id="v2">
+                                <video class="bg-video position-absolute w-100 h-100 top-0 start-0 videos" autoplay muted loop>
+                                    <source src="video/medu-b.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="v-2 d-flex justify-content-center align-items-center">
+                                    <button class="i-z fullPlay">Play ▶</button>
+                                    <div class="i-v i-z position-absolute">
+                                        <div class=" d-flex">
+                                            <h3>02</h3>
+                                            <div>
+                                                <h2>Propósito</h2>
+                                                <h2><i>1:02 min</i></h2>
+                                            </div>
+                                        </div>   
+                                    </div>
+                                    <div class="cover position-absolute"></div>
+                                </div>
+                            </div>
+                            <div class="v position-relative" id="v3">
+                                <video class="bg-video position-absolute w-100 h-100 top-0 start-0 videos" autoplay muted loop>
+                                    <source src="video/medu-c.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="v-2 d-flex justify-content-center align-items-center">
+                                    <button class="i-z fullPlay">Play ▶</button>
+                                    <div class="i-v i-z position-absolute">
+                                        <div class=" d-flex">
+                                            <h3>03</h3>
+                                            <div>
+                                                <h2>Variaciones</h2>
+                                                <h2><i>1:52 min</i></h2>
+                                            </div>
+                                        </div>   
+                                    </div>
+                                 <div class="cover position-absolute"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+        </section>
+
+        <section id="characters-section">
+            <article class="section-inner">
+                <h1>Personajes</h1>
+                <div class="container character">
+                    <div class="row align-items-center justify-content-center g-0">
+                      <div class="col-10 col-md-4">
+                        <div class="card" data-aos="my-fade-up">
+                            <img src="img/character-1.png" class="card-img-top" alt="character 1">
+                            <div class="card-overlay">Nadie le ha visto.</div>
+                            <div class="card-body">
+                                <h5>??</h5>
+                                <p class="card-text">Archivo creado el 12/01/2025. <a href="#" class="pointer">Más</a></p>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-10 col-md-4">
+                        <div class="card" data-aos="my-fade-up" data-aos-delay="300">
+                            <img src="img/character-2.png" class="card-img-top" alt="character 2">
+                            <div class="card-overlay">Es propiedad del mundo.</div>
+                            <div class="card-body">
+                                <h5>Delet Archi</h5>
+                                <p class="card-text">Modificado hace dos horas. <a href="#" class="pointer">Más</a></p>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
                 </div>
             </article>
         </section>
-    </main>  
-    
+
+        <section id="galeria">
+        <article class="section-inner dark position-relative">
+            <h1 class="dark">Galería</h1>
+            <div class="d-block d-sm-flex justify-content-between align-items-center">
+                <p class="mt-3 mx-3 mb-0 comentario">Deja tu comentario #¿Y-Fotos-Delet!</p>
+                <button id="postalButton" class="mx-3 mt-3">🡦 Voltear postales</button>
+            </div>
+            <div id="pixi-container" class="pointer"></div>
+        </article>
+        </section>
+    </main>
+
+    <footer class="d-flex align-items-end">
+        <div class="container d-block concon">
+            <p class="pointer idiomas"><a href="#" class="pointer">Es</a> <a href="#" class="pointer">En</a> <a href="#" class="pointer">Pt</a> <a href="" class="pointer">Fr</a> <a href="#">It</a></P>
+            <div class="container d-block">
+                <div class="row justify-content-between g-3 mb-3">
+                    <div class="col-sm-6 col-md-4 d-flex flex-column">
+                        <a href="#" class="pointer">Créditos</a>
+                        <a href="#" class="pointer">Políticas de privacidad</a>
+                        <a href="#" class="pointer">Gestionar preferencias</a>
+                        <a href="#" class="pointer">Términos y condiciones de uso</a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 d-flex flex-column">
+                        <button class="btn btn-outline-dark pointer">Contacto</button>
+                        <button class="btn btn-outline-dark pointer">Prensa</button>
+                        <button class="btn btn-outline-dark pointer">Donaciones</button>
+                    </div>
+                    <div class="col-sm-6 col-md-4 d-flex flex-column">
+                        <p>Redes Sociales</p>
+                        <a href="#" class="pointer">Facebook</a>
+                        <a href="#" class="pointer">Facebook</a>
+                        <a href="#" class="pointer">Youtube</a>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-outline-dark pointer faq">FAQ</button>
+            <div class="d-block d-sm-flex justify-content-end px-1 nombre">
+                <a href="#" class="pointer pe-5">Inicio</a>
+                <p class="pointer"><span>&copy;</span> 2025 ¿Y-Delet!.exe</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="js/script.js">
+
+    <!-- My .js -->
+    <script src="js/script.js"></script>
+
+    <!-- Gsap y ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            gsap.registerPlugin(ScrollTrigger);
+    
+            const coleccionHorizontal = document.querySelector(".coleccion-horizontal");
+            const scrollV = coleccionHorizontal.scrollWidth - coleccionHorizontal.offsetWidth;
+
+            const tl = gsap.timeline();
+            tl.to("#v1", { height: "55vh" })
+            .to("#v2", { height: "70vh" })
+            .to("#v3", { height: "65vh" })
+            .to("#v2", { height: "40vh" });
+
+            ScrollTrigger.matchMedia({
+            "(min-width: 992px)": function () {
+                gsap.to(".video-s", {
+                    x: () => -scrollV,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".coleccion-horizontal",
+                        id: "v",
+                        start: "top top",
+                        end: () => "+=" + scrollV,
+                        scrub: 6,
+                        tooggleAction: "reverse",
+                        pin: true
+                    }
+                });
+
+                gsap.utils.toArray(".video-s").forEach((el, index) => {
+                    ScrollTrigger.create({
+                        animation: tl,
+                        trigger: el,
+                        start: "top top",
+                        end: () => "+=" + scrollV,
+                        scrub: 6,
+                        ease: "none",
+                    });
+                });
+            },
+
+            "(max-width: 991px)": function () {
+                const trigger = ScrollTrigger.getById("v");
+                if (trigger) trigger.kill();
+                }
+            });
+        });
     </script>
+
+    <!-- PiziJS - Sección galería -->
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.x/dist/pixi.min.js"></script>
+
+    <script>
+        (async () => {
+            const app = new PIXI.Application({
+                resizeTo: window,
+                backgroundColor: 0x1E1EFF
+            });
+
+            document.getElementById("pixi-container").appendChild(app.view);
+
+        const currentFotoUrl = [
+            "img/foto-6.png",
+            "img/foto-7.png",
+            "img/foto-8.png",
+            "img/foto-9.png",
+            "img/foto-10.png"
+        ];
+
+        const newFotoUrl = [
+            "img/foto-1.png",
+            "img/foto-2.png",
+            "img/foto-3.png",
+            "img/foto-4.png",
+            "img/foto-5.png"
+        ];
+
+        const textures = await Promise.all(currentFotoUrl.map(url => PIXI.Assets.load(url)));
+
+        textures.forEach(texture => {
+            texture.baseTexture.scaleMode = PIXI.SCALE_MODES.NEAREST;
+        });
+
+        const photos = textures.map((texture, index) => {
+            return createPhoto(
+                texture,
+                Math.floor(Math.random() * app.screen.width),
+                Math.floor(Math.random() * app.screen.height),
+                index
+            );
+        });
+
+        function createPhoto(texture, x, y, index) {
+            const photo = new PIXI.Sprite(texture);
+            photo.eventMode = "static";
+            photo.cursor = "pointer";
+            photo.anchor.set(0.5);
+            photo.scale.set(giveScale()); 
+            photo.on("pointerdown", onDragStart, photo);
+            photo.x = x;
+            photo.y = y;
+            app.stage.addChild(photo);
+            return photo;
+        }
+
+        function giveScale() {
+                const screenWidth = window.innerWidth;
+                if (screenWidth <= 576) {
+                    return 0.1;
+                } else if (screenWidth <= 992) {
+                    return 0.2;
+                } else {
+                    return 0.3;
+                }
+            }
+
+        let dragTarget = null;
+
+        app.stage.eventMode = "static";
+        app.stage.hitArea = app.screen;
+        app.stage.on("pointerup", onDragEnd);
+        app.stage.on("pointerupoutside", onDragEnd);
+
+        function onDragMove(event) {
+            if (dragTarget) {
+                dragTarget.parent.toLocal(event.global, null, dragTarget.position);
+            }
+        }
+
+        function onDragStart() {
+            this.alpha = 0.5;
+            dragTarget = this;
+            app.stage.on("pointermove", onDragMove);
+        }
+
+        function onDragEnd() {
+            if (dragTarget) {
+                app.stage.off("pointermove", onDragMove);
+                dragTarget.alpha = 1;
+                dragTarget = null;
+            }
+        }
+
+        document.getElementById("postalButton").addEventListener("click", async () => {
+
+            const newTextures = await Promise.all(newFotoUrl.map(url => PIXI.Assets.load(url)));
+
+            newTextures.forEach(texture => {
+                texture.baseTexture.scaleMode = PIXI.SCALE_MODES.NEAREST;
+            });
+
+            photos.forEach((photo, index) => {
+                photo.texture = newTextures[index];
+            });
+        });
+    })();
+    </script>
+    
+    <!-- jquery -->
+    <script>
+        $( "button" ).on( "click", function() {
+        $( "#archi-2" ).fadeToggle( "slow", "linear" );
+        } );
+    </script>
+
 </body>
 </html>
