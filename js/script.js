@@ -235,3 +235,22 @@ document.querySelectorAll('.obtener-entrada').forEach(button => {
         confirmationModal.show();
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contactForm");
+    const feedbackModal = new bootstrap.Modal(document.getElementById("feedbackModal"));
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const formData = new FormData(form);
+
+        // Simulate form submission for demonstration purposes
+        setTimeout(() => {
+            feedbackModal.show();
+            form.reset(); // Reset the form fields
+        }, 1000);
+
+    });
+});
+
