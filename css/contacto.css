@@ -430,7 +430,7 @@ footer .row .btn {
     width: 200px;
 }
 
-=
+
 
 /* mediaquery */
 @media (max-width: 1200px) {
@@ -484,10 +484,6 @@ footer .row .btn {
 
     .banner {
         font-size: small;
-    }
-
-    .container {
-        padding: ;
     }
 
     .footer {
