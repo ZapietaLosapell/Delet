@@ -85,7 +85,7 @@ h1 {
     border: 1px solid var(--primary-color);
     font-size: 2.8em;
     background-color: rgba(255, 255, 255, 0.185);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     filter: brightness(1.2);
     font-family: var(--font-title);
     padding: 8px 15px;
@@ -99,7 +99,6 @@ h1 {
 #botones-menu  a:hover {
     color: var(--background-color);
     font-weight: 400 !important;
-    padding-left: 1.5em;
     border: 1px solid var(--background-color);
 }
 
@@ -109,10 +108,12 @@ h1 {
 
 .btn-outline-dark:hover {
     background-color: var(--secundary-color);
+    padding: 8px 15px 8px 1.5em;
 }
 
 .btn-outline-dark:focus {
     background-color: var(--background-color);
+    color: var(--primary-color);
 }
 
 .home-section-fondo-menu {
@@ -128,7 +129,7 @@ h1 {
 
 .btn-menu-icon {
     background: rgba(255, 255, 255, 0.112);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     height: 45px;
     width: 50px;
     display: flex;
@@ -148,7 +149,8 @@ h1 {
     height: 70vh;
     display: flex;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.97);
+    background: rgba(255, 255, 255, 0.564);
+    backdrop-filter: blur(10px);
     text-align: center;
     font-size: 1.8em;
     text-transform: uppercase;
@@ -219,6 +221,19 @@ h1 {
     top: 20px;
 }
 
+
+
+@media (max-width: 576px) {
+
+.navbar-nav {
+        height: 50vh;
+        margin: 2.3rem 1%;
+    }
+
+    .btn-menu {
+        margin: 3% 1%;
+    }
+}
 
 /* CONTENEDORES */
 
