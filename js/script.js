@@ -178,11 +178,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 setTimeout(function() {
   document.getElementById("logotipo").style.opacity = "1";
-}, 3800);
+}, 3000);
 
 setTimeout(function() {
   document.getElementById("logotipo").style.animationPlayState = "paused";
-}, 6800);
+}, 4800);
 
 
 // Reproducir video en pantalla completa
