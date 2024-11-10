@@ -32,6 +32,10 @@
     accent-color: var(--accent-color);
 }
 
+body {
+    visibility: hidden;
+}
+
 button, a {
     font-weight: 500;
     text-decoration: none;
@@ -277,14 +281,7 @@ h1 {
     color: var(--primary-color);
     font-weight: bold;
     font-size: 3rem;
-    text-decoration: ;
-
 }     
-
-.rotate-5 {
-    transform: ;
-}
-
 
 /* Placeholder text styling */
 ::placeholder {

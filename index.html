@@ -53,9 +53,9 @@
                 <nav class="d-none d-lg-block" id="botones-menu">
                     <ul class="list-inline m-0">
                         <li class="list-inline-item"><a href="#video-section" class="btn btn-outline-dark btn-menu pointer">VIDEOS</a></li>
-                        <li class="list-inline-item"><a href="entradas.html" class="btn btn-outline-dark btn-menu pointer">PASES / TIKECTS</a></li>
+                        <li class="list-inline-item"><a href="entradas.html" class="btn btn-outline-dark btn-menu pointer page">PASES / TIKECTS</a></li>
                         <li class="list-inline-item"><a href="#sinopsis-section" class="btn btn-outline-dark btn-menu pointer">SINOPSIS</a></li>
-                        <li class="list-inline-item"><a href="contacto.html" class="btn btn-outline-dark btn-menu pointer">CONTACTO</a></li>
+                        <li class="list-inline-item"><a href="contacto.html" class="btn btn-outline-dark btn-menu pointer page">CONTACTO</a></li>
                     </ul>
                 </nav>   
             </div>
@@ -649,9 +649,24 @@
     
     <!-- jquery -->
     <script>
+        // botón de archivo
         $( "button" ).on( "click", function() {
-        $( "#archi-2" ).fadeToggle( "slow", "linear" );
+            $( "#archi-2" ).fadeToggle( "slow", "linear" );
         } );
+
+        // transición entre páginas
+        $(document).ready(function() {
+  
+            $("body").css("visibility", "visible").hide().fadeIn("slow");
+            
+            $("a.page").click(function(event){
+            event.preventDefault();
+            var changePage = $(this).attr("href");
+            $("body").fadeOut("slow", function() {
+                window.location.href = changePage;
+            });
+        });
+     });
     </script>
 
 </body>

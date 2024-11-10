@@ -32,6 +32,10 @@
     accent-color: var(--accent-color);
 }
 
+body {
+    visibility: hidden;
+}
+
 button, a {
     font-weight: 500;
     text-decoration: none;
