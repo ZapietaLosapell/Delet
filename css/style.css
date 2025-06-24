@@ -735,6 +735,10 @@ div.fixed-2 {
     color: var(--background-color);
 }
 
+#review-section .card-body {
+    padding: 0;
+}
+
 .section-inner {
     height: auto;
     font-family: var(--font-mono);
@@ -862,6 +866,7 @@ div.fixed-2 {
 
 .card-body.slide-carousel {
     padding: 0;
+    height: 500px;
 }
 
 #carouselReviews .card {
