@@ -735,8 +735,9 @@ div.fixed-2 {
     color: var(--background-color);
 }
 
-#review-section .card-body {
-    padding: 0;
+#review-section .card.h-100 {
+    /* padding: 0; */
+    background-color: rgba(255, 255, 255, 0.152);
 }
 
 .section-inner {
@@ -783,7 +784,7 @@ div.fixed-2 {
 }
 
 .situ {
-    font-family: var(--font-body);
+    font-family: var(--font-mono);
     font-size: 1em;
     font-weight: 400;
 }
@@ -807,6 +808,11 @@ div.fixed-2 {
     display: flex;
 }
 
+.carousel-item.active.card.a1 {
+    padding-bottom: 0;
+    background-color: transparent;
+}
+
 .estrellas {
     width: 90%;
 }
@@ -820,7 +826,7 @@ div.fixed-2 {
 }
 
 .card {
-    color: var(--primary-color);
+    color: var(--background-color);
     border-color: var(--background-color);
     border: 1px solid;
     padding: 1rem 1rem;
@@ -858,7 +864,7 @@ div.fixed-2 {
 }
 
 #carouselReviews .card p {
-    font-family: var(--font-mono);
+    font-family: var(--font-title);
     font-weight: 400;
     transition: opacity 500ms, transform 500ms, height 500ms;
     font-size: 1em;
@@ -931,11 +937,12 @@ div.fixed-2 {
 .accordion-item {
     border: none;
     margin-top: .5em;
+    background-color: transparent;
 }
 
 .accordion-body {
     padding: 1em 0 0 0;
-    color: var(--primary-color);
+    color: var(--background-color);
     font-family: var(--font-mono);
     text-align: justify;
 }
