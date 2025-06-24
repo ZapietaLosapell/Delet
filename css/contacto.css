@@ -82,10 +82,7 @@ h1 {
 }
 
 #botones-menu  a:hover {
-    color: var(--background-color);
-    font-weight: 400 !important;
-    border: 1px solid var(--background-color);
-    background-color: var(--primary-color);
+    color: var(--accent-color) !important;
 }
 
 .btn-outline-dark {
@@ -93,8 +90,8 @@ h1 {
 }
 
 .btn-outline-dark:hover {
-    background-color: var(--secundary-color);
-    padding: 8px 15px 8px 1.5em;
+    background-color: rgba(255, 255, 255, 0.208);
+    padding: 8px 15px 8px 1em;
 }
 
 .btn-outline-dark:focus {
