@@ -1,26 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Kosugi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 
 :root {
 
     /* Colores principales */
-    --primary-color: #2036fd; 
-    --secundary-color: #2F06CA; 
-    --accent-color: #FC1F30; 
-    --highlight-color: #FEF102; 
+    --primary-color: #0D0592; 
+    --secundary-color: #1118EC; 
+    --accent-color: #FF3B2D; 
+    --highlight-color: #EFFF41; 
     --background-color: white; 
 
     /* Colores de uso poco frecuente */
-    --details-color: #5EF6AD; 
-    --purple: #4F0CA7; 
-    --black: #181818; 
+    --details-color: #EFFF41; 
+    --purple: #1B0E6B; 
+    --black: #252525; 
 
     /* Tipografías */
     --font-title: "DotGothic16", sans-serif;
     --font-body: "Montserrat", sans-serif; 
-    --font-details: "Kosugi", sans-serif; 
-    --font-mono: "Azeret Mono", monospace; 
+    --font-details: "Courier Prime", monospace; 
+    --font-mono: "Courier Prime", monospace; 
     --font-btn-link: "Montserrat", sans-serif; 
 }
 
@@ -28,8 +29,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: url("../img/a1.png"), url("../img/a2.png"), url("../img/a3.png"), url("../img/a4.png"), auto;
-    accent-color: var(--accent-color);
 }
 
 body {
@@ -60,25 +59,6 @@ h1 {
 }
 
 
-/* Cursores */
-
-.pointer {
-    cursor: url("../img/pointer_a1.png"), url("../img/pointer_a2.png"), pointer !important;
-}
-
-.help {
-    cursor: url("../img/help_a1.png"), url("../img/help_a2.png"), url("../img/help_a3.png"), help;
-}
-
-.text {
-    cursor: url("../img/text-cursor.png"), text;
-}
-
-.special {
-    cursor: url("../img/special_a.png"), default;
-}
-
-
 /* MENÚ */
 
 /* Aplica al menu en pantalla grande */
@@ -93,10 +73,11 @@ h1 {
     filter: brightness(1.2);
     font-family: var(--font-title);
     padding: 8px 15px;
+    color: var(--primary-color);
 }
 
 #botones-menu  a {
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
     transition: color 1s ease-in-out;
 }
 
@@ -104,6 +85,7 @@ h1 {
     color: var(--background-color);
     font-weight: 400 !important;
     border: 1px solid var(--background-color);
+    background-color: var(--primary-color);
 }
 
 .btn-outline-dark {
@@ -294,9 +276,9 @@ h1 {
 .col-md-6 h2{
     text-align: start!important;
     padding-bottom: 3rem;
-    font-family: var(--font-title);
+    font-family: var(--font-mono);
     color: var(--primary-color);
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 3rem;
 }     
 

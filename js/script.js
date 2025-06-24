@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", function () {
+
+ // Lenis
+    const lenis = new Lenis({
+        lerp: 0.08,
+        // autoRaf: true,
+        wheelMultiplier: 0.9,
+        duration: 1.5,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        ScrollTrigger.update();
+        requestAnimationFrame(raf);
+    }
+      
+    requestAnimationFrame(raf);
+
+
 // Tooltip
 
 const tooltipTriggerEl = document.querySelector('[data-bs-toggle="tooltip"]');
@@ -178,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 setTimeout(function() {
   document.getElementById("logotipo").style.opacity = "1";
-}, 3000);
+}, 1500);
 
 setTimeout(function() {
   document.getElementById("logotipo").style.animationPlayState = "paused";
@@ -278,4 +298,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 });
-
+});

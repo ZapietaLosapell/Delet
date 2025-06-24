@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿YDelet!.exe</title>
-    <link rel="icon" type="image/x-icon" href="img/icon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+    <title>Orbe-4016.01</title>
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Jquery -->
@@ -23,11 +24,11 @@
                 <nav class="navbar navbar-expand-lg menu-oculto">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#">
-                            <img class="logotipo-navbar" src="img/logo.png" alt="Logotipo">
+                            <img class="logotipo-navbar" src="img/Or.01.png" alt="Logotipo">
                         </a>
-                        <button class="btn-menu btn-menu-icon navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">     
+                        <button class="btn-menu btn-menu-icon navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <div class="line"></div>
-                                <div class="line"></div>         
+                                <div class="line"></div>
                         </button>
                         <div id="navbarNav" class="collapse navbar-collapse">
                             <ul class="navbar-nav">
@@ -36,9 +37,6 @@
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="#video-section">Videos</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="entradas.html">Pases / Tikects</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="#sinopsis-section">Sinopsis</a>
@@ -52,25 +50,19 @@
                 </nav>
                 <nav class="d-none d-lg-block" id="botones-menu">
                     <ul class="list-inline m-0">
-                        <li class="list-inline-item"><a href="#video-section" class="btn btn-outline-dark btn-menu pointer">VIDEOS</a></li>
-                        <li class="list-inline-item"><a href="entradas.html" class="btn btn-outline-dark btn-menu pointer page">PASES / TIKECTS</a></li>
-                        <li class="list-inline-item"><a href="#sinopsis-section" class="btn btn-outline-dark btn-menu pointer">SINOPSIS</a></li>
-                        <li class="list-inline-item"><a href="contacto.html" class="btn btn-outline-dark btn-menu pointer page">CONTACTO</a></li>
+                        <li class="list-inline-item"><a href="#sinopsis-section" class="btn btn-outline-dark btn-menu pointer">Sinopsis</a></li>
+                        <li class="list-inline-item"><a href="#video-section" class="btn btn-outline-dark btn-menu pointer">Videos</a></li>
+                        <li class="list-inline-item"><a href="contacto.html" class="btn btn-outline-dark btn-menu pointer page">Contacto</a></li>
                     </ul>
                 </nav>   
             </div>
             <span id="busca-play" class="d-none d-lg-block">Busca el play oculto</span>
             <div class="container-fluid">
                 <div class="video-tv-container">
-                    <video id="video-tv" loop autoplay muted poster="poimg/poster.png" alt="Video teaser">
-                        <source src="video/Vídeo de KoolShooters_.mp4" type="video/mp4" />
-                        <source src="video/Video.webm" type="video/webm" />
-                        Your browser does not support HTML5 video. 
-                        Su navegador no soporta vídeo HTML5. 
-                    </video>
-                    <img id="logotipo" class="help" src="img/logotipo.png" alt="Logotipo">
-                    <button onclick="openModal();" aria-label="Open" class="open"><p>Pulsa para acceder (Play)</p>
-                        <img src="img/play-8.png" alt="Play" class="pointer" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="¡Has encontrado el Teaser!">
+                    <img id="video-tv" src="img/animacion_volatryx_WEB.gif" alt="Gif animado de Volatryx">
+                    <img id="logotipo" class="help" src="img/Orbe-4016.01-white.png" alt="Logotipo">
+                    <button onclick="openModal();" aria-label="Open" class="open"><p>Ver teaser...</p>
+                        <img src="img/play.png" alt="Play" class="pointer" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="¡Has encontrado el Teaser!">
                     </button>
                 </div>
                 <dialog id="modal1" role="dialog" aria-labelledby="dialogTitle" class="special ">
@@ -80,8 +72,8 @@
                     </div>
                     <div class="video-container ratio ratio-16x9">
                         <video id="teaser" class="teaser" controls preload="auto" poster="img/poster.png" alt="Teaser Video">
-                            <source src="video/Teaser_1.mp4" type="video/mp4" />
-                            <source src="video/Teaser_1.webm" type="video/webm" />
+                            <!-- <source src="video/Teaser_1.mp4" type="video/mp4" />
+                            <source src="video/Teaser_1.webm" type="video/webm" /> -->
                             <track src="captions/MyCaptions.es.vtt" kind="captions" srclang="es" label="Spanish" class="track-es">
                             <track src="captions/MyCaptions.en.vtt" kind="captions" srclang="en" label="English captions" class="track-en">
                             <p>Your browser does not support the video tag. Download <a href="Teaser_1.mp4">Teaser.mp4</a>.<br>
@@ -95,13 +87,10 @@
                 <div class="fixed-2 aviso">
                     <div class="sticky">
                         <div class="row justify-content-between">
-                            <h2 class="col-md-8 ms-3"><a href="entradas.html" class="pointer">Ven al estreno del documental*</a></h2>
+                            <h2 class="col-md-8 ms-3"><a href="https://www.youtube.com/@Orbe-4016.0" class="pointer">@Orbe-4016.01</a></h2>
                             <button type="button" id="close" class="col-md-1 fixed-close me-3" aria-label="Close">X</button>
                         </div>
                     </div>
-                    <p><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b></p>
-                    <p><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b><span>⇊</span><b>⇊</b></p>
-                    <p><a href="#" class="pointer">* Y consigue una camiseta gratis aquí.</a></p>
                 </div>
             </div>
         </header>
@@ -112,26 +101,22 @@
             <article data-aos="my-fade-up" class="container-lg">
                 <div class="container">
                     <h3>Sinopsis</h3>
-                    <p>***¿Y-Delet!.exe*** es una inmersión intrigante en las imágenes de los años 80, tratadas como especies en peligro en un ecosistema digital saturado. Con un enfoque en la evolución de la memoria visual y cultural, el documental revela lo que podría estar desapareciendo ante nuestros ojos. ¿Qué se ha perdido realmente?</p>
+                    <p>En el año 4016, un programa antiguo llamado Volatryx intenta reconstruir imágenes perdidas del siglo XX en España, utilizando fragmentos digitales y datos dañados. En el proceso, encuentra pistas confusas sobre un documental que pudo haber sido destruido o restringido, y decide recrearlo bajo el nombre Fotografía del siglo XX: Narrativas visuales detrás de la fotografía. De este esfuerzo nace Orbe-4016.01, una simulación incompleta que interpreta los restos del archivo como una nueva forma de memoria imaginada.</p>
                     <a href="#" class="pointer">➔ Descubre más</a>
                 </div>
             </article>
             <article class="d-none d-lg-flex" data-aos="my-fade-up" data-aos-delay="200">
-                <img id="gif" class="img-fluid object-fit-cover help" src="img/tv-animacion.gif" alt="Gif animado de un televisor" onmouseover="pausarGif()" onmouseout="reanudarGif()">
+                <img id="gif" class="img-fluid object-fit-cover help" src="img/Presentation-imagen.png" alt="Gif animado de un televisor" onmouseover="pausarGif()" onmouseout="reanudarGif()">
             </article>
         </section>
         <section id="vhs-section">
             <div class="vhs">
                 <img src="img/vhs-blue-2.png" class="img-fluid" alt="Imagen de una cinta VHS con fondo transparente" data-aos="vhs-animation" data-aos-anchor-placement="top-center">
-                <h5 class="d-none d-sm-block"><span>Nombre Director / España / 2025</span><br>
-                    <span>Digital <span>&#47;</span> Español <span>&#47;</span> 125 min (piloto)</span><br>
-                    <span>Documental</span><br>
-                    <span>No recomendada para menores de siete años</span>
+                <h5 class="d-none d-sm-block">
+                    <span>Digital | Español | 125 min (piloto) | Ficción documental</span>
                 </h5>
             </div>
-            <h5 class="d-block d-sm-none descrip">Nombre Director / España / 2025 /
-                Digital <span>&#47;</span> Español <span>&#47;</span> 125 min (piloto) /
-                Documental / No recomendada para menores de siete años.
+            <h5 class="d-block d-sm-none descrip">Digital | Español | 125 min (piloto) | Ficción documental
             </h5>
         </section>
 
@@ -146,19 +131,19 @@
                             <img id="archi-2" class="pb-5 help" src="img/archi-2.png" alt="Ilustración de un archivo digital">
                         </div>
                         <div class="col-lg-3">
-                            <p id="r-1" class="rev" data-aos="fade-up" data-aos-offset="0" data-aos-duration="1000">✷ Estoy un poco pixelado y roto, pero aún puedo rescatar lo que dicen de mí.</p>
+                            <p id="r-1" class="rev" data-aos="fade-up" data-aos-offset="0" data-aos-duration="1000">- Estoy un poco pixelado y roto, pero aún puedo rescatar lo que dicen de mí.</p>
                         </div>
                         <div class="col-lg-3">
-                            <p class="rev" data-aos="fade-up"  data-aos-delay="2000" data-aos-offset="0" data-aos-duration="1000">✷ ¿Te apetece descubrirlo?</p>
+                            <p class="rev" data-aos="fade-up"  data-aos-delay="2000" data-aos-offset="0" data-aos-duration="1000">- ¿Te apetece descubrirlo?</p>
                         </div>
                         <div class="col-lg-3">
-                            <p class="rev" data-aos="fade-up"  data-aos-delay="3000" data-aos-offset="0" data-aos-duration="1000">✷ No prometo que sea bonito, pero sí... interesante.</p>
+                            <p class="rev" data-aos="fade-up"  data-aos-delay="3000" data-aos-offset="0" data-aos-duration="1000">- No prometo que sea bonito, pero sí... interesante.</p>
                         </div>
                     </div>
                 </div>
             </article>
             <article class="section-inner section-inner-2">
-                    <h3 class="situ situ-2 pt-3 mx-3 pe-1">✵ Deja tu review <a href="#" class="pointer">@¿Y-Delet!</a></h3></div>
+                    <h3 class="situ situ-2 pt-3 mx-3 pe-1">✵ Deja tu review: <a href="#" class="pointer">@Orbe-4016.01</a></h3></div>
                     <div id="carouselReviews" class="container carousel slide" data-aos="my-fade-up">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselReviews" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -170,7 +155,7 @@
                                     <div class="col-lg-4 col-md-6 col-sm-6">
                                         <div class="card h-100">
                                             <div class="card-body slide">
-                                                <h5 class="card-title mt-1 es4">El País</h5>
+                                                <h5 class="card-title mt-1 es4">Territorio Común</h5>
                                                 <p class="card-text">Una obra magistralmente compuesta que desentraña la complejidad de la memoria y su representación visual en sintonía con la época actual.</p>
                                                 <div class="accordion d-block d-sm-none" id="accordion1">
                                                     <div class="accordion-item">
@@ -195,8 +180,8 @@
                                     <div class="col-lg-4 col-md-6 d-block d-sm-none d-lg-block">
                                         <div class="card h-100">
                                             <div class="card-body slide">
-                                                <h5 class="card-title mt-1 es5">La Vanguardia</h5>
-                                                <p class="card-text">Este documental de los años 80 se revela como un hito en la exploración de cómo la imagen moldea nuestra memoria colectiva. Resuena por su perspicaz análisis y un uso innovador de secuencias visuales.</p>
+                                                <h5 class="card-title mt-1 es5">Umbral-552</h5>
+                                                <p class="card-text">Esta ficción documental del siglo XX se revela como un hito en la exploración de cómo la imagen moldea nuestra memoria colectiva. Resuena por su perspicaz análisis y un uso innovador de las narrativas visuales.</p>
                                                 <div class="accordion d-block d-sm-none" id="accordion2">
                                                     <div class="accordion-item">
                                                     <h2 class="accordion-header">
@@ -206,7 +191,7 @@
                                                     </h2>
                                                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion2">
                                                         <div class="accordion-body">
-                                                        <strong>Este documental de los años 80 se revela como un hito</strong> en la exploración de cómo la imagen moldea nuestra memoria colectiva. Resuena por su perspicaz análisis y un uso innovador de secuencias visuales.
+                                                        <strong>Esta ficción documental del siglo XX se revela como un hito</strong> en la exploración de cómo la imagen moldea nuestra memoria colectiva. Resuena por su perspicaz análisis y un uso innovador de las narrativas visuales.
                                                         </div>
                                                     </div>
                                                     </div>
@@ -220,8 +205,8 @@
                                     <div class="col-lg-4 col-md-6 col-sm-6">
                                         <div class="card h-100">
                                             <div class="card-body">
-                                                <h5 class="card-title mt-1 es5">Fotogramas</h5>
-                                                <p class="card-text">Una pieza que trasciende su época y deja una huella indeleble en la historia del cine documental. Se nos presenta como un clásico que no va a perder vigencia con el tiempo.</p>
+                                                <h5 class="card-title mt-1 es5">Retina Fractal</h5>
+                                                <p class="card-text">Una pieza que trasciende su época y deja una huella indeleble en la historia del documental. Se nos presenta como un clásico que no va a perder vigencia con el tiempo.</p>
                                                 <div class="accordion d-block d-sm-none" id="accordion3">
                                                     <div class="accordion-item">
                                                     <h2 class="accordion-header">
@@ -231,7 +216,7 @@
                                                     </h2>
                                                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion3">
                                                         <div class="accordion-body">
-                                                        <strong>Una pieza que trasciende su época</strong> y deja una huella indeleble en la historia del cine documental. Se nos presenta como un clásico que no va a perder vigencia con el tiempo.
+                                                        <strong>Una pieza que trasciende su época</strong> y deja una huella indeleble en la historia del documental. Se nos presenta como un clásico que no va a perder vigencia con el tiempo.
                                                         </div>
                                                     </div>
                                                     </div>
@@ -249,8 +234,8 @@
                                     <div class="col-lg-4 col-md-6 col-sm-6">
                                         <div class="card h-100">
                                             <div class="card-body slide">
-                                                <h5 class="card-title mt-1 es5">ABC</h5>
-                                                <p class="card-text">¿Y-Delet!.exe, con su enfoque introspectivo sobre la memoria visual y las narrativas, es pionero en mostrar cómo las imágenes fijas y en movimiento conforman nuestro recuerdo histórico. Un testimonio de gran valor.</p>
+                                                <h5 class="card-title mt-1 es5">Archivo Base</h5>
+                                                <p class="card-text">Orbe-4016.01, con su enfoque introspectivo sobre la memoria visual y las narrativas, es pionero en mostrar cómo las imágenes fijas y en movimiento conforman nuestro recuerdo histórico.</p>
                                                 <div class="accordion d-block d-sm-none" id="accordion1">
                                                     <div class="accordion-item">
                                                     <h2 class="accordion-header">
@@ -260,7 +245,7 @@
                                                     </h2>
                                                     <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion1">
                                                         <div class="accordion-body">
-                                                        <strong>¿Y-Deleted.exe, con su enfoque introspectivo</strong> sobre la memoria visual y las narrativas, es pionero en mostrar cómo las imágenes fijas y en movimiento conforman nuestro recuerdo histórico. Un testimonio de gran valor.
+                                                        <strong>Orbe-4016.01, con su enfoque introspectivo</strong> sobre la memoria visual y las narrativas, es pionero en mostrar cómo las imágenes fijas y en movimiento conforman nuestro recuerdo histórico.
                                                         </div>
                                                     </div>
                                                     </div>
@@ -274,8 +259,8 @@
                                     <div class="col-lg-4 col-md-6 d-block d-sm-none d-lg-block">
                                         <div class="card h-100">
                                             <div class="card-body slide">
-                                                <h5 class="card-title mt-1 es4">Cinemanía</h5>
-                                                <p class="card-text">Este documental se erige como una joya del cine de ensayo de los años 80. Una obra imprescindible para los amantes de la historia del cine.</p>
+                                                <h5 class="card-title mt-1 es4">Órbita Visual</h5>
+                                                <p class="card-text">Esta construcción documental se erige como una joya del siglo XX. Una obra imprescindible para los amantes de la historia de la fotografía.</p>
                                                 <div class="accordion d-block d-sm-none" id="accordion2">
                                                     <div class="accordion-item">
                                                     <h2 class="accordion-header">
@@ -285,8 +270,7 @@
                                                     </h2>
                                                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion2">
                                                         <div class="accordion-body">
-                                                        <strong>Este documental se erige como una joya</strong> del cine de ensayo de los años 80. Una obra imprescindible para los amantes de la historia del cine.
-                                                        </div>
+                                                        <strong>Esta construcción documental se erige como una joya</strong> del siglo XX. Una obra imprescindible para los amantes de la historia de la fotografía.
                                                     </div>
                                                     </div>
                                                 </div>
@@ -299,8 +283,8 @@
                                     <div class="col-lg-4 col-md-6 col-sm-6">
                                         <div class="card h-100">
                                             <div class="card-body">
-                                                <h5 class="card-title mt-1 es4">El Mundo</h5>
-                                                <p class="card-text">Con una mirada que combina lo filosófico y lo artístico, este documental de los años 80 indaga en las narrativas visuales como un espejo de nuestra identidad.</p>
+                                                <h5 class="card-title mt-1 es4"> Esfera Global</h5>
+                                                <p class="card-text">Con una mirada que combina lo filosófico y lo artístico, esta ficción del siglo XX indaga en las narrativas visuales como un espejo de nuestra identidad.</p>
                                                 <div class="accordion d-block d-sm-none" id="accordion3">
                                                     <div class="accordion-item">
                                                     <h2 class="accordion-header">
@@ -310,7 +294,7 @@
                                                     </h2>
                                                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion3">
                                                         <div class="accordion-body">
-                                                        <strong>Con una mirada que combina lo filosófico y lo artístico</strong>, este documental de los años 80 indaga en las narrativas visuales como un espejo de nuestra identidad.
+                                                        <strong>Con una mirada que combina lo filosófico y lo artístico</strong>, esta ficción del siglo XX indaga en las narrativas visuales como un espejo de nuestra identidad.
                                                         </div>
                                                     </div>
                                                     </div>
@@ -340,12 +324,12 @@
             <div class="fondo-2"></div>
             <article class="section-inner dark">
                 <h1 class="dark">Videos</h1>
-                <p class="px-4 mt-3 comentario">Deja tu comentario #¿Y-Videos-Delet!</p>
+                <p class="px-4 mt-3 comentario">Deja tu comentario: #Orbe-4016.01</p>
                 <div class="coleccion-horizontal pe-5">
                     <div class="video-s d-block d-lg-flex align-items-end">
                             <div class="v position-relative" id="v1">
                                 <video id="video1" class="bg-video position-absolute w-100 h-100 top-0 start-0 videos" autoplay muted loop>
-                                    <source src="video/medu-a.mp4" type="video/mp4">
+                                    <!-- <source src="video/medu-a.mp4" type="video/mp4"> -->
                                     Your browser does not support the video tag.
                                 </video>
                                 <div class="v-2 d-flex justify-content-center align-items-center">
@@ -364,7 +348,7 @@
                             </div>
                             <div class="v position-relative" id="v2">
                                 <video class="bg-video position-absolute w-100 h-100 top-0 start-0 videos" autoplay muted loop>
-                                    <source src="video/medu-b.mp4" type="video/mp4">
+                                    <!-- <source src="video/medu-b.mp4" type="video/mp4"> -->
                                     Your browser does not support the video tag.
                                 </video>
                                 <div class="v-2 d-flex justify-content-center align-items-center">
@@ -383,7 +367,7 @@
                             </div>
                             <div class="v position-relative" id="v3">
                                 <video class="bg-video position-absolute w-100 h-100 top-0 start-0 videos" autoplay muted loop>
-                                    <source src="video/medu-c.mp4" type="video/mp4">
+                                    <!-- <source src="video/medu-c.mp4" type="video/mp4"> -->
                                     Your browser does not support the video tag.
                                 </video>
                                 <div class="v-2 d-flex justify-content-center align-items-center">
@@ -408,7 +392,7 @@
 
         <section id="characters-section">
             <article class="section-inner">
-                <h1>Personajes</h1>
+                <h1>Extras</h1>
                 <div class="container character">
                     <div class="row align-items-center justify-content-center g-0">
                       <div class="col-10 col-md-4">
@@ -426,7 +410,7 @@
                             <img src="img/character-2.png" class="card-img-top" alt="character 2">
                             <div class="card-overlay">Es propiedad del mundo.</div>
                             <div class="card-body">
-                                <h5>Delet Archi</h5>
+                                <h5>Docu Archi</h5>
                                 <p class="card-text">Modificado hace dos horas. <a href="#" class="pointer">Más</a></p>
                             </div>
                         </div>
@@ -440,7 +424,7 @@
         <article class="section-inner dark position-relative">
             <h1 class="dark">Galería</h1>
             <div class="d-block d-sm-flex justify-content-between align-items-center">
-                <p class="mt-3 mx-3 mb-0 comentario">Deja tu comentario #¿Y-Fotos-Delet!</p>
+                <p class="mt-3 mx-3 mb-0 comentario">Deja tu comentario: #Orbe-4016.01</p>
                 <button id="postalButton" class="mx-3 mt-3">🡦 Voltear postales</button>
             </div>
             <div id="pixi-container" class="pointer"></div>
@@ -467,15 +451,14 @@
                     <div class="col-sm-6 col-md-4 d-flex flex-column">
                         <p>Redes Sociales</p>
                         <a href="#" class="pointer">Facebook</a>
-                        <a href="#" class="pointer">Facebook</a>
-                        <a href="#" class="pointer">Youtube</a>
+                        <a href="https://www.youtube.com/@Orbe-4016.0" class="pointer">Youtube</a>
                     </div>
                 </div>
             </div>
             <button class="btn btn-outline-dark pointer faq">FAQ</button>
             <div class="d-block d-sm-flex justify-content-end px-1 nombre">
                 <a href="#" class="pointer pe-5">Inicio</a>
-                <p class="pointer"><span>&copy;</span> 2025 ¿Y-Delet!.exe</p>
+                <p class="pointer"><span>&copy;</span> 2025 Orbe-4016.01</p>
             </div>
         </div>
     </footer>
@@ -484,6 +467,9 @@
 
     <!-- My .js -->
     <script src="js/script.js"></script>
+
+    <!-- Lenis.js -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 
     <!-- Gsap y ScrollTrigger -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
