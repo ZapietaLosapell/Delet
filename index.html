@@ -71,7 +71,7 @@
                         <button type="button" onclick="closeModal();" aria-label="Close">X</button>
                     </div>
                     <div class="video-container ratio ratio-16x9">
-                        <video id="teaser" class="teaser" controls preload="auto" poster="img/poster.png" alt="Teaser Video">
+                        <video id="teaser" class="teaser" controls preload="auto" poster="img/poster-video.png" alt="Teaser Video">
                             <!-- <source src="video/Teaser_1.mp4" type="video/mp4" />
                             <source src="video/Teaser_1.webm" type="video/webm" /> -->
                             <track src="captions/MyCaptions.es.vtt" kind="captions" srclang="es" label="Spanish" class="track-es">
@@ -113,7 +113,7 @@
             <div class="vhs">
                 <img src="img/vhs-blue-2.png" class="img-fluid" alt="Imagen de una cinta VHS con fondo transparente" data-aos="vhs-animation" data-aos-anchor-placement="top-center">
                 <h5 class="d-none d-sm-block">
-                    <span>Digital | Español | 125 min (piloto) | Ficción documental</span>
+                    <span>Digital | Español | 125 min?? (piloto) | Documental</span>
                 </h5>
             </div>
             <h5 class="d-block d-sm-none descrip">Digital | Español | 125 min (piloto) | Ficción documental
@@ -483,35 +483,36 @@
             const scrollV = coleccionHorizontal.scrollWidth - coleccionHorizontal.offsetWidth;
 
             const tl = gsap.timeline();
-            tl.to("#v1", { height: "55vh" })
-            .to("#v2", { height: "70vh" })
-            .to("#v3", { height: "65vh" })
-            .to("#v2", { height: "40vh" });
+            tl.to("#v1", { height: "40vh" })
+            .to("#v2", { height: "40vh" })
+            .to("#v3", { height: "40vh" });
 
             ScrollTrigger.matchMedia({
             "(min-width: 992px)": function () {
-                gsap.to(".video-s", {
-                    x: () => -scrollV,
-                    ease: "none",
-                    scrollTrigger: {
-                        trigger: ".coleccion-horizontal",
-                        id: "v",
-                        start: "top top",
-                        end: () => "+=" + scrollV,
-                        scrub: 6,
-                        tooggleAction: "reverse",
-                        pin: true
-                    }
-                });
+                // gsap.to(".video-s", {
+                //     x: () => -scrollV,
+                //     ease: "none",
+                //     scrollTrigger: {
+                //         trigger: "#video-section",
+                //         id: "v",
+                //         start: "top top",
+                //         end: "bottom bottom",
+                //         scrub: 3,
+                //         tooggleAction: "reverse",
+                //         markers: true,
+                //     }
+                // });
 
                 gsap.utils.toArray(".video-s").forEach((el, index) => {
                     ScrollTrigger.create({
                         animation: tl,
-                        trigger: el,
+                        trigger: "#video-section",
                         start: "top top",
-                        end: () => "+=" + scrollV,
-                        scrub: 6,
+                        end: "bottom top",
+                        scrub: true,
+                        id: "v",
                         ease: "none",
+                        markers: true,
                     });
                 });
             },

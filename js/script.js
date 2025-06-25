@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
- // Lenis
+// Lenis
     const lenis = new Lenis({
         lerp: 0.08,
         // autoRaf: true,
@@ -16,7 +16,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
       
     requestAnimationFrame(raf);
+    
 
+// GSAP
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".vhs", {
+      backgroundPosition: "100% 50%",
+      ease: "none",
+        scrollTrigger: {
+          trigger: ".vhs",
+          start: "top bottom",
+          end: "bottom top", 
+          scrub: true 
+    }
+});
 
 // Tooltip
 

@@ -956,6 +956,10 @@ div.fixed-2 {
     background-size: 100% auto; 
 }
 
+.pe-5 {
+    padding-right: 0 !important;
+}
+
 .section-inner.dark {
     border-radius: 0;
     background-color: var(--primary-color);
@@ -969,14 +973,14 @@ div.fixed-2 {
 }
 
 .coleccion-horizontal {
-    max-width: 100vw;
+    /* max-width: 100vw;
     overflow: hidden;
     white-space: nowrap;
     display: flex;
     height: 100vh;
     background-color: var(--primary-color);
-    border-radius: 0;
-    border: 1px solid var(--background-color);
+    border-radius: 0; */
+    border-top: 1px solid var(--background-color);
 }
 
 .coleccion-horizontal h3 {
@@ -988,9 +992,7 @@ div.fixed-2 {
 }
 
 .video-s {
-    height: 100%;
     padding-bottom: 2%;
-    padding-left: 2%;
     background: none;
     max-width: 100vw;
     overflow: hidden;
@@ -998,7 +1000,7 @@ div.fixed-2 {
 
 .v {
     width: 700px;
-    height: 40vh;
+    height: 55vh;
     border: 1px solid var(--background-color);
     transform-origin: bottom;
     text-transform: uppercase;
@@ -1194,12 +1196,26 @@ h1.dark {
     letter-spacing: .015em;
 }
 
-.vhs {
+/* .vhs {
     background: center / cover repeat-x url(../img/fondo-01.png), var(--highlight-color);
     display: flex;
     align-items: center;
     justify-content: center;
     animation: mover-fondo 8s linear forwards;
+    position: relative;
+    z-index: 2;
+    background-position: 0% 50%;
+} */
+
+.vhs {
+    background-image: url(../img/fondo-01.png);
+    background-color: var(--highlight-color);
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-position: 0% 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     z-index: 2;
 }
@@ -1231,14 +1247,14 @@ h1.dark {
     border-top: 2px solid var(--primary-color);
 }
 
-@keyframes mover-fondo {
+/* @keyframes mover-fondo {
     0% {
         background-position: 0% 50%;
     }
     100% {
         background-position: 100% 50%;
     }
-}
+} */
 
 .vhs img {
     width: 50%;
@@ -1302,6 +1318,7 @@ footer {
 
 footer a {
     color: var(--background-color);
+    transition: color 0.3s, padding 0.3s;
 }
 
 footer .concon {
@@ -1491,7 +1508,6 @@ footer .row .btn {
     .coleccion-horizontal {
         flex-direction: column;
         height: auto;
-        padding-top: 5px;
     }
 
     .video-s {
