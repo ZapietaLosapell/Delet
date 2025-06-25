@@ -69,7 +69,7 @@ h1 {
 
 /* Aplica al menu en pantalla grande */
 
-.btn-menu { 
+.btn-menu {
     margin-top: 1.5em;
     border: 1px solid var(--primary-color);
     font-size: 1.5em;
@@ -132,6 +132,7 @@ h1 {
 .btn-menu-icon {
     backdrop-filter: blur(5px);
     filter: brightness(1.2);
+    background-color: #ffffff00;
     height: 45px;
     width: 50px;
     display: flex;
@@ -140,7 +141,7 @@ h1 {
     position: absolute;
     top: 0;
     right: 1.5%;
-    border: 1px solid var(--secundary-color);
+    border: 2px solid var(--secundary-color);
 } 
 
 .navbar {
@@ -1418,6 +1419,7 @@ footer .row .btn {
 
     .btn-menu { 
         font-size: 2em;
+        margin-top: 0.5em;
     }
 }
 
