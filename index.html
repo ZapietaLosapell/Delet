@@ -479,13 +479,13 @@
         document.addEventListener("DOMContentLoaded", (event) => {
             gsap.registerPlugin(ScrollTrigger);
     
-            const coleccionHorizontal = document.querySelector(".coleccion-horizontal");
-            const scrollV = coleccionHorizontal.scrollWidth - coleccionHorizontal.offsetWidth;
+            // const coleccionHorizontal = document.querySelector(".coleccion-horizontal");
+            // const scrollV = coleccionHorizontal.scrollWidth - coleccionHorizontal.offsetWidth;
 
             const tl = gsap.timeline();
-            tl.to("#v1", { height: "40vh" })
-            .to("#v2", { height: "40vh" })
-            .to("#v3", { height: "40vh" });
+            tl.to("#v1", { height: "55vh" })
+            .to("#v2", { height: "55vh" })
+            .to("#v3", { height: "55vh" });
 
             ScrollTrigger.matchMedia({
             "(min-width: 992px)": function () {
@@ -506,9 +506,9 @@
                 gsap.utils.toArray(".video-s").forEach((el, index) => {
                     ScrollTrigger.create({
                         animation: tl,
-                        trigger: "#video-section",
-                        start: "top top",
-                        end: "bottom top",
+                        trigger: ".fondo-2",
+                        start: "top",
+                        end: "bottom",
                         scrub: true,
                         id: "v",
                         ease: "none",

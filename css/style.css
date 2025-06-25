@@ -1000,7 +1000,7 @@ div.fixed-2 {
 
 .v {
     width: 700px;
-    height: 55vh;
+    height: 40vh;
     border: 1px solid var(--background-color);
     transform-origin: bottom;
     text-transform: uppercase;
