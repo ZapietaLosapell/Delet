@@ -413,7 +413,7 @@ dialog::backdrop {
 dialog .x {
     display: flex;
     justify-content: space-between;
-    background-color: var(--secundary-color);
+    background-color: var(--primary-color);
     border-bottom: 1px solid var(--secundary-color);
     font-size: 1.2em;
 }
