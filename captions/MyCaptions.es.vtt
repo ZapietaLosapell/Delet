@@ -1,23 +1,38 @@
 WEBVTT
 
-00:00:00.010 --> 00:00:02.550 line:0 position:10% size:70% align:start
-[<i>Música intrigante</i>]
+00:00:02.000 --> 00:00:03.100 line:0 position:10% size:70% align:start
+[<i>Sonido de notificación</i>]
 
-00:00:00.200 --> 00:00:02.810 line:5% position:40% size:70% align:start
-[Voz en off] En un mundo donde todo es visible...
+00:00:02.120 --> 00:00:06.000 line:85% 
+[Mensaje] ¿Qué hacían mis tatarabuelos cuando iban a la playa? ¿Tienes <i>imágenes</i>?
 
-00:00:03.190 --> 00:00:07.080 line:85%
-[Voz en off] Algunos relatos permanecen ocultos,
-al borde de la extinción.
+00:00:03.900 --> 00:00:04.900 line:0 position:50% align:start
+[Programa Volatryx] Buscando...
 
-00:00:08.060 --> 00:00:11.200 line:85%
-[Voz en off] Relatos que se esconden justo delante de <i>nuestros ojos</i>.
+00:00:05.300 --> 00:00:07.000 line:0 position:50% align:start
+[Programa Volatryx] He perdido las imágenes.
 
-00:00:16.160 --> 00:00:17.920 line:80%
-<b>¿Quieres ejecutarlo?</b>
+00:00:07.120 --> 00:00:12.000 line:85%
+[Mensaje] ¿Pero iban a la playa? Yo <i>recuerdo</i> a mi abuelo con la pala en el campo.
 
-00:00:18.800 --> 00:00:20.800 line:85%
-[<i>Efectos sonoros de viento</i>]
+00:00:08.890 --> 00:00:12.200 line:0 position:10% align:start
+[Programa Volatryx] ¿Una pala? En el siglo XX se usaban para conectar
+con almas pasadas.
 
-00:00:21.200 --> 00:00:23.000 line:85%
-[<i>Inquietante silencio</i>] 
+00:00:13.100 --> 00:00:16.800 line:85%
+[Mensaje] A mí me interesa <i>ver</i> cómo eran las peluquerías de la época de mi abuela.
+
+00:00:17.010 --> 00:00:18.030 line:85%
+[Mensaje] <b>¿Por qué no me respondes?</b>
+
+00:00:18.140 --> 00:00:22.000 line:85%
+[Mensaje] <b>¿Qué significa esto?</b>
+
+00:00:19.100 --> 00:00:21.700 line:0 position:10% align:start
+[Programa Volatryx] Esto es una simulación documental. ¡Permanece fugaz!
+
+00:00:21.800 --> 00:00:22.100 line:0 position:40% align:start
+[<i>Efecto estallido de píxeles</i>]
+
+00:00:22.090 --> 00:00:23.000 line:85%
+[<i>Sonido de máquina de escribir</i>] 
