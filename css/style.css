@@ -422,7 +422,7 @@ dialog .x {
     font-size: .7em;
     color: var(--background-color);
     padding-left: 10px;
-    padding-top: 10px;
+    padding-top: 6px;
     margin: 0;
     letter-spacing: .03em;
     font-family: var(--font-mono);
