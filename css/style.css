@@ -474,7 +474,7 @@ video::cue {
     background-color: var(--secundary-color);
     background-clip: content-box;
     color: var(--background-color);
-    line-height: 1.5;
+    line-height: 1em;
 }
 
 ::cue(b) {
