@@ -1154,6 +1154,7 @@ h1.dark {
 #galeria{
     height: 145vh;
     overflow: hidden;
+    background-color: var(--primary-color);
 }
 
 #pixi-container {
@@ -1161,10 +1162,6 @@ h1.dark {
     height: 145vh;
     position: relative;
     overflow: hidden;
-}
-
-#pixi-container.pointer {
-    height: 145vh;
 }
 
 #postalButton {
@@ -1770,4 +1767,12 @@ footer .row .btn {
     #logotipo  {
         display: none !important;
     }
+
+    #pixi-container {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+    }
+
 }
