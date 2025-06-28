@@ -262,7 +262,7 @@ h1 {
     object-fit: cover;
     top: 20%;
     left: 4rem;
-    width: 36%;
+    width: 30%;
     mix-blend-mode: hard-light;
     animation: desplazamiento 1.8s cubic-bezier(0.45, 0, 0.35, 1) infinite;
     animation-play-state: running;
