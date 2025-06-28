@@ -260,9 +260,9 @@ h1 {
 #logotipo {
     position: absolute;
     object-fit: cover;
-    top: 18%;
+    top: 20%;
     left: 4rem;
-    width: 45%;
+    width: 36%;
     mix-blend-mode: hard-light;
     animation: desplazamiento 1.8s cubic-bezier(0.45, 0, 0.35, 1) infinite;
     animation-play-state: running;
@@ -567,7 +567,7 @@ div.fixed-2 {
 }
 
 .fixed-2 h2 {
-    font-size: 2.8em;
+    font-size: 2.4em;
     line-height: 1;
     padding-bottom: .1em;
 }
